@@ -1,0 +1,14 @@
+<nav class="flex flex-row justify-between items-center">
+  <div class="pl-3 lg:pl-0">
+    <%= image_tag "ideal_logo.webp", alt: "ideal aviation logo", class: "lg:h-24 h-16"%>
+  </div>
+  <div class="hidden lg:flex flex-row gap-10 italic font-semibold text-2xl mr-5">
+    <%= link_to "FLY NOW", root_path, class: ""%>
+    <%= link_to "PILOT CERTIFICATION", root_path, class: ""%>  
+    <%= link_to "NEWS", root_path, class: ""%>  
+    <%= link_to "CONTACT", root_path, class: ""%>  
+  </div>
+  <div class="lg:hidden mr-5">
+    <%= render "shared/header_nav_mobile_menu"%>
+  </div>
+</nav>

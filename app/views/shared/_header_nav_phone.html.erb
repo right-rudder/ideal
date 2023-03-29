@@ -1,7 +1,9 @@
-<nav class="flex flex-row justify-between bg-ideal-blue font-semibold text-slate-50 text-2xl">
-  <div class="">
+<nav class="flex flex-row justify-center lg:justify-between items-center bg-ideal-blue font-semibold text-slate-50 py-2 px-5">
+  <div class="flex-row gap-10 hidden lg:flex">
+    <%= link_to "New to Flying?", root_path, class: ""%>
+    <%= link_to "Pilot Resources", root_path, class: ""%>
   </div>
-  <div class="">
-    <%= link_to "(618)-337-5845", "tel:1-618-337-5845" %>
+  <div class="text-2xl">
+    <%= link_to "(618) 337-5845", "tel:1-618-337-5845" %>
   </div>
 </nav>
