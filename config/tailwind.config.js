@@ -15,6 +15,36 @@ module.exports = {
       colors: {
         'ideal-blue': '#004f9aff',
       },
+      keyframes: {
+        'plane-enter': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(-100%)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+        },
+        'plane-leave': {
+          '0%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+          '50%': {
+            opacity: 1,
+            transform: 'translateX(50%)',
+          },
+          '100%': {
+            opacity: 0,
+            transform: 'translateX(100%)',
+          },
+        }
+      },
+      animation: {
+        'plane-enter': 'plane-enter 0.7s ease-out forwards',
+        'plane-leave': 'plane-leave 0.3s ease-out forwards',
+      },
     },
   },
   plugins: [
