@@ -13,7 +13,8 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        'ideal-blue': '#004f9aff',
+        'ideal-blue': '#004F9A',
+        'ideal-blue-light': '#2065A7',
       },
       keyframes: {
         'plane-enter': {
