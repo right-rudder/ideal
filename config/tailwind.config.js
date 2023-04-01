@@ -46,6 +46,16 @@ module.exports = {
         'plane-enter': 'plane-enter 0.7s ease-out forwards',
         'plane-leave': 'plane-leave 0.3s ease-out forwards',
       },
+      backgroundImage : {
+        'home' : "url('collage_header.webp')",
+      },
+      height: theme => ({
+        'screen-1/2': '50vh',
+        'screen-2/3': '66vh',
+        'screen-1/3': 'calc(100vh / 3)',
+        'screen-3/4': '75vh',
+        'screen-4/5': '80vh',
+      }),
     },
   },
   plugins: [
