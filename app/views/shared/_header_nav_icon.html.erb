@@ -9,7 +9,7 @@
       pilot_drop: false,
       about_drop: false
       }" 
-    @mouseleave="
+    x-on:mouseleave="
       fly_drop = false, 
       pilot_drop = false, 
       about_drop = false"
@@ -17,7 +17,7 @@
     <!--LINKS-->
 
     <!--FLY-->
-    <div class="" @mouseover="fly_drop = true">
+    <div class="" x-on:mouseover="fly_drop = true">
       <%= link_to "FLY NOW", root_path, class: "hover:text-ideal-blue link-underline" %>
       <div class="dropshadow-xl bg-slate-50 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[33rem]" x-cloak x-show="fly_drop"
         x-transition:enter="transition ease-out duration-300"
@@ -71,7 +71,7 @@
       </div>
     </div>
     <!--PILOT CERTIFICATION-->
-    <div class="" @mouseover="pilot_drop = true">
+    <div class="" x-on:mouseover="pilot_drop = true">
       <%= link_to "PILOT CERTIFICATION", root_path, class: "hover:text-ideal-blue link-underline"%>
       <div class="dropshadow-xl bg-slate-50 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[19rem]" x-cloak x-show="pilot_drop"
         x-transition:enter="transition ease-out duration-300"
@@ -141,7 +141,7 @@
     <%= link_to "NEWS", root_path, class: "link-underline hover:text-ideal-blue"%>  
     
     <!--ABOUT-->
-    <div class="" @mouseover="about_drop = true">
+    <div class="" x-on:mouseover="about_drop = true">
       <%= link_to "ABOUT US", root_path, class: "hover:text-ideal-blue link-underline" %>
       <div class="dropshadow-xl bg-slate-50 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[3rem]" x-cloak x-show="about_drop"
         x-transition:enter="transition ease-out duration-300"
