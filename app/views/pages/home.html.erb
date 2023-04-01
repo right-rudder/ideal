@@ -1,10 +1,33 @@
+<div class="">
 <%= render "shared/header"%>
-<div class="z-30">
+
 <section class="w-full bg-home bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center">
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
       <h1 class="font-bold text-5xl text-center">Pilot Training in St. Louis</h1>
       <h2 class="font-bold text-4xl text-center py-10">The Place for Pilots</h2>
-      <%= link_to "STAY FLYING TODAY", root_path, class: "font-semibold bg-ideal-blue hover:bg-ideal-blue-light hover:scale-105 text-xl lg:text-2xl transition-all duration-300 text-white rounded-lg text-center py-2 px-5 ml-8 mr-2" %>
+      <%= link_to "STAY FLYING TODAY", root_path, class: "btn-primary" %>
+  </div>
+</section>
+
+<section class="flex flex-col lg:flex-row py-10">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Do You Think You Could Be a Pilot?</h3>
+    <p class="w-3/4">
+    Are you fascinated by the world of aviation and 
+    always dreamed of soaring through the skies?
+    Do you find yourself looking up at the planes overhead, 
+    wondering what it would be like to be the one in control?
+    </p>
+    <p class="w-3/4 py-10">
+    Start by taking our quick quiz to see if you have what it takes!
+    Our quiz will assess your knowledge and skills related to 
+    aviation, as well as your personality traits and interests, 
+    to help determine if  flying is right for you.
+    </p>
+    <%= link_to "TAKE THE QUIZ", root_path, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "female_pilot_smiling_helicopter.webp", alt: "Student Pilot at Ideal Aviation Flying a Helicopter", class: "lg:w-3/5"%>
   </div>
 </section>
 </div>
