@@ -124,7 +124,7 @@
           <div class="items-center hover:text-ideal-blue">
             <%= link_to root_path, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
-                ADVANCE FLIGHT TRAINING
+                ADVANCED FLIGHT TRAINING
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
                   :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
                   x-transition:leave="() => { isOut = false }"
