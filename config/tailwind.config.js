@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         'ideal-blue': '#004F9A',
         'ideal-blue-light': '#2065A7',
+        'ideal-blue-dark' : '#003B74',
       },
       keyframes: {
         'plane-enter': {
