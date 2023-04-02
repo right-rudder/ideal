@@ -8,7 +8,7 @@
   </div>
 </header>
 
-<section class="flex flex-col lg:flex-row py-10">
+<section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
     <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Do You Think You Could Be a Pilot?</h3>
     <p class="w-3/4">
@@ -31,13 +31,19 @@
 </section>
 
 <section class="bg-gradient-to-r from-slate-200 to-blue-100 flex flex-col items-center py-10 pb-20">
-  <div class="">
+  <div class="flex flex-col items-center">
     <h3 class="text-3xl font-semibold pb-5 font-sans mx-5 text-center pt-10">How to Get Started</h3>
-    <p class="p-text text-center">
+    <p class="p-text text-center hidden lg:block">
     If you've always dreamed of becoming a pilot,  <br>
     now is the perfect time to get started.  <br>
     We offer a range of programs and services to  <br>
     help you achieve your aviation goals <br>
+    </p>
+    <p class="p-text text-center lg:hidden w-3/4">
+    If you've always dreamed of becoming a pilot, 
+    now is the perfect time to get started. 
+    We offer a range of programs and services to 
+    help you achieve your aviation goals
     </p>
   </div>
   <div class="grid lg:grid-cols-2 grid-cols-1 gap-10 lg:gap-4 pt-10 lg:w-2/3 z-0">
@@ -167,8 +173,54 @@
       </div>
     </div>
   </div>
+</section>
 
+<section class="flex flex-col lg:flex-row-reverse py-10">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Why Choose Ideal Aviation?</h3>
+    <p class="w-3/4">
+      Fly the Ideal Way.  Ideal Aviation is the place for pilots in St. Louis, Missouri.  We maintain the highest standards of safety in all of our operations.  Our certified flight instructors have decades of combined experience, ensuring that you have the knowledge and skills you need to fly safely and confidently.  
+    </p>
+    <p class="w-3/4 py-10">
+      When you choose to fly at Ideal Aviation, you're not only joining the welcoming and friendly community of aviation, you become part of the Ideal Aviation family.  We are committed to your success and we want to see you succeed in your aviation goals.
+    </p>
+    <%= link_to "JOIN THE FAMILY", root_path, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "ideal_team.webp", alt: "Ideal Aviation Team Photo", class: "lg:w-5/6"%>
+  </div>
+</section>
 
+<section class="flex flex-col lg:flex-row py-10">
+  <div class="flex flex-col items-center justify-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">State of the Art Facilities</h3>
+    <p class="w-3/4 pb-10">
+      Our facility spans over three hangars and we have a growing fleet of ten aircraft and over 20 certified flight instructors to fit your training needs.  Ideal Aviation offers private classrooms for individualized ground instruction that provide a comfortable and personalized learning environment.  
+    </p>
+    <%= link_to "TAKE A TOUR", root_path, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "facility.webp", alt: "Cessna 172 Outside the Ideal Aviation Hangar During Sunset", class: "lg:h-screen-2/3"%>
+  </div>
+</section>
+
+<section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Helicopter and Airplane Pilot Programs</h3>
+    <p class="w-3/4">
+      Ideal Aviation offers part 141 and part 61 pilot training for rotary wing and fixed wing aircraft.  From private pilot all the way to commercial and ATP, Ideal Aviation is here to help you reach your goals.
+    </p>
+    <p class="w-3/4 py-10">
+      Ideal Aviation has partnered with <%= link_to "Southwestern Illinois College", "https://www.swic.edu/academics/career-degrees/aviation/pilot-training/", target: "blank", class: "text-ideal-blue hover:underline"%> to provide college credit for flight and ground pilot training.
+    </p>
+    <span class="w-3/4">
+      <h4 class="pb-10 font-semibold font-sans">Ideal Aviation is the place for pilots in the St. Louis area.  We just do it better.  Full staff of CFIs, aircraft availability, and clean hangars and study areas to create the best environment for your pilot training.</h4>
+    </span>
+    <%= link_to "VIEW PROGRAMS", root_path, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "student_pilot_recieves_certificate.webp", alt: "Student Pilot Passes Private Pilot Checkride at Ideal Aviation", class: "lg:w-5/6"%>
+  </div>
 </section>
 
 <!--Sticky div-->
