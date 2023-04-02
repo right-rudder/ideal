@@ -42,11 +42,33 @@ module.exports = {
             opacity: 0,
             transform: 'translateX(100%)',
           },
-        }
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-168%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(168%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        marqueemobile: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-174%)' },
+        },
+        marquee2mobile: {
+          '0%': { transform: 'translateX(174%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
       },
       animation: {
         'plane-enter': 'plane-enter 0.7s ease-out forwards',
         'plane-leave': 'plane-leave 0.3s ease-out forwards',
+
+
+        marquee: 'marquee 55s linear infinite',
+        marquee2: 'marquee2 55s linear infinite',
+        marqueemobile: 'marqueemobile 55s linear infinite',
+        marquee2mobile: 'marquee2mobile 55s linear infinite',
       },
       backgroundImage : {
         'home' : "url('collage_header.webp')",
