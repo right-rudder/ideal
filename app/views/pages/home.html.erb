@@ -207,19 +207,67 @@
 <section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
     <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Helicopter and Airplane Pilot Programs</h3>
-    <p class="w-3/4">
-      Ideal Aviation offers part 141 and part 61 pilot training for rotary wing and fixed wing aircraft.  From private pilot all the way to commercial and ATP, Ideal Aviation is here to help you reach your goals.
-    </p>
-    <p class="w-3/4 py-10">
-      Ideal Aviation has partnered with <%= link_to "Southwestern Illinois College", "https://www.swic.edu/academics/career-degrees/aviation/pilot-training/", target: "blank", class: "text-ideal-blue hover:underline"%> to provide college credit for flight and ground pilot training.
+    <p class="w-3/4 pb-10">
+      Ideal Aviation offers part 141 and part 61 pilot training for rotary wing and fixed wing aircraft.  From private pilot all the way to commercial and ATP, Ideal Aviation is here to help you reach your goals.  Ideal Aviation has also partnered with <%= link_to "Southwestern Illinois College", "https://www.swic.edu/academics/career-degrees/aviation/pilot-training/", target: "blank", class: "text-ideal-blue hover:underline"%> to provide college credit for flight and ground pilot training.
     </p>
     <span class="w-3/4">
-      <h4 class="pb-10 font-semibold font-sans">Ideal Aviation is the place for pilots in the St. Louis area.  We just do it better.  Full staff of CFIs, aircraft availability, and clean hangars and study areas to create the best environment for your pilot training.</h4>
+      <h4 class="pb-10 font-semibold font-sans">Ideal Aviation is the best flight school in the St. Louis area.  Full staff of CFIs, aircraft availability, clean hangars, and study areas to create the best environment for your pilot training. Start flying with Ideal Aviation today!</h4>
     </span>
     <%= link_to "VIEW PROGRAMS", root_path, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <%=image_tag "student_pilot_recieves_certificate.webp", alt: "Student Pilot Passes Private Pilot Checkride at Ideal Aviation", class: "lg:w-5/6"%>
+    <span class="text-slate-600 italic hidden lg:block">Another student pilot at Ideal Aviation passing their checkride!</span>
+  </div>
+</section>
+
+<section class="bg-slate-200 flex flex-col pt-10 pb-0 lg:py-10">
+  <div class="flex flex-col lg:flex-row">
+    <div class="lg:w-1/2 flex flex-col items-center ml-10">
+      <div class="grid place-items-center pb-10">
+        <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Visit Ideal Aviation Today</h3>
+        <p class="w-3/4">Come visit Ideal Aviation and speak to one of our team members.  We are located at St. Louis Downtown Airport (KCPS).</p>
+      </div>
+
+      <!--NAP-->
+      <div class="flex flex-col gap-5 w-3/4 pb-10">
+        <div class="flex flex-row">
+          <div class="">
+            <%= image_tag "pin.webp", class: "h-7 max-w-min"%>
+          </div>
+          <div class="ml-5 ">
+            5600 Vector Dr<br>
+            Sauget, IL 62206
+          </div>
+        </div>
+        
+        <div class="flex flex-row">
+          <div class="">
+            <%= image_tag "phone.webp", class: "h-7 max-w-min"%>
+          </div>
+          <div class="ml-5 ">
+            (618) 337-5845
+          </div>
+        </div>
+        
+        <div class="flex flex-row">
+          <div class="">
+            <%= image_tag "email.webp", class: "h-7 max-w-min"%>
+          </div>
+          <div class="ml-5 ">
+            info@idealaviationstl.com
+          </div>
+        </div>
+      </div>
+
+      
+
+        <%= link_to "VISIT IDEAL", root_path, class: "btn-primary mb-10 ml-5 lg:ml-20 w-52 " %>
+      
+    </div>
+    <div class="lg:w-1/2 flex flex-col items-center">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.9284959262027!2d-90.16488488255615!3d38.58149439999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b2176bb00437%3A0xc55163b52114baf9!2sIdeal%20Aviation!5e0!3m2!1sen!2sus!4v1680478014007!5m2!1sen!2sus" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="lg:w-3/4 w-full aspect-auto"></iframe>
+    </div>
   </div>
 </section>
 
