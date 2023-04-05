@@ -77,103 +77,8 @@
     </div>
   </div>
 </section>
-<section class="bg-gradient-to-t from-ideal-blue to-ideal-blue-dark pb-20">
-  <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center text-slate-50 pt-10">What Our Students Say</h3>
 
-  <!--1st set-->
-  <div class="relative flex flex-row overflow-x-hidden ">
-    <div class="flex flex-row gap-10 lg:animate-marquee animate-marqueemobile ml-10">
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>I did a discovery flight with Steve. He was incredibly welcoming, positive, optimistic, encouraging, all the good stuff. The facilities were great, the aircraft in great shape.</p>
-        <div class="">
-          <p>Alex A</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>Had a discovery flight today with Micheal. It was a wonderful experience I definitely recommend it!</p>
-        <div class="">
-          <p>Natalia V</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>Beautiful facility. Help was great. Had some maintenance done on our V Tail and mechanic was amazing</p>
-        <div class="">
-          <p>Maria A</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>I love flying at Ideal and it's a truly wonderful flight school!</p>
-        <div class="">
-          <p>Stacie S</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>The people that work there are very nice and helpful And make it a very relaxing atmosphere</p>
-        <div class="">
-          <p>Don B</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>Great instructors, nice facilities. Highly recommended</p>
-        <div class="">
-          <p>Blake V</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-    </div>
-
-    <!--second set-->
-    <div class="flex flex-row overscroll-none gap-10 absolute top-0 lg:animate-marquee2 lg:animate-marquee2 animate-marquee2mobile ml-10">
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>I did a discovery flight with Steve. He was incredibly welcoming, positive, optimistic, encouraging, all the good stuff. The facilities were great, the aircraft in great shape.</p>
-        <div class="">
-          <p>Alex A</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>Had a discovery flight today with Micheal. It was a wonderful experience I definitely recommend it!</p>
-        <div class="">
-          <p>Natalia V</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>Beautiful facility. Help was great. Had some maintenance done on our V Tail and mechanic was amazing</p>
-        <div class="">
-          <p>Maria A</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>I love flying at Ideal and it's a truly wonderful flight school!</p>
-        <div class="">
-          <p>Stacie S</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>The people that work there are very nice and helpful And make it a very relaxing atmosphere</p>
-        <div class="">
-          <p>Don B</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-      <div class="flex-shrink-0 flex flex-col justify-between bg-slate-50 p-text rounded-xl w-1/4 h-80 py-5 px-5 ">
-        <p>Great instructors, nice facilities. Highly recommended</p>
-        <div class="">
-          <p>Blake V</p>
-          <p class="text-yellow-600">★★★★★</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%= render "shared/testimonials"%>
 
 <section class="flex flex-col lg:flex-row-reverse py-10">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
@@ -260,10 +165,8 @@
         </div>
       </div>
 
-      
-
-        <%= link_to "VISIT IDEAL", root_path, class: "btn-primary mb-10 ml-5 lg:ml-20 w-52 " %>
-      
+      <%= link_to "VISIT IDEAL", root_path, class: "btn-primary mb-10 ml-5 lg:ml-20 w-52 " %>
+    
     </div>
     <div class="lg:w-1/2 flex flex-col items-center">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.9284959262027!2d-90.16488488255615!3d38.58149439999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b2176bb00437%3A0xc55163b52114baf9!2sIdeal%20Aviation!5e0!3m2!1sen!2sus!4v1680478014007!5m2!1sen!2sus" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="lg:w-3/4 w-full aspect-auto"></iframe>
