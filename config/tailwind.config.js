@@ -73,6 +73,7 @@ module.exports = {
       },
       backgroundImage : {
         'home' : "url('collage_header.webp')",
+        'ctahead' : "url('cta_banner_ideal.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
