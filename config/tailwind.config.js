@@ -60,6 +60,26 @@ module.exports = {
           '0%': { transform: 'translateX(174%)' },
           '100%': { transform: 'translateX(0%)' },
         },
+        'slide-in-left': {
+          '0%': {
+            transform: 'translateX(-100%)',
+            opacity: 0
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: 1
+          },
+        },
+        'slide-out-left': {
+          '0%': {
+            transform: 'translateX(0)',
+            opacity: 1,
+          },
+          '100%': {
+            transform: 'translateX(-100%)',
+            opacity: 0,
+          },
+        },
       },
       animation: {
         'plane-enter': 'plane-enter 0.7s ease-out forwards',
@@ -70,6 +90,9 @@ module.exports = {
         marquee2: 'marquee2 55s linear infinite',
         marqueemobile: 'marqueemobile 55s linear infinite',
         marquee2mobile: 'marquee2mobile 55s linear infinite',
+
+        'slide-in-left': 'slide-in-left 0.6s ease-out',
+        'slide-out-left': 'slide-out-left 0.3s ease-out',
       },
       backgroundImage : {
         'home' : "url('collage_header.webp')",
