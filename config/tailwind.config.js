@@ -92,7 +92,14 @@ module.exports = {
         marquee2mobile: 'marquee2mobile 55s linear infinite',
 
         'slide-in-left': 'slide-in-left 0.6s ease-out',
+        'slide-in-left2': 'slide-in-left 0.7s ease-out',
+        'slide-in-left3': 'slide-in-left 0.8s ease-out',
+        'slide-in-left4': 'slide-in-left 1s ease-out',
+
         'slide-out-left': 'slide-out-left 0.3s ease-out',
+        'slide-out-left2': 'slide-out-left 0.4s ease-out',
+        'slide-out-left3': 'slide-out-left 0.5s ease-out',
+        'slide-out-left4': 'slide-out-left 0.6s ease-out',
       },
       backgroundImage : {
         'home' : "url('collage_header.webp')",
@@ -104,6 +111,7 @@ module.exports = {
         'screen-1/3': 'calc(100vh / 3)',
         'screen-3/4': '75vh',
         'screen-4/5': '80vh',
+        'screen-mobile' : '90.1vh', //depends on menu height
       }),
     },
   },
