@@ -1,5 +1,94 @@
 <%= render "shared/header"%>
 
+<header class="bg-gradient-to-b from-slate-50 to-blue-100">
+  <div class="flex flex-col lg:flex-row">
+    <div class="flex flex-col items-center lg:w-1/2">
+      <h1 class="font-bold text-5xl pt-10 text-center">Pilot Training Programs</h1>
+      <h2 class="font-semibold text-xl italic pt-5 pb-3 px-10 text-center">Pilot training courses to help you reach your goals</h2>
+      <p class="p-text w-3/4 pb-5">
+        Ideal Aviation is the place to become a pilot in St. Louis, MO.  Offering training in both helicopters and airplanes, we can help you get your private pilot certificate and more.
+      </p>
+      <div class="flex flex-col px-5 gap-3">
+        <div class="flex flex-row ">
+          <div class="text-green-500 pr-2 font-extrabold">✓</div>
+          <h3 class="lg:px-10 pl-4 p-text text-left">Professional, safe, friendly instructors</h3>
+        </div>
+        <div class="flex flex-row ">
+          <div class="text-green-500 pr-2 font-extrabold">✓</div>
+          <h3 class="lg:px-10 pl-4 p-text text-left">Aircraft availability and large fleet</h3>
+        </div>
+        <div class="flex flex-row ">
+          <div class="text-green-500 pr-2 font-extrabold">✓</div>
+          <h3 class="lg:px-10 pl-4 p-text text-left">Modern and well maintained aircraft</h3>
+        </div>
+        <div class="flex flex-row ">
+          <div class="text-green-500 pr-2 font-extrabold">✓</div>
+          <h3 class="lg:px-10 pl-4 p-text text-left">Private classrooms and tailored lessons</h3>
+        </div>
+        <div class="flex flex-row ">
+          <div class="text-green-500 pr-2 font-extrabold">✓</div>
+          <h3 class="lg:px-10 pl-4 p-text text-left">Part 61 and part 141 FAA approved training center</h3>
+        </div>
+      </div>
+      <%= link_to "SEND US A MESSAGE", root_path, class: "btn-primary my-3" %>
+    </div>
+    <div class="flex flex-col items-center lg:w-1/2">
+      <%= image_tag "thumbs_up.webp", alt: "Pilot giving the thumbs up by a cessna 172", class: "lg:w-4/5"%>
+    </div>
+  </div>
+</header>
+
+<section class="bg-gradient-to-b from-slate-50 to-white flex flex-col lg:flex-row-reverse items-center pt-10 pb-0 lg:py-10">
+  <div class="flex flex-col items-center justify-center lg:w-1/2 p-text">
+    <span class="font-sans font-semibold italic">Take the first step...</span>
+    <h2 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Schedule a Discovery Flight</h2>
+    <p class="w-3/4 pb-10">Schedule a time to meet with our team, tour our hangar, and take flight in one of our aircraft.  During a discovery flight, you'll be paired up with one of our highly qualified FAA certificated flight instructors.</p>
+    <p class="w-3/4 pb-10">You'll get the chance to sit in the pilot seat and commandeer the aircraft.  Your instructor will help you taxi the aircraft out of the ramp and receive clearance from the control tower.  Once airborne, you'll take control of the aircraft and practice basic maneuvers like flying straight and level, turns, climbs, and descents.</p>
+    <p class="w-3/4 pb-10 font-semibold font-sans">Are you up for the opportunity that lies ahead?  Schedule a discovery flight now and see if flying is right for you.</p>
+    <%= link_to "SCHEDULE DISCOVERY FLIGHT", root_path, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "st_louis_arch_aerial.webp", alt: "Discovery flight over the St. Louis Arch", class: "lg:h-screen-2/3 lg:px-12 lg:py-8"%>
+  </div>
+</section>
+
+<section class="bg-gradient-to-t lg:bg-gradient-to-l from-ideal-blue to-ideal-blue flex flex-col items-center text-white">
+  <h2 class="font-bold text-3xl lg:text-5xl pt-16 pb-6 text-center">Become a Pilot at St. Louis Downtown Airport</h2>
+  <div class="flex flex-col lg:flex-row justify-center w-full py-10">
+    <div class="lg:w-1/2 flex flex-col items-center">
+      <div class="block max-w-xl rounded-lg bg-white shadow-lg mx-5 mb-10">
+        <%= image_tag "helicopter_training_program.webp", class: "rounded-t-lg", alt: "Picture of a pilot and helicopter"%>
+        <div class="p-6">
+          <h2 class="mb-2 text-xl font-medium leading-tight text-neutral-800 ">
+            Helicopter Pilot Training
+          </h2>
+          <p class="mb-4 text-neutral-600 p-text">
+             This is a section for helicopter training.  Link to helicopter fleet
+          </p>
+          <%= link_to "ROTARY WING FLEET", root_path, class: "btn-primary mb-10" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:w-1/2 flex flex-col items-center">
+      <div class="block max-w-xl rounded-lg bg-white shadow-lg mx-5 mb-10">
+        <%= image_tag "airplane_training_program.webp", class: "rounded-t-lg", alt: "Picture of airplane in hangar"%>
+        <div class="p-6">
+          <h2 class="mb-2 text-xl font-medium leading-tight text-neutral-800 ">
+            Airplane Pilot Training
+          </h2>
+          <p class="mb-4 text-neutral-600 p-text">
+             This is a section for airplane training.  Link to airplane fleet.
+          </p>
+          <%= link_to "FIXED WING FLEET", root_path, class: "btn-primary mb-10" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <%= render "shared/cta_fly_with"%>
 <%= render "shared/cta_next_steps"%>
 <%= render "shared/footer"%>
