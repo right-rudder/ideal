@@ -20,7 +20,7 @@
 
     <!--FLY-->
     <div class="" x-on:mouseover="fly_drop = true">
-      <%= link_to "FLY NOW", root_path, class: "hover:text-ideal-blue link-underline" %>
+      <%= link_to "FLY NOW", become_path, class: "hover:text-ideal-blue link-underline" %>
       <div class="dropshadow-xl bg-slate-50 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[33rem]" x-cloak x-show="fly_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
@@ -44,7 +44,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to root_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to programs_path, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 PILOT PROGRAMS
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
