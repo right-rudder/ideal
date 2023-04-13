@@ -7,5 +7,8 @@ class PagesController < ApplicationController
 
   def pilot_programs
   end
+
+  def aircraft_rental
+  end
   
 end
