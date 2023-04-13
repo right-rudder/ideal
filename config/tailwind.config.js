@@ -104,7 +104,8 @@ module.exports = {
       backgroundImage : {
         'home' : "url('collage_header.webp')",
         'ctahead' : "url('cta_banner_ideal.webp')",
-        'sunset' : "url('sunset.webp')",        
+        'sunset' : "url('sunset.webp')",
+        'archbg' : "url('archbg.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
