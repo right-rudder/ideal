@@ -57,7 +57,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to root_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to aircraft_rental_path, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 AIRCRAFT RENTAL
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
