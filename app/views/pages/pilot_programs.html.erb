@@ -52,46 +52,7 @@
   </div>
 </section>
 
-<section class="bg-gradient-to-t lg:bg-gradient-to-l from-ideal-blue to-ideal-blue flex flex-col items-center text-white">
-  <h2 class="font-bold text-3xl lg:text-5xl pt-16 pb-6 text-center">Become a Pilot at St. Louis Downtown Airport</h2>
-  <div class="flex flex-col lg:flex-row justify-center w-full py-10">
-    <div class="lg:w-1/2 flex flex-col items-center">
-      <div class="block max-w-xl rounded-lg bg-white shadow-lg mx-5 mb-10">
-        <%= image_tag "helicopter_training_program.webp", class: "rounded-t-lg", alt: "Picture of a pilot and helicopter"%>
-        <div class="p-6">
-          <h2 class="mb-2 text-xl font-medium leading-tight text-neutral-800 ">
-            Helicopter Pilot Training
-          </h2>
-          <p class="mb-4 text-neutral-600 p-text">
-             Ideal Aviation has helicopter pilot training programs to fit your schedule and your career goals. Whether you are just starting out or are looking to advance your career, we have the training programs you need to succeed.
-          </p>
-          <p class="mb-4 text-neutral-600 p-text">
-            Our hangar is home to an impressive fleet of helicopters. Our Guimbal Cabri helicopters are well-maintained and equipped with the latest avionics and safety features, so you can feel confident and secure during your training flights.  Give us a call and visit the Ideal Aviation hangar and see what all the pilots in St. Louis are talking about.
-          </p>
-          <%= link_to "ROTARY WING FLEET", root_path, class: "btn-primary mb-10" %>
-        </div>
-      </div>
-    </div>
-
-    <div class="lg:w-1/2 flex flex-col items-center">
-      <div class="block max-w-xl rounded-lg bg-white shadow-lg mx-5 mb-10">
-        <%= image_tag "airplane_training_program.webp", class: "rounded-t-lg", alt: "Picture of airplane in hangar"%>
-        <div class="p-6">
-          <h2 class="mb-2 text-xl font-medium leading-tight text-neutral-800 ">
-            Airplane Pilot Training
-          </h2>
-          <p class="mb-4 text-neutral-600 p-text">
-             The Ideal Aviation training facility is home to a modern fleet of fixed-wing aircraft that are well-maintained and equipped with advanced avionics and safety features. Our aircraft are regularly serviced and inspected to ensure that they are always in top condition and ready for your next training flight.
-          </p>
-          <p class="mb-4 text-neutral-600 p-text">
-            Our aircraft fleet includes a variety of aircraft types, from the reliable and versatile Cessna 172 to the sleek and powerful Cirrus SR20. We also have Piper Pilots, Piper Seminole, and Tecnam aircraft that can help you develop your skills as a pilot and prepare you for a successful career in aviation.
-          </p>
-          <%= link_to "FIXED WING FLEET", root_path, class: "btn-primary mb-10" %>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%= render "shared/helicopter_airplane_fleet"%>
 
 <%= render "shared/pilot_programs"%>
 
