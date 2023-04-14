@@ -11,4 +11,6 @@ class PagesController < ApplicationController
   def aircraft_rental
   end
   
+  def fixed_wing
+  end
 end
