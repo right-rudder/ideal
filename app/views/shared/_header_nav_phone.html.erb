@@ -39,7 +39,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to root_path, class: "hover:text-slate-400" do %>
+            <%= link_to fixed_wing_path, class: "hover:text-slate-400" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 Fixed Wing Fleet
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-50 h-4 ml-3 opacity-0" 
