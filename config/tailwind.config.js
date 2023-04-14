@@ -106,6 +106,7 @@ module.exports = {
         'ctahead' : "url('cta_banner_ideal.webp')",
         'sunset' : "url('sunset.webp')",
         'archbg' : "url('archbg.webp')",
+        'piper' : "url('piper_sunset.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
