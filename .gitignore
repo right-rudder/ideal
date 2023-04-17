@@ -36,3 +36,4 @@
 # Additional ignores
 */.DS_Store/*
 .DS_Store
+NOTES.md
