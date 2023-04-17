@@ -142,6 +142,73 @@
   </div>
 </section>
 
+<section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">The Cirrus SR22</h3>
+    <p class="w-3/4 pb-5">
+      Ideal Aviation's fleet includes the sleek and sophisticated Cirrus SR22, designed for both comfort and performance. The SR22 is equipped with advanced avionics, including a Garmin Perspective+ system, and a powerful Continental IO-550 engine.
+    </p>
+    <p class="w-3/4 pb-10">
+      The Cirrus SR22 is an ideal choice for pilots seeking a reliable cross-country plane or an IFR trainer. With advanced avionics, including synthetic vision, and an impressive cruising speed, the SR22 offers superior situational awareness and performance. Its sleek design and advanced features make it a popular choice for pilots who demand the best in comfort, safety, and performance.
+    </p>
+    <%= link_to "FLY THE PIPER PILOT", root_path, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <!--Slider--->
+    <div x-data="{
+      slide: 0,
+      images: [
+        '<%= image_url "piper1.webp" %>',
+        '<%= image_url "piper2.webp" %>',
+        '<%= image_url "piper3.webp" %>'
+      ],
+      autoplay: null,
+      startAutoplay() {
+        this.autoplay = setInterval(() => {
+          this.nextSlide();
+        }, 11000);  //timer
+      },
+      stopAutoplay() {
+        clearInterval(this.autoplay);
+        this.autoplay = null;
+      },
+      nextSlide() {
+        this.slide = (this.slide + 1) % this.images.length;
+      },
+      prevSlide() {
+        this.slide = this.slide - 1 < 0 ? this.images.length - 1 : this.slide - 1;
+      }
+    }" x-init="startAutoplay()" id="slider" class="w-full lg:w-3/4">
+      <div x-show="images.length > 1" class="relative">
+    <template x-for="(image, index) in images" :key="index">
+      <img x-show="slide === index" :src="image" :alt="'Modern Tecnam Airplane ' + (index + 1)" class="w-full"
+        x-transition:enter="opacity-0 duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+        x-transition:leave="opacity-100 duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+        :class="{'hidden': index !== slide}" x-init="setTimeout(() => { $el.classList.remove('hidden'); }, 100)">
+    </template>
+
+        <button x-show="images.length > 1" x-on:mouseover="stopAutoplay()" x-on:mouseleave="startAutoplay()" x-on:click="prevSlide()" class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 rounded-md text-white bg-ideal-blue hover:bg-ideal-blue-light focus:outline-none focus:shadow-outline-gray transition duration-150 ease-in-out mx-3">
+          <span class="sr-only">Previous</span>
+          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button x-show="images.length > 1" x-on:mouseover="stopAutoplay()" x-on:mouseleave="startAutoplay()" x-on:click="nextSlide()" class="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 rounded-md text-white bg-ideal-blue hover:bg-ideal-blue-light focus:outline-none focus:shadow-outline-gray transition duration-150 ease-in-out mx-3">
+          <span class="sr-only">Next</span>
+          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+        <div class="absolute bottom-0 left-0 w-full flex justify-center space-x-2 pb-2">
+          <template x-for="(image, index) in images" :key="index">
+            <button x-on:click="slide = index" :class="{'bg-ideal-blue': index === slide, 'bg-slate-50': index !== slide}" class="h-2 w-2 rounded-full"></button>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <%= render "shared/cta_arch"%>
 <%= render "shared/cta_next_steps"%>
 <%= render "shared/footer"%>
