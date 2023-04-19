@@ -16,4 +16,7 @@ class PagesController < ApplicationController
 
   def rotary_wing
   end
+
+  def airplane_training
+  end
 end
