@@ -1,21 +1,21 @@
 <%= render "shared/header"%>
 
-<header class="w-full bg-piper bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center">
+<header class="w-full bg-sunset bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center text-white">
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
-      <h1 class="font-bold text-5xl text-center">Fixed Wing Aircraft</h1>
-      <h2 class="font-bold text-4xl text-center py-10">Fly an airplane today at Ideal Aviation</h2>
+      <h1 class="font-bold text-5xl text-center">Rotary Wing Aircraft</h1>
+      <h2 class="font-bold text-4xl text-center py-10">Fly a helicopter today at Ideal Aviation</h2>
       <%= link_to "GET CHECKED OUT NOW", root_path, class: "btn-primary" %>
   </div>
 </header>
 
 <section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">The Tecnam P92</h3>
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">The Guimbal Cabri</h3>
     <p class="w-3/4 pb-5">
-      Ideal Aviation is proud to be the only school in the St. Louis area that offers Tecnam aircraft for our students. You'll have access to some of the most advanced and innovative aircraft on the market. From the modern avionics to the sleek design, our Tecnam light sport aircraft offers an unmatched flying experience that you won't find anywhere else in St. Louis.
+      As the only flight school in St. Louis to offer the Guimbal Cabri helicopter, Ideal Aviation provides a unique and exceptional training experience. The Cabri is a modern and reliable helicopter that is designed for training purposes. With its advanced safety features, including a rigid main rotor system and a crash-resistant fuel system, the Cabri is the safest helicopter in its class.
     </p>
     <p class="w-3/4 pb-10">
-      Tecnam P92s are equipped with the Garmin G3X touch screen avionics system. This innovative system provides pilots with two advanced and user-friendly 10.6 inch touch screens that makes flying safer and more enjoyable.  To top it all off, enjoy a comfortable ride with a premium interior and easily adjustable Italian leather seats.  Come fly with us and experience the comfort and luxury of our Tecnam aircraft. 
+      The Cabri's spacious cabin, comfortable seats, and excellent visibility provide an optimal learning environment for pilots of all skill levels. Whether you are a beginner or an experienced pilot, our Cabri helicopter will allow you to master the art of helicopter flight in a safe and controlled setting. With its advanced technology and exceptional safety features, the Guimbal Cabri is the perfect helicopter for flight training, and Ideal Aviation is proud to offer this exceptional aircraft to our students.
     </p>
     <%= link_to "FLY THE TECNAM P92", root_path, class: "btn-primary mb-10" %>
   </div>
@@ -24,9 +24,9 @@
     <div x-data="{
       slide: 0,
       images: [
-        '<%= image_url "tecnam1.webp" %>',
-        '<%= image_url "tecnam2.webp" %>',
-        '<%= image_url "tecnam3.webp" %>'
+        '<%= image_url "cabri1.webp" %>',
+        '<%= image_url "cabri2.webp" %>',
+        '<%= image_url "cabri3.webp" %>'
       ],
       autoplay: null,
       startAutoplay() {
@@ -79,15 +79,15 @@
   <div class="flex flex-col items-center lg:w-1/2 p-text">
     <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Elite Simulator</h3>
     <p class="w-3/4 pb-5">
-      The Redbird Simulator is a highly realistic flight training device with an advanced motion platform, high-resolution visual system, and realistic flight controls. It provides a safe and controlled environment for pilots to practice a wide range of flight maneuvers and emergency procedures, making it a valuable tool for pilots of all levels.
+      The Elite Helicopter Simulator is a state of the art training device that provides pilots with a highly realistic and immersive training experience. With its advanced motion platform, high resolution visual system, and realistic flight controls, the simulator offers a true to life simulation of helicopter flight.
     </p>
     <p class="w-3/4 pb-10">
-      The simulator's customizable scenarios and weather conditions make it an excellent tool for instrument training, allowing pilots to practice instrument approaches and procedures without the added cost and complexity of flying in actual instrument conditions. With its advanced technology and unparalleled realism, the Redbird Simulator is the ultimate tool for flight training and proficiency.
+      The simulator's customizable scenarios and weather conditions allow pilots to practice a wide range of flight maneuvers and emergency procedures, making it a valuable tool for pilots of all levels. Whether you're a new pilot looking to build your skills or an experienced pilot looking to maintain your proficiency, the Elite Simulator is the perfect training tool to help you achieve your goals.
     </p>
     <%= link_to "FLY THE REDBIRD", root_path, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%= image_tag "redbird.webp", alt: "Redbird simulator training", class: "lg:w-3/4"%>
+    <%= image_tag "elite.webp", alt: "Elite Helicopter simulator training", class: "lg:w-3/4"%>
   </div>
 </section>
 
