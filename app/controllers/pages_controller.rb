@@ -12,7 +12,6 @@ class PagesController < ApplicationController
   end
   
   def fixed_wing
-    @images = ['tecnam1.webp', 'tecnam2.webp', 'tecnam3.webp']
   end
 
   def rotary_wing
