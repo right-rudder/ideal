@@ -59,6 +59,9 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # Don't know why I need to put this, but for some reason, Tailwind wasnt loading classes right and this fixes it...
+  config.assets.debug = true
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
