@@ -21,4 +21,5 @@ class PagesController < ApplicationController
   end
 
   def helicopter_training
+  end
 end
