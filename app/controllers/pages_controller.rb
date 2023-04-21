@@ -22,4 +22,7 @@ class PagesController < ApplicationController
 
   def helicopter_training
   end
+
+  def private_pilot
+  end
 end

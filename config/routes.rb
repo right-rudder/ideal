@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'rotary-wing-helicopter-fleet', to: 'pages#rotary_wing', as: :rotary_wing
   get 'airplane-pilot-training', to: 'pages#airplane_training', as: :airplane_training
   get 'helicopter-pilot-training', to: 'pages#helicopter_training', as: :helicopter_training
+  get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
 
 end
