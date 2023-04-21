@@ -19,4 +19,6 @@ class PagesController < ApplicationController
 
   def airplane_training
   end
+
+  def helicopter_training
 end
