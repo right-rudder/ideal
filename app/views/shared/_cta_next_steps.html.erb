@@ -11,10 +11,18 @@
   </div>
 
   <div class="flex flex-row gap-5 lg:gap-10">
-    <%=image_tag "fb.webp", alt: "facebook social media icon", class: "h-16 hover:scale-110 duration-300" %>
-    <%=image_tag "insta.webp", alt: "facebook social media icon", class: "h-16 hover:scale-110 duration-300" %>
-    <%=image_tag "tiktok.webp", alt: "facebook social media icon", class: "h-16 hover:scale-110 duration-300" %>
-    <%=image_tag "youtube.webp", alt: "facebook social media icon", class: "h-16 hover:scale-110 duration-300" %>
+    <%= link_to "https://www.facebook.com/IdealAviation", target: "blank" do%>
+      <%=image_tag "fb.webp", alt: "facebook social media icon", class: "h-16 hover:scale-110 duration-300" %>
+    <%end%>
+    <%= link_to "https://www.instagram.com/idealaviation", target: "blank" do%>
+      <%=image_tag "insta.webp", alt: "facebook social media icon", class: "h-16 hover:scale-110 duration-300" %>
+    <%end%>
+    <%= link_to "https://www.tiktok.com/@idealaviationstl", target: "blank" do%>
+      <%=image_tag "tiktok.webp", alt: "facebook social media icon", class: "h-16 hover:scale-110 duration-300" %>
+    <%end%>
+    <%= link_to "https://www.youtube.com/@idealaviation9390", target: "blank" do%>
+      <%=image_tag "youtube.webp", alt: "facebook social media icon", class: "h-16 hover:scale-110 duration-300" %>
+    <%end%>
   </div>
 
   <div class="text-center text-slate-50 flex flex-col items-center">
