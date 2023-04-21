@@ -108,7 +108,7 @@ module.exports = {
         'archbg' : "url('archbg.webp')",
         'piper' : "url('piper_sunset.webp')",
         'cessna-sunset' : "url('cessna_sunset_dark.webp')",
-        
+        'dark-hangar' : "url('dark_hangar.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
