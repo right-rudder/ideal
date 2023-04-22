@@ -1,7 +1,13 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">New message</h1>
 
-  <%= render "form", message: @message %>
+<%= render "shared/header"%>
+<div class="bg-gradient-to-l from-slate-200 to-blue-50">
+  <div class="mx-5 lg:mx-auto lg:max-w-2xl ">
+    <h1 class="font-bold text-4xl pt-10 text-center">Contact Us</h1>
+    
+    <%= render "form", message: @message %>
 
-  <%= link_to 'Back to messages', messages_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%#= link_to 'Back to messages', messages_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
 </div>
+
+<%= render "shared/footer"%>
