@@ -36,7 +36,7 @@
       <li><%= link_to "NEW TO FLYING?", become_path%></li>
       <li>
         <div class="flex flex-row justify-between" >
-          <div class="">PILOT RESOURCES</div>
+          <div class=""><%= link_to "PILOT RESOURCES", pilot_resources_path%></div>
           <div class="px-5 py-1" x-on:click="mobile_resources_drop = ! mobile_resources_drop">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="transition-transform duration-500 ease-in-out" viewBox="0 0 16 16" x-bind:class="{ 'rotate-[90deg]': mobile_resources_drop }">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
@@ -55,7 +55,7 @@
           <%= link_to "ROTARY WING FLEET", rotary_wing_path%>
         </li>
         <li class="ml-5 animate-slide-in-left4" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left4': !mobile_resources_drop}">
-          PILOT RESOURCES
+          <%= link_to "TRAINING RESOURCES", pilot_resources_path%>
         </li>
       <li>
         <div class="flex flex-row justify-between" >

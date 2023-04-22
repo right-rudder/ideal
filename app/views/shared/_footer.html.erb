@@ -19,7 +19,7 @@
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Resources</h2>
             <ul class="text-gray-600 font-medium">
               <li class="mb-4">
-                <%= link_to root_path, class: "hover:text-ideal-blue" do %>
+                <%= link_to about_us_path, class: "hover:text-ideal-blue" do %>
                   <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                     About Us
                     <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -58,7 +58,7 @@
                 <% end %>
               </li>
               <li class="mb-4">
-                <%= link_to root_path, class: "hover:text-ideal-blue" do %>
+                <%= link_to careers_path, class: "hover:text-ideal-blue" do %>
                   <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                     Careers
                     <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
