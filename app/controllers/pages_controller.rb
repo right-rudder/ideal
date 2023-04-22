@@ -25,4 +25,17 @@ class PagesController < ApplicationController
 
   def private_pilot
   end
+
+  def about_us
+  end
+
+  def advanced_training
+  end
+
+  def our_story
+  end
+
+  def our_team
+  end
+  
 end
