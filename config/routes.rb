@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :messages
   root "pages#home"
   
+  get 'contact', to: 'messages#new', as: :contact
+
+
   # Static Pages
   get 'how-to-become-a-pilot', to: 'pages#become_a_pilot', as: :become
   get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
