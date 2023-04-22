@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   get 'about-ideal-aviation', to: 'pages#about_us', as: :about_us
   get 'advanced_training', to: 'pages#advanced_training', as: :advanced_training
-  get 'our-story', to: 'pages#our_story', as: :our_story
   get 'our-team', to: 'pages#our_team', as: :our_team
   get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
   get 'careers', to: 'pages#careers', as: :careers

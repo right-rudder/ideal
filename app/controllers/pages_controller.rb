@@ -32,9 +32,6 @@ class PagesController < ApplicationController
   def advanced_training
   end
 
-  def our_story
-  end
-
   def our_team
   end
 
