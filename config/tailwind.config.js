@@ -109,6 +109,7 @@ module.exports = {
         'piper' : "url('piper_sunset.webp')",
         'cessna-sunset' : "url('cessna_sunset_dark.webp')",
         'dark-hangar' : "url('dark_hangar.webp')",
+        'ideal-ramp' : "url('ideal_ramp.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
