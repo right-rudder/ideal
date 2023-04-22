@@ -37,5 +37,10 @@ class PagesController < ApplicationController
 
   def our_team
   end
-  
+
+  def pilot_resources
+  end
+
+  def careers
+  end
 end
