@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :quiz_results
   resources :messages
   root "pages#home"
   
