@@ -5,13 +5,19 @@ Rails.application.routes.draw do
   resources :messages
   root "pages#home"
   
+  # Contact form
   get 'contact', to: 'messages#new', as: :contact
   get 'visit-ideal-aviation', to: 'messages#location', as: :location
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
 
+  # Quiz form
   get 'quiz', to: 'quiz_results#new', as: :quiz
 
+  # Discovery flight form
   get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
+
+  # Check out form
+  get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
 
 
   # Static Pages
