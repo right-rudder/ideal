@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'visit-ideal-aviation', to: 'messages#location', as: :location
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
 
+  get 'quiz', to: 'quiz_results#new', as: :quiz
+
 
   # Static Pages
   get 'how-to-become-a-pilot', to: 'pages#become_a_pilot', as: :become
