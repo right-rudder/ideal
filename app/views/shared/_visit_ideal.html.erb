@@ -36,9 +36,9 @@
           </div>
         </div>
       </div>
-      <% if current_page?(contact_path) %>
+      <% if current_page?(contact_path) || current_page?(location_path) %>
       <% else %>
-        <%= link_to "VISIT IDEAL", root_path, class: "btn-primary mb-10 ml-5 lg:ml-20 w-52 " %>
+        <%= link_to "VISIT IDEAL", location_path, class: "btn-primary mb-10 ml-5 lg:ml-20 w-52 " %>
       <% end %>
     </div>
     <div class="lg:w-1/2 flex flex-col items-center">

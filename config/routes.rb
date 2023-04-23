@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "pages#home"
   
   get 'contact', to: 'messages#new', as: :contact
+  get 'visit-ideal-aviation', to: 'messages#location', as: :location
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
 
 

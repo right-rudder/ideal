@@ -17,6 +17,9 @@ class MessagesController < ApplicationController
   def new
     @message = Message.new
   end
+  def location
+    @message = Message.new
+  end
 
   # GET /messages/1/edit
   def edit
