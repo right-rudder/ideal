@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "pages#home"
   
   get 'contact', to: 'messages#new', as: :contact
+  get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
 
 
   # Static Pages
@@ -19,5 +20,6 @@ Rails.application.routes.draw do
   get 'our-team', to: 'pages#our_team', as: :our_team
   get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
   get 'careers', to: 'pages#careers', as: :careers
+  
 
 end
