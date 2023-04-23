@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :discover_flights
   resources :quiz_results
   resources :messages
   root "pages#home"
@@ -8,6 +9,8 @@ Rails.application.routes.draw do
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
 
   get 'quiz', to: 'quiz_results#new', as: :quiz
+
+  get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
 
 
   # Static Pages

@@ -1,0 +1,2 @@
+class DiscoverFlight < ApplicationRecord
+end
