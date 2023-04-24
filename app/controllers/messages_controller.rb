@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        #MessageMailer.new_message(@message).deliver
+        MessageConfirmationMailer.message_confirmation_email(@message).deliver_later
         format.html { redirect_to contact_confirmation_path, notice: @message.body }
         format.json { render :show, status: :created, location: @message }
       else
