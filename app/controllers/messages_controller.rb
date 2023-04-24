@@ -28,14 +28,20 @@ class MessagesController < ApplicationController
   # POST /messages or /messages.json
   def create
     @message = Message.new(message_params)
+    success = verify_recaptcha(action: 'message', minimum_score: 0.5, secret_key: ENV['RECAPTCHA_SECRET_KEY'])
+    checkbox_success = verify_recaptcha unless success
 
     respond_to do |format|
-      if @message.save
+      if @message.save && (success || checkbox_success)
         MessageConfirmationMailer.message_confirmation_email(@message).deliver_later
         format.html { redirect_to contact_confirmation_path, notice: @message.body }
         format.json { render :show, status: :created, location: @message }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { 
+          if !success
+            @show_checkbox_recaptcha = true
+          end
+          render :new, status: :unprocessable_entity }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end
