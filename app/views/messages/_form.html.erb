@@ -33,6 +33,7 @@
 
   <% if @show_checkbox_recaptcha %>
     <%= recaptcha_tags %>
+    <div class="mb-10"></div>
   <% else %>
     <%= recaptcha_v3(action: 'message', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
   <% end %>
