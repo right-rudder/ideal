@@ -1,67 +1,100 @@
-<%= form_with(model: discover_flight, class: "contents") do |form| %>
-  <% if discover_flight.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(discover_flight.errors.count, "error") %> prohibited this discover_flight from being saved:</h2>
+<div x-data="{ currentPage: 1 }">
+  <%= form_with(model: discover_flight, class: "contents") do |form| %>
+    <% if discover_flight.errors.any? %>
+      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+        <h2><%= pluralize(discover_flight.errors.count, "error") %> prohibited this discover_flight from being saved:</h2>
 
-      <ul>
-        <% discover_flight.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% discover_flight.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div x-show="currentPage === 1" class="flex flex-col justify-between">
+      <div class="">
+        <div class="my-5">
+          <%= form.label :first_name %>
+          <%= form.text_field :first_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        </div>
+
+        <div class="my-5">
+          <%= form.label :last_name %>
+          <%= form.text_field :last_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        </div>
+
+        <div class="my-5">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        </div>
+
+        <div class="my-5">
+          <%= form.label :phone %>
+          <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        </div>
+
+        <div class="my-5">
+          <span class="block font-medium text-gray-700 mb-2">Select aircraft type:</span>
+          <div class="flex items-center">
+            <label class="inline-flex items-center mr-6">
+              <%= form.radio_button :aircraft, 'airplanes', class: "form-radio h-5 w-5 text-gray-600" %>
+              <span class="ml-2 text-gray-700">Airplanes</span>
+            </label>
+
+            <label class="inline-flex items-center mr-6">
+              <%= form.radio_button :aircraft, 'helicopters', class: "form-radio h-5 w-5 text-gray-600" %>
+              <span class="ml-2 text-gray-700">Helicopters</span>
+            </label>
+
+            <label class="inline-flex items-center">
+              <%= form.radio_button :aircraft, 'both', class: "form-radio h-5 w-5 text-gray-600" %>
+              <span class="ml-2 text-gray-700">Both</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="inline">
+        <input type="button" x-on:click="currentPage = 2" class="btn-primary" value="NEXT">
+      </div>
+    </div>
+
+    <div x-show="currentPage === 2" x-cloak>
+      <%= form.label :preferred_date %>
+      <%= form.date_field :preferred_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+
+      <div class="my-5">
+        <%= form.label :preferred_availability %>
+        <%= form.text_field :preferred_availability, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+
+      <div class="flex justify-between">
+        <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="Previous">
+        <input type="button" class="btn-primary" @click="currentPage++" value="Next">
+      </div>
+    </div>
+
+    <div x-show="currentPage === 3" x-cloak>
+      <%= form.label :alternate_date %>
+      <%= form.date_field :alternate_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+
+      <div class="my-5">
+        <%= form.label :alternate_availability %>
+        <%= form.text_field :alternate_availability, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+
+      <div class="my-5">
+        <%= form.label :comments %>
+        <%= form.text_area :comments, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      </div>
+
+      <div class="flex justify-between">
+        <input type="button" class="btn-primary" value="PREVIOUS" @click="currentPage--">
+        <div class="inline">
+          <%= form.submit class: "btn-primary" %>
+        </div>
+      </div>
     </div>
   <% end %>
-
-  <div class="my-5">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :aircraft %>
-    <%= form.text_field :aircraft, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :preferred_date %>
-    <%= form.date_field :preferred_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :preferred_availability %>
-    <%= form.text_field :preferred_availability, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :alternate_date %>
-    <%= form.date_field :alternate_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :preferred_availability %>
-    <%= form.text_field :preferred_availability, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :comments %>
-    <%= form.text_area :comments, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
-  </div>
-<% end %>
+</div>
