@@ -13,35 +13,35 @@
     <% end %>
 
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
-      <div class="">
+      <div class="p-text">
         <div class="my-5">
           <%= form.label :first_name %>
-          <%= form.text_field :first_name, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :first_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
         </div>
 
         <div class="my-5">
           <%= form.label :last_name %>
-          <%= form.text_field :last_name, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :last_name, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
         </div>
 
         <div class="my-5">
           <%= form.label :email %>
-          <%= form.text_field :email, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :email, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
         </div>
 
         <div class="my-5">
           <%= form.label :phone %>
-          <%= form.text_field :phone, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :phone, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
         </div>
 
         <div class="my-5" x-data="{ selectedAircraft: '' }">
-          <span class="block font-medium text-slate-700 mb-2">Select aircraft type:</span>
-          <div class="flex flex-col">
+          <span class="mb-4 font-sans font-semibold">Select aircraft category</span>
+          <div class="flex flex-row justify-start gap-3">
             <label class="inline-flex items-center pb-5">
               <%= form.radio_button :aircraft, 'airplanes', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center border border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-slate-200': selectedAircraft == 'airplanes' }">
-                  <span class="px-4 py-2 text-sm font-medium text-slate-700">Airplanes</span>
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 hover:bg-slate-400" :class="{ 'bg-ideal-blue': selectedAircraft == 'airplanes' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': selectedAircraft == 'airplanes' }">Airplanes</span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'airplanes'"></span>
               </span>
@@ -50,8 +50,8 @@
             <label class="inline-flex items-center pb-5" >
               <%= form.radio_button :aircraft, 'helicopters', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center border border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-slate-200': selectedAircraft == 'helicopters' }">
-                  <span class="px-4 py-2 text-sm font-medium text-slate-700">Helicopters</span>
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 hover:bg-slate-400" :class="{ 'bg-ideal-blue': selectedAircraft == 'helicopters' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': selectedAircraft == 'helicopters' }">Helicopters</span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'helicopters'"></span>
               </span>
@@ -60,15 +60,14 @@
             <label class="inline-flex items-center pb-5" >
               <%= form.radio_button :aircraft, 'both', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
               <span class="relative">
-                <span class="inline-flex items-center justify-center border border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-slate-200': selectedAircraft == 'both' }">
-                  <span class="px-4 py-2 text-sm font-medium text-slate-700">Both</span>
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 hover:bg-slate-400" :class="{ 'bg-ideal-blue': selectedAircraft == 'both' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': selectedAircraft == 'both' }">Both</span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'both'"></span>
               </span>
             </label>
           </div>
         </div>
-
       </div>
 
       <div class="inline">
@@ -77,19 +76,44 @@
     </div>
 
     <div x-show="currentPage === 2" x-cloak>
-      <%= form.label :preferred_date %>
-      <%#= form.date_field :preferred_date, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" %>
-
-        <% today = Date.today %>
-        <% (0..9).each do |i| %>
-          <% date = today + i.days %>
-          <input type="button" name="date" value="<%= date.strftime('%Y-%m-%d') %>" class="btn-secondary py-2 px-3 text-sm rounded-full mx-1 my-1 hover:bg-blue-500 hover:text-white">
-        <% end %>
-
-      <div class="my-5">
-        <%= form.label :preferred_availability %>
-        <%= form.text_field :preferred_availability, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+      <div class="my-5" x-data="{ selectedDate: '' }">
+        <%= form.label "Select Discovery Flight Date", class: "font-semibold" %>
+        <div class="grid grid-cols-3 pt-5">
+          <% today = Date.today %>
+          <% (0..17).each do |i| %>
+            <% date = today + i.days %>
+            <label class="inline-flex items-center pb-5">
+              <%= form.radio_button :preferred_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "selectedDate" } %>
+              <span class="relative">
+                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-ideal-blue text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%B %d') %></span>
+                </span>
+                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
+              </span>
+            </label>
+          <% end %>
+        </div>
       </div>
+
+
+      <div class="my-5" x-data="{ selectedAvailability: '' }">
+        <span class="text-slate-700">Select preferred availability</span>
+        <div class="grid grid-cols-2 mt-5 gap-3">
+          <% availability_options = ['7 AM to 10 AM', '10 AM to 1 PM', '1 PM to 4 PM', '4 PM to 7 PM'] %>
+          <% availability_options.each do |option| %>
+            <label class="">
+              <%= form.radio_button :preferred_availability, option, { class: "hidden", "data-x-model" => "selectedAvailability" } %>
+              <span class="relative">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 " :class="{ 'bg-ideal-blue': selectedAvailability == '<%= option %>' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': selectedAvailability == '<%= option %>' }"><%= option %></span>
+                </span>
+                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAvailability = '<%= option %>'"></span>
+              </span>
+            </label>
+          <% end %>
+        </div>
+      </div>
+
 
       <div class="flex justify-between">
         <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
