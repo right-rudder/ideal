@@ -110,6 +110,7 @@ module.exports = {
         'cessna-sunset' : "url('cessna_sunset_dark.webp')",
         'dark-hangar' : "url('dark_hangar.webp')",
         'ideal-ramp' : "url('ideal_ramp.webp')",
+        'aerial' : "url('aerial.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
