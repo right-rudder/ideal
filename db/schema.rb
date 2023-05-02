@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_29_023103) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_02_105747) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -63,7 +63,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_29_023103) do
     t.text "why_pilot"
     t.string "previous_training"
     t.text "wings_lift"
-    t.text "want_cfi"
     t.text "goals"
     t.boolean "schedule_visit"
     t.date "preferred_date"
@@ -74,6 +73,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_29_023103) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "phone"
+    t.string "learn_style"
+    t.string "structure"
+    t.string "feedback"
+    t.string "approach"
   end
 
 end
