@@ -41,9 +41,23 @@
     </div>
 
     <div x-show="currentPage === 2" class="flex flex-col justify-between" x-cloak>
-      <div class="my-5">
-        <%= form.label :program, class: "text-slate-700 font-semibold text-lg"  %>
-        <%= form.text_field :program, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+      <%# PROGRAM %>
+      <div class="my-5" x-data="{ program: '' }">
+        <span class="text-slate-700 text-lg font-semibold">What type of training are you interested in?</span>
+        <div class="grid grid-cols-2 mt-5 gap-3">
+          <% availability_options = ['Helicopters', 'Airplanes'] %>
+          <% availability_options.each do |option| %>
+            <label class="">
+              <%= form.radio_button :program, option, { class: "hidden", "data-x-model" => "program" } %>
+              <span class="relative">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 w-5/6" :class="{ 'bg-ideal-blue': program == '<%= option %>' }">
+                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-50': program == '<%= option %>' }"><%= option %></span>
+                </span>
+                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="program = '<%= option %>'"></span>
+              </span>
+            </label>
+          <% end %>
+        </div>
       </div>
 
       <%# WHY BECOME A PILOT? %>
