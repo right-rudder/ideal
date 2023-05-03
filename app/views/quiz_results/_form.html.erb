@@ -1,15 +1,15 @@
 <%= form_with(model: quiz_result, class: "contents") do |form| %>
   <div class="max-w-lg px-5">
     <% if quiz_result.errors.any? %>
-      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <div x-data="{ showErrors: <%= quiz_result.errors.any? %> }" x-show="showErrors" x-init="setTimeout(() => showErrors = false, 10000)"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
         <h2><%= pluralize(quiz_result.errors.count, "mistakes") %> need to be fixed</h2>
-
         <ul>
           <% quiz_result.errors.each do |error| %>
             <li><%= error.full_message %></li>
           <% end %>
         </ul>
       </div>
+
     <% end %>
   </div>
   <div x-data="{ currentPage: 1 }" class="max-w-lg px-5">
