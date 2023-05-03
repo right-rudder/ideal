@@ -65,6 +65,6 @@ class QuizResultsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def quiz_result_params
-      params.require(:quiz_result).permit(:first_name, :last_name, :email, :in_us, :program, :why_pilot, :previous_training, :wings_lift, :want_cfi, :goals, :schedule_visit, :preferred_date, :preferred_availability, :alternate_date, :alternate_availability, :comments)
+      params.require(:quiz_result).permit(:first_name, :last_name, :email, :program, :why_pilot, :previous_training, :wings_lift, :goals, :preferred_date, :preferred_availability, :alternate_date, :alternate_availability, :comments, :phone, :learn_style, :structure, :approach, :guidance)
     end
 end
