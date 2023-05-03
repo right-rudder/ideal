@@ -111,6 +111,7 @@ module.exports = {
         'dark-hangar' : "url('dark_hangar.webp')",
         'ideal-ramp' : "url('ideal_ramp.webp')",
         'aerial' : "url('aerial.webp')",
+        'pilot-thumbs' : "url('pilot_thumbs.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
