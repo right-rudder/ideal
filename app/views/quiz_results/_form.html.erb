@@ -1,8 +1,8 @@
-<div x-data="{ currentPage: 1 }" class="max-w-lg px-5">
-  <%= form_with(model: quiz_result, class: "contents") do |form| %>
+<%= form_with(model: quiz_result, class: "contents") do |form| %>
+  <div class="max-w-lg px-5">
     <% if quiz_result.errors.any? %>
       <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-        <h2><%= pluralize(quiz_result.errors.count, "error") %> prohibited this quiz_result from being saved:</h2>
+        <h2><%= pluralize(quiz_result.errors.count, "mistakes") %> need to be fixed</h2>
 
         <ul>
           <% quiz_result.errors.each do |error| %>
@@ -11,7 +11,8 @@
         </ul>
       </div>
     <% end %>
-
+  </div>
+  <div x-data="{ currentPage: 1 }" class="max-w-lg px-5">
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
       <div class="">
         <div class="my-3">
@@ -26,7 +27,7 @@
 
         <div class="my-3 flex flex-col">
           <%= form.label :email, class: "text-slate-700 font-semibold text-base" %>
-          <%= form.email_field :email, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :email, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
         </div>
 
         <div class="my-3 flex flex-col">
@@ -255,7 +256,7 @@
 
     <div x-show="currentPage === 6" class="flex flex-col justify-between" x-cloak>
 
-<div class="my-5" x-data="{ alternateDate: '' }">
+      <div class="my-5" x-data="{ alternateDate: '' }">
         <%= form.label "Select Alternate Flight Date", class: "font-semibold text-base" %>
         <div class="grid grid-cols-3 pt-5">
           <% today = Date.today %>
@@ -299,5 +300,5 @@
         
       </div>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
