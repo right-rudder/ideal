@@ -219,6 +219,14 @@
         <%= form.text_field :preferred_availability, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
       </div>
 
+      <div class="flex justify-between">
+        <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
+        <input type="button" class="btn-primary" @click="currentPage++" value="NEXT">
+      </div>
+    </div>
+
+    <div x-show="currentPage === 6" class="flex flex-col justify-between" x-cloak>
+
       <div class="my-3">
         <%= form.label :alternate_date %>
         <%= form.date_field :alternate_date, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
@@ -227,6 +235,10 @@
       <div class="my-3">
         <%= form.label :alternate_availability %>
         <%= form.text_field :alternate_availability, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+      </div>
+
+      <div class="flex justify-between">
+        <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
       </div>
 
 
