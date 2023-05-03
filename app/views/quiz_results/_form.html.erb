@@ -260,7 +260,7 @@
     <div x-show="currentPage === 6" class="flex flex-col justify-between" x-cloak>
 
       <div class="my-5" x-data="{ alternateDate: '' }">
-        <%= form.label "Select Alternate Flight Date", class: "font-semibold text-base" %>
+        <%= form.label "Select an Alternate Date", class: "font-semibold text-base" %>
         <div class="grid grid-cols-3 pt-5">
           <% today = Date.today %>
           <% (0..17).each do |i| %>
