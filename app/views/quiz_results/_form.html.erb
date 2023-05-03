@@ -197,9 +197,18 @@
 
       <div class="my-3">
         <div class="text-slate-700 font-semibold text-lg mb-2">Would you like to schedule a visit to Ideal Aviation?</div>
-        <%= form.check_box :schedule_visit, class: "block mt-2 h-5 w-5" %>
+        <div class="flex gap-10">
+        <%= form.submit "NO", class: "btn-primary" %>
+        <input type="button" class="btn-primary" @click="currentPage++" value="YES">
+        </div>
       </div>
 
+      <div class="flex justify-between mt-16">
+        <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
+      </div>
+    </div>
+
+    <div x-show="currentPage === 5" class="flex flex-col justify-between" x-cloak>
       <div class="my-3">
         <%= form.label :preferred_date %>
         <%= form.date_field :preferred_date, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
