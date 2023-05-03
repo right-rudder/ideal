@@ -230,7 +230,7 @@
 
 
       <div class="my-5" x-data="{ selectedAvailability: '' }">
-        <span class="text-slate-700 font-semibold text-base">Select preferred availability</span>
+        <span class="text-slate-700 font-semibold text-base">Select availability</span>
         <div class="grid grid-cols-2 mt-5 gap-3">
           <% availability_options = ['7 AM to 10 AM', '10 AM to 1 PM', '1 PM to 4 PM', '4 PM to 7 PM'] %>
           <% availability_options.each do |option| %>
@@ -255,23 +255,48 @@
 
     <div x-show="currentPage === 6" class="flex flex-col justify-between" x-cloak>
 
-      <div class="my-3">
-        <%= form.label :alternate_date %>
-        <%= form.date_field :alternate_date, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+<div class="my-5" x-data="{ alternateDate: '' }">
+        <%= form.label "Select Alternate Flight Date", class: "font-semibold text-base" %>
+        <div class="grid grid-cols-3 pt-5">
+          <% today = Date.today %>
+          <% (0..17).each do |i| %>
+            <% date = today + i.days %>
+            <label class="inline-flex items-center pb-5">
+              <%= form.radio_button :alternate_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "alternateDate" } %>
+              <span class="relative">
+                <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-ideal-blue text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
+                  <span class="px-4 py-2 text-sm" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%B %d') %></span>
+                </span>
+                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
+              </span>
+            </label>
+          <% end %>
+        </div>
       </div>
 
-      <div class="my-3">
-        <%= form.label :alternate_availability %>
-        <%= form.text_field :alternate_availability, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+      <div class="my-5" x-data="{ alternateAvailability: '' }">
+        <span class="text-slate-700 text-base font-semibold">Select alternate date availability</span>
+        <div class="grid grid-cols-2 mt-5 gap-3">
+          <% availability_options = ['7 AM to 10 AM', '10 AM to 1 PM', '1 PM to 4 PM', '4 PM to 7 PM'] %>
+          <% availability_options.each do |option| %>
+            <label class="">
+              <%= form.radio_button :alternate_availability, option, { class: "hidden", "data-x-model" => "alternateAvailability" } %>
+              <span class="relative">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 " :class="{ 'bg-ideal-blue': alternateAvailability == '<%= option %>' }">
+                  <span class="px-4 py-2 font-sans text-sm text-slate-800" :class="{ 'text-slate-50': alternateAvailability == '<%= option %>' }"><%= option %></span>
+                </span>
+                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateAvailability = '<%= option %>'"></span>
+              </span>
+            </label>
+          <% end %>
+        </div>
       </div>
 
       <div class="flex justify-between">
         <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
+        <%= form.submit "SEND", class: "btn-primary" %>
       </div>
-
-
-      <div class="inline">
-        <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+        
       </div>
     </div>
   <% end %>
