@@ -12,7 +12,7 @@
 
     <% end %>
   </div>
-  <div x-data="{ currentPage: 1 }" class="max-w-lg px-5">
+  <div x-data="{ currentPage: 1 }" class="lg:w-[28rem] px-5">
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
       <div class="">
         <div class="my-3">
@@ -179,7 +179,7 @@
         <%= form.hidden_field :guidance, "x-bind:value": "guidance.concat(otherGuidance ? [otherGuidance] : []).join(', ')" %>
       </div>
 
-      <div class="flex justify-between">
+      <div class="flex justify-between mt-5">
         <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
         <input type="button" class="btn-primary" @click="currentPage++" value="NEXT">
       </div>
