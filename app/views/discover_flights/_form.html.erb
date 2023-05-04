@@ -1,9 +1,12 @@
-<div x-data="{ currentPage: 1 }" class="max-w-sm px-5">
-  <%= form_with(model: discover_flight, class: "contents") do |form| %>
-    <% if discover_flight.errors.any? %>
-      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-        <h2><%= pluralize(discover_flight.errors.count, "error") %> prohibited this discover_flight from being saved:</h2>
 
+<%= form_with(model: discover_flight, class: "contents") do |form| %>
+  <div class="max-w-lg px-5">
+    <% if discover_flight.errors.any? %>
+      
+      <!--Commented out has it disappearing after 10 secs-->
+      <!--<div x-data="{ showErrors: <%= discover_flight.errors.any? %> }" x-show="showErrors" x-init="setTimeout(() => showErrors = false, 10000)"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">-->
+      <div x-data="{ showErrors: <%= discover_flight.errors.any? %> }"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+        <h2><%= pluralize(discover_flight.errors.count, "mistake") %> need to be fixed</h2>
         <ul>
           <% discover_flight.errors.each do |error| %>
             <li><%= error.full_message %></li>
@@ -11,7 +14,9 @@
         </ul>
       </div>
     <% end %>
-
+  </div>
+  
+  <div x-data="{ currentPage: 1 }" class="max-w-sm px-5">
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
       <div class="">
         <div class="my-5 flex flex-col">
@@ -172,7 +177,7 @@
       <div class="flex justify-between">
         <input type="button" class="btn-primary" value="PREVIOUS" @click="currentPage--">
         <div class="inline">
-          <%= form.submit "SCHEDULE", class: "btn-primary" %>
+          <%= form.submit "SCHEDULE", class: "btn-primary", data: { turbo: false } %>
         </div>
       </div>
 

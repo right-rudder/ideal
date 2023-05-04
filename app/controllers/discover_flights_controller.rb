@@ -25,7 +25,7 @@ class DiscoverFlightsController < ApplicationController
 
     respond_to do |format|
       if @discover_flight.save
-        format.html { redirect_to discover_flight_url(@discover_flight), notice: "Discover flight was successfully created." }
+        format.html { redirect_to discovery_confirmation_path, notice: "#{@discover_flight.first_name}" }
         format.json { render :show, status: :created, location: @discover_flight }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,17 +35,17 @@ class DiscoverFlightsController < ApplicationController
   end
 
   # PATCH/PUT /discover_flights/1 or /discover_flights/1.json
-  def update
-    respond_to do |format|
-      if @discover_flight.update(discover_flight_params)
-        format.html { redirect_to discover_flight_url(@discover_flight), notice: "Discover flight was successfully updated." }
-        format.json { render :show, status: :ok, location: @discover_flight }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @discover_flight.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #def update
+  #  respond_to do |format|
+  #    if @discover_flight.update(discover_flight_params)
+  #      format.html { redirect_to discover_flight_url(@discover_flight), notice: "Discover flight was successfully updated." }
+  #      format.json { render :show, status: :ok, location: @discover_flight }
+  #    else
+  #      format.html { render :edit, status: :unprocessable_entity }
+  #      format.json { render json: @discover_flight.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /discover_flights/1 or /discover_flights/1.json
   def destroy
