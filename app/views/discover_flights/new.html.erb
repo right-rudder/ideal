@@ -13,7 +13,7 @@
 </header>
 
 <turbo-frame id="quiz-frame">
-  <div class=" lg:absolute right-5 top-10 z-50 bg-white rounded-xl border pb-5">
+  <div class=" lg:absolute right-5 top-10 z-50 bg-white rounded-xl border pb-5 lg:overflow-y-auto lg:max-h-[92vh]">
     <%= render "form", discover_flight: @discover_flight %>
   </div>
 </turbo-frame>

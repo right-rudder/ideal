@@ -1,6 +1,6 @@
 
 <%= form_with(model: discover_flight, class: "contents") do |form| %>
-  <div class="max-w-lg px-5">
+  <div class="max-w-sm px-5">
     <% if discover_flight.errors.any? %>
       
       <!--Commented out has it disappearing after 10 secs-->
@@ -16,7 +16,7 @@
     <% end %>
   </div>
   
-  <div x-data="{ currentPage: 1 }" class="max-w-sm px-5">
+  <div x-data="{ currentPage: 1 }" class="lg:w-[25rem] px-5">
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
       <div class="">
         <div class="my-5 flex flex-col">
