@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # Discovery flight form
   get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
-  get 'discovery-flight-confirmation', to: 'messages#confirmation', as: :discovery_confirmation
+  get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
 
   # Check out form
   get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
