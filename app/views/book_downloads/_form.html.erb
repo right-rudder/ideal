@@ -1,17 +1,30 @@
-<%= form_with(model: book_download, class: "contents") do |form| %>
-  <% if book_download.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(book_download.errors.count, "error") %> prohibited this book_download from being saved:</h2>
+<%= form_with(model: @book_download, class: "contents") do |form| %>
+  <% if @book_download.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 text-sm font-medium rounded-lg mb-5">
+      <h2><%= pluralize(@book_download.errors.count, "error") %> prohibited you from continuing:</h2>
 
       <ul>
-        <% book_download.errors.each do |error| %>
+        <% @book_download.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  <div class="w-full">
+    <div class="mb-5">
+      <%= form.text_field :name, placeholder: "Name", class: " shadow text-black rounded-md border border-gray-200 focus:border-ideal-blue focus:ring-ideal-blue px-3 py-2 w-full" %>
+    </div>
+    <div class="mb-5">
+      <%= form.text_field :phone, placeholder: "Phone", class: " shadow text-black rounded-md border border-gray-200 focus:border-ideal-blue focus:ring-ideal-blue px-3 py-2 w-full" %>
+    </div>
+    <div class="mb-5">
+      <%= form.email_field :email, placeholder: "Email", class: " shadow text-black rounded-md border border-gray-200 focus:border-ideal-blue focus:ring-ideal-blue px-3 py-2 w-full"  %>
+    </div>
+    <%#= invisible_captcha :confirm_email, :book_download %>
+    <div class="inline">
+      <%= form.submit "Download", class: "btn-primary uppercase" %>
+    </div>
   </div>
+  Please enter your information to download your booklet.
+
 <% end %>

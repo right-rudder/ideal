@@ -65,6 +65,6 @@ class BookDownloadsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_download_params
-      params.fetch(:book_download, {})
+      params.require(:book_download).permit(:name, :email, :phone)
     end
 end
