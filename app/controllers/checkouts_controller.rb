@@ -25,7 +25,7 @@ class CheckoutsController < ApplicationController
 
     respond_to do |format|
       if @checkout.save
-        format.html { redirect_to checkout_url(@checkout), notice: "Checkout was successfully created." }
+        format.html { redirect_to checkout_confirmation_path, notice: "#{@checkout.first_name}" }
         format.json { render :show, status: :created, location: @checkout }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,17 +35,17 @@ class CheckoutsController < ApplicationController
   end
 
   # PATCH/PUT /checkouts/1 or /checkouts/1.json
-  def update
-    respond_to do |format|
-      if @checkout.update(checkout_params)
-        format.html { redirect_to checkout_url(@checkout), notice: "Checkout was successfully updated." }
-        format.json { render :show, status: :ok, location: @checkout }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @checkout.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #def update
+  #  respond_to do |format|
+  #    if @checkout.update(checkout_params)
+  #      format.html { redirect_to checkout_url(@checkout), notice: "Checkout was successfully updated." }
+  #      format.json { render :show, status: :ok, location: @checkout }
+  #    else
+  #      format.html { render :edit, status: :unprocessable_entity }
+  #      format.json { render json: @checkout.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /checkouts/1 or /checkouts/1.json
   def destroy

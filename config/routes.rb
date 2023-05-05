@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   # Check out form
   get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
+  get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation
 
 
   # Static Pages
