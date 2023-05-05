@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   # Quiz form
   get 'quiz', to: 'quiz_results#new', as: :quiz
+  get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Discovery flight form
   get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
