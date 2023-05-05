@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
   get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation
 
+  # Book Download
+  get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Static Pages
   get 'how-to-become-a-pilot', to: 'pages#become_a_pilot', as: :become

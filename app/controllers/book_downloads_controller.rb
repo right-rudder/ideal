@@ -1,6 +1,10 @@
 class BookDownloadsController < ApplicationController
   before_action :set_book_download, only: %i[ show edit update destroy ]
 
+  def confirmation
+    render 'confirm'
+  end
+
   # GET /book_downloads or /book_downloads.json
   def index
     @book_downloads = BookDownload.all
@@ -25,7 +29,7 @@ class BookDownloadsController < ApplicationController
 
     respond_to do |format|
       if @book_download.save
-        format.html { redirect_to book_download_url(@book_download), notice: "Book download was successfully created." }
+        format.html { redirect_to book_download_confirmation_path, notice: @book_download.name }
         format.json { render :show, status: :created, location: @book_download }
       else
         format.html { render :new, status: :unprocessable_entity }
