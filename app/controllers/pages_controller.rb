@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def become_a_pilot
+    @book_download = BookDownload.new
   end
 
   def pilot_programs
