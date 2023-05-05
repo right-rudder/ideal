@@ -1,0 +1,2 @@
+class BookDownload < ApplicationRecord
+end
