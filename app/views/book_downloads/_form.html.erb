@@ -1,7 +1,7 @@
 <%= form_with(model: @book_download, class: "contents") do |form| %>
   <% if @book_download.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 text-sm font-medium rounded-lg mb-5">
-      <h2><%= pluralize(@book_download.errors.count, "error") %> prohibited you from continuing:</h2>
+      <h2><%= pluralize(@book_download.errors.count, "mistake") %>need to be fixed</h2>
 
       <ul>
         <% @book_download.errors.each do |error| %>
