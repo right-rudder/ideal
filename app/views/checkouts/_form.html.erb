@@ -13,7 +13,7 @@
     <% end %>
   </div>
 
-  <div x-data="{ currentPage: 1 }" class="lg:w-[25rem] px-5">
+  <div x-data="{ currentPage: 1 }" class="lg:w-[32rem] px-5">
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
       <div class="">
         <div class="my-5 flex flex-col">
@@ -43,6 +43,84 @@
     </div>
 
     <div x-show="currentPage === 2" x-cloak>
+      
+      <div class="my-3" x-data="{ interested_aircraft: '' }">
+        <span class="text-slate-700 text-base font-semibold">Which aircraft are you interested in?</span>
+        <div class="grid grid-cols-2 mt-5 gap-3">
+          <% availability_options = ['Tecnam P92', 'Guimbal Cabri', 'Piper Pilot', 'Cirrus SR22', 'Cessna 172', 'Piper Seminole', 'Redbird Sim', 'Elite Sim' ] %>
+          <% availability_options.each do |option| %>
+            <label class="">
+              <%= form.radio_button :interested_aircraft, option, { class: "hidden", "data-x-model" => "interested_aircraft" } %>
+              <span class="relative">
+                <span class="inline-flex items-center justify-center text-slate-700 border border-slate-300 rounded-md bg-slate-50 w-5/6" :class="{ 'bg-ideal-blue': interested_aircraft == '<%= option %>' }">
+                  <span class="px-4 py-2 font-sans text-sm text-slate-800" :class="{ 'text-slate-50': interested_aircraft == '<%= option %>' }"><%= option %></span>
+                </span>
+                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="interested_aircraft = '<%= option %>'"></span>
+              </span>
+            </label>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="mt-5" x-data="{ certifications: [], otherCertifications: '' }">
+        <div class="text-slate-700 font-semibold text-base mb-2">What pilot certifications do you hold? (Select all that apply)</div>
+        
+        <div class="flex mb-2">
+          <input type="checkbox" x-model="certifications" value="None, but I want to start flying" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <span class="ml-2 text-slate-700">None, but I want to start flying</span>
+        </div>
+        
+        <div class="flex mb-2">
+          <input type="checkbox" x-model="certifications" value="Student Pilot" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <span class="ml-2 text-slate-700">Student Pilot</span>
+        </div>
+        
+        <div class="flex mb-2">
+          <input type="checkbox" x-model="certifications" value="Private Pilot" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <span class="ml-2 text-slate-700">Private Pilot</span>
+        </div>
+
+        <div class="flex mb-2">
+          <input type="checkbox" x-model="certifications" value="Instrument" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <span class="ml-2 text-slate-700">Instrument </span>
+        </div>
+
+        <div class="flex mb-2">
+          <input type="checkbox" x-model="certifications" value="Multi-Engine" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <span class="ml-2 text-slate-700">Multi-Engine </span>
+        </div>
+
+        <div class="flex mb-2">
+          <input type="checkbox" x-model="certifications" value="Commercial" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <span class="ml-2 text-slate-700">Commercial </span>
+        </div>
+
+        <div class="flex mb-2">
+          <input type="checkbox" x-model="certifications" value="CFI" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <span class="ml-2 text-slate-700">CFI </span>
+        </div>
+
+        <div class="flex mb-2">
+          <input type="checkbox" x-model="certifications" value="ATP" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <span class="ml-2 text-slate-700">ATP </span>
+        </div>
+        
+        <div class="flex mb-2">
+          <input type="checkbox" x-model="certifications" value="Other" class="form-checkbox h-5 w-5 text-ideal-blue focus:ring-0 mt-1">
+          <span class="ml-2 text-slate-700">Other</span>
+        </div>
+        
+        <div x-show="certifications.includes('Other')" class="mb-2">
+          <textarea type="text"
+            x-model="otherCertifications"
+            x-init="otherCertifications = ''"
+            placeholder="Enter other certifications you hold"
+            rows=4
+            class="form-textarea mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-ideal-blue focus:ring focus:ring-ideal-blue-light focus:ring-opacity-50 placeholder-slate-500"
+          ></textarea>
+        </div>
+        <%= form.hidden_field :certifications, "x-bind:value": "certifications.concat(otherCertifications ? [otherCertifications] : []).join(', ')" %>
+      </div>
 
       <div class="flex justify-between">
         <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
@@ -88,7 +166,6 @@
           <% end %>
         </div>
       </div>
-
 
       <div class="flex justify-between">
         <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
