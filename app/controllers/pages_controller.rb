@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   end
 
   def pilot_programs
+    @book_download = BookDownload.new
   end
 
   def aircraft_rental
@@ -19,9 +20,11 @@ class PagesController < ApplicationController
   end
 
   def airplane_training
+    @book_download = BookDownload.new
   end
 
   def helicopter_training
+    @book_download = BookDownload.new
   end
 
   def private_pilot
