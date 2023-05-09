@@ -46,18 +46,18 @@ module.exports = {
         },
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-168%)' },
+          '100%': { transform: 'translateX(-138%)' }, // 6 reviews = 168%
         },
         marquee2: {
-          '0%': { transform: 'translateX(168%)' },
+          '0%': { transform: 'translateX(138%)' },
           '100%': { transform: 'translateX(0%)' },
         },
         marqueemobile: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-174%)' },
+          '100%': { transform: 'translateX(-152%)' },
         },
         marquee2mobile: {
-          '0%': { transform: 'translateX(174%)' },
+          '0%': { transform: 'translateX(152%)' }, // 6 reviews = 174%
           '100%': { transform: 'translateX(0%)' },
         },
         'slide-in-left': {
