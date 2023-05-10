@@ -1,21 +1,23 @@
 <%= form_with(model: quiz_result, class: "contents") do |form| %>
-  <div class="max-w-lg px-5">
-    <% if quiz_result.errors.any? %>
-      
-      <!--Commented out has it disappearing after 10 secs-->
-      <!--<div x-data="{ showErrors: <%= quiz_result.errors.any? %> }" x-show="showErrors" x-init="setTimeout(() => showErrors = false, 10000)"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">-->
-      <div x-data="{ showErrors: <%= quiz_result.errors.any? %> }"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-        <h2><%= pluralize(quiz_result.errors.count, "mistake") %> need to be fixed</h2>
-        <ul>
-          <% quiz_result.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-      </div>
-
-    <% end %>
-  </div>
+  
   <div x-data="{ currentPage: 1 }" class="lg:w-[28rem] px-5">
+    <div class="max-w-lg">
+      <% if quiz_result.errors.any? %>
+        
+        <!--Commented out has it disappearing after 10 secs-->
+        <!--<div x-data="{ showErrors: <%= quiz_result.errors.any? %> }" x-show="showErrors" x-init="setTimeout(() => showErrors = false, 10000)"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">-->
+        <div x-data="{ showErrors: <%= quiz_result.errors.any? %> }"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+          <h2><%= pluralize(quiz_result.errors.count, "mistake") %> need to be fixed</h2>
+          <ul>
+            <% quiz_result.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+
+      <% end %>
+    </div>
+    <%# Need to put validation here.  Make a x-show div to display errors. %>
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
       <div class="">
         <div class="my-3">
@@ -35,9 +37,10 @@
 
         <div class="my-3 flex flex-col">
           <span class="text-slate-700 font-semibold text-base">Phone</span>
-          <%= form.text_field :phone, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
+          <%= form.text_field :phone, placeholder: "###-###-####", class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full placeholder:text-slate-300 focus:border-ideal-blue focus:ring-ideal-blue" %>
         </div>
 
+        <%# Then on this button, run a functions that checks if first_name, last_name is present and then if the email and phone are valid entries.  The email has an @ sign and the phone, when stripped of punctuation and spaces is equial to 10 characters %>
         <div class="inline">
           <input type="button" x-on:click="currentPage = 2" class="btn-primary" value="NEXT">
         </div>
@@ -190,7 +193,7 @@
 
     <div x-show="currentPage === 4" class="flex flex-col justify-between" x-cloak>
       <div class="my-3">
-        <div class="text-slate-700 font-semibold text-base mb-2">Why does a rotor blade or a wing generate lift?</div>
+        <div class="text-slate-700 font-semibold text-base mb-2">Just for fun, do you know how a wing generates lift?</div>
         <%= form.text_area :wings_lift, rows: 4, class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
       </div>
 
