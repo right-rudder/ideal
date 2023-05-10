@@ -1,19 +1,19 @@
 <%= form_with(model: checkout, class: "contents") do |form| %>
-  <div class="max-w-sm px-5">
-    <% if checkout.errors.any? %>
-      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-        <h2><%= pluralize(checkout.errors.count, "mistake") %> need to be fixed</h2>
-
-        <ul>
-          <% checkout.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  </div>
 
   <div x-data="{ currentPage: 1 }" class="lg:w-[28rem] px-5">
+    <div class="max-w-sm">
+      <% if checkout.errors.any? %>
+        <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+          <h2><%= pluralize(checkout.errors.count, "mistake") %> need to be fixed</h2>
+
+          <ul>
+            <% checkout.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
       <div class="">
         <div class="my-5 flex flex-col">
