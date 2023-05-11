@@ -47,7 +47,7 @@
       <div class="my-3" x-data="{ interested_aircraft: '' }">
         <span class="text-slate-700 text-base font-semibold">Which aircraft are you interested in?</span>
         <div class="grid grid-cols-2 mt-5 gap-3">
-          <% availability_options = ['Tecnam P92', 'Guimbal Cabri', 'Piper Pilot', 'Cirrus SR22', 'Cessna 172', 'Piper Seminole', 'Redbird Sim', 'Elite Sim' ] %>
+          <% availability_options = ['Tecnam P92', 'Guimbal Cabri', 'Piper Pilot', 'Cessna 172', 'Piper Seminole', 'Redbird Sim', 'Elite Sim' ] %>
           <% availability_options.each do |option| %>
             <label class="">
               <%= form.radio_button :interested_aircraft, option, { class: "hidden", "data-x-model" => "interested_aircraft" } %>
