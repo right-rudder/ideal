@@ -5,7 +5,7 @@ class MessageConfirmationMailer < ApplicationMailer
   def message_confirmation_email(message)
     @message = message
 
-    mail(to: @message.email, subject: "✈️ Thank you for contacting Ideal Aviation")
+    mail(to: @message.email, bcc: "info@idealaviationstlouis.com", subject: "✈️ Thank you for contacting Ideal Aviation")
   end
 
 end
