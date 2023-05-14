@@ -1,5 +1,6 @@
 class QuizResultsController < ApplicationController
   before_action :set_quiz_result, only: %i[ show edit update destroy ]
+  invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /quiz_results or /quiz_results.json
   def index
