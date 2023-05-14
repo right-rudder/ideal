@@ -90,4 +90,19 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { host: 'idealaviationstlouis.com' }
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: "mail.smtp2go.com",
+    port: 80,
+    domain: "idealaviationstlouis.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: "idealaviationstlouis.com",
+    password: ENV["SMTP2GO_PASS"]
+  }
 end
