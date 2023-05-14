@@ -1,5 +1,6 @@
 class DiscoverFlightsController < ApplicationController
   before_action :set_discover_flight, only: %i[ show edit update destroy ]
+  invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /discover_flights or /discover_flights.json
   def index
