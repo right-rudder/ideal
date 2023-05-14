@@ -30,7 +30,7 @@
 }
 
 
- /* Move reCAPTCHA v3 badge a little higher */
+ /* Move reCAPTCHA v3 badge a little higher 
  
  .grecaptcha-badge {
   width: 70px !important;
@@ -42,4 +42,4 @@
 
 .grecaptcha-badge:hover {
   width: 256px !important;
-}
+}*/
