@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[ show edit update destroy ]
+  invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /messages or /messages.json
   def index
@@ -34,7 +35,7 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save #&& (success || checkbox_success)
         MessageConfirmationMailer.message_confirmation_email(@message).deliver_later
-        #format.html { redirect_to contact_confirmation_path, notice: @message.body }
+        format.html { redirect_to contact_confirmation_path, notice: @message.body }
         #format.json { render :show, status: :created, location: @message }
       else
         format.html { 
