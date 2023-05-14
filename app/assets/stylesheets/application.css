@@ -30,3 +30,16 @@
 }
 
 
+ /* Move reCAPTCHA v3 badge a little higher */
+ 
+ .grecaptcha-badge {
+  width: 70px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  right: 4px !important;
+  bottom: 40px !important;
+}
+
+.grecaptcha-badge:hover {
+  width: 256px !important;
+}
