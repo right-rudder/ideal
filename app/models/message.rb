@@ -16,33 +16,42 @@ class Message < ApplicationRecord
 
   def to_lacrm
     api_key = ENV['LACRM_API']
-
     # Set the endpoint and headers
-    endpoint = "https://api.lessannoyingcrm.com/v2/"  
-     
-    #name = self.first_name + ' ' + self.last_name <- use for forms with first name and last name fields.
-
+    endpoint = "https://api.lessannoyingcrm.com/v2/"
     headers = {
-        "Authorization" => ENV['LACRM_API'],
-        "Content-Type" => "application/json"
+      "Authorization" => api_key,
+      "Content-Type" => "application/json"
+    }
+    # Get the user ID
+    user_payload = {
+      "Function" => "GetUser",
+      "Parameters" => {}
+    }
+    user_response = HTTParty.post(endpoint, headers: headers, body: user_payload.to_json)
+    if user_response.code == 200
+      user_id = JSON.parse(user_response.body)['UserId']
+    else
+      # Handle the error
+      user_id = nil
+    end
+    # Create the contact
+    contact_payload = {
+      "Function" => "CreateContact",
+      "Parameters" => {
+        "IsCompany" => false,
+        "AssignedTo" => user_id,
+        "Name" => "#{self.name}",
+        "Email" => "#{self.email}",
+        "Phone" => "#{self.phone}",
+        "Background Info" => "Originated from contact form on website",
+      }
     }
 
-    payload = {
-        "Function" => "CreateContact",
-        "Parameters" => {
-            "IsCompany" => false,
-            "AssignedTo" => "850228" ,  #This needs to be the USERID...
-            "Name" => "#{self.name}",
-            "Email" => "#{self.email}",
-            "Phone" => "#{self.phone}",
-            "Background Info" => "#{self.body}",
 
-        }
-    }
+    
 
-    # Make the POST request to create the contact
-    # response = HTTParty.post(endpoint, headers: headers, body: contact_data.to_json)
-    response = HTTParty.post(endpoint, headers: headers, body: payload.to_json)
+    response = HTTParty.post(endpoint, headers: headers, body: contact_payload.to_json)
+    
     if response.code == 200
       # API Contact created successfully
       self.lacrm_contact_id = JSON.parse(response.body)['ContactId']
@@ -51,5 +60,16 @@ class Message < ApplicationRecord
     end
     self.lacrm_response_code = response.code
     self.lacrm_response_body = response.body
-  end
+
+    # Add a note
+    note_payload = {
+      "Function" => "CreateNote",
+      "Parameters" => {
+        "ContactId" => "#{self.lacrm_contact_id}",
+        "Note" => "#{self.body}",
+      }
+    }
+    HTTParty.post(endpoint, headers: headers, body: note_payload.to_json)
+
+  end  
 end
