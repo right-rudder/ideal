@@ -66,6 +66,6 @@ class DiscoverFlightsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def discover_flight_params
-      params.require(:discover_flight).permit(:first_name, :last_name, :email, :phone, :aircraft, :preferred_date, :preferred_availability, :alternate_date, :preferred_availability, :comments)
+      params.require(:discover_flight).permit(:first_name, :last_name, :email, :phone, :aircraft, :preferred_date, :preferred_availability, :alternate_date, :alternate_availability, :comments)
     end
 end
