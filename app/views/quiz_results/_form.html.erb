@@ -40,12 +40,12 @@
           <%= form.text_field :phone, placeholder: "###-###-####", class: "block rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full placeholder:text-slate-300 focus:border-ideal-blue focus:ring-ideal-blue" %>
         </div>
 
-        <% if @show_checkbox_recaptcha %>
-          <%= recaptcha_tags %>
-          <div class="mb-10"></div>
-        <% else %>
-          <%= recaptcha_v3(action: 'quiz', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
-        <% end %>
+        <%# if @show_checkbox_recaptcha %>
+          <%#= recaptcha_tags %>
+          <!--<div class="mb-10"></div>-->
+        <%# else %>
+          <%#= recaptcha_v3(action: 'quiz', site_key: ENV['RECAPTCHA_SITE_KEY']) %>
+        <%# end %>
 
         <%# Then on this button, run a functions that checks if first_name, last_name is present and then if the email and phone are valid entries.  The email has an @ sign and the phone, when stripped of punctuation and spaces is equial to 10 characters %>
         <div class="inline">
