@@ -1,24 +1,24 @@
 <%= form_with(model: quiz_result, class: "contents") do |form| %>
   
   <div x-data="{ currentPage: 1 }" class="lg:w-[28rem] px-5">
-    <div class="max-w-lg">
-      <% if quiz_result.errors.any? %>
-        
-        <!--Commented out has it disappearing after 10 secs-->
-        <!--<div x-data="{ showErrors: <%= quiz_result.errors.any? %> }" x-show="showErrors" x-init="setTimeout(() => showErrors = false, 10000)"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">-->
-        <div x-data="{ showErrors: <%= quiz_result.errors.any? %> }"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-          <h2><%= pluralize(quiz_result.errors.count, "mistake") %> need to be fixed</h2>
-          <ul>
-            <% quiz_result.errors.each do |error| %>
-              <li><%= error.full_message %></li>
-            <% end %>
-          </ul>
-        </div>
-
-      <% end %>
-    </div>
     <%# Need to put validation here.  Make a x-show div to display errors. %>
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
+      <div class="max-w-lg">
+        <% if quiz_result.errors.any? %>
+          
+          <!--Commented out has it disappearing after 10 secs-->
+          <!--<div x-data="{ showErrors: <%= quiz_result.errors.any? %> }" x-show="showErrors" x-init="setTimeout(() => showErrors = false, 10000)"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">-->
+          <div x-data="{ showErrors: <%= quiz_result.errors.any? %> }"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+            <h2><%= pluralize(quiz_result.errors.count, "mistake") %> need to be fixed</h2>
+            <ul>
+              <% quiz_result.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+
+        <% end %>
+      </div>
       <div class="">
         <div class="my-3">
           <%= form.label :first_name, class: "text-slate-700 font-semibold text-base" %>
