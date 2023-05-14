@@ -98,6 +98,8 @@ GEM
     importmap-rails (1.1.5)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    invisible_captcha (2.1.0)
+      rails (>= 5.2)
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
@@ -169,7 +171,6 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
-    recaptcha (5.14.0)
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -229,11 +230,11 @@ DEPENDENCIES
   debug
   figaro
   importmap-rails
+  invisible_captcha
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
-  recaptcha
   selenium-webdriver
   sprockets-rails
   stimulus-rails
