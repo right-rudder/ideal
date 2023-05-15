@@ -1,6 +1,3 @@
-require 'httparty'
-require 'json'
-
 class Message < ApplicationRecord
   before_validation :strip_phone_number
   after_save :to_lacrm
