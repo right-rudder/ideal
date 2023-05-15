@@ -8,14 +8,16 @@
 
       <h2 class="text-3xl font-bold mb-12 text-center">Latest articles</h2>
 
-      <% @posts.reverse_each do |post| %> 
+      <% @posts.sort_by(&:post_date).reverse_each do |post| %> 
         
           <div class="flex flex-wrap mb-6">
             <div class="grow-0 shrink-0 basis-auto w-full md:w-3/12 px-3 mb-6 md:mb-0 ml-auto">
               <div
                 class="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6"
                 data-mdb-ripple="true" data-mdb-ripple-color="light">
-                <%= image_tag post.feature_image.url, class: "w-full max-h-48 object-cover", alt: "picture for article: #{post.title}"%>
+                <% if post.feature_image.present?%>
+                  <%= image_tag post.feature_image.url, class: "w-full max-h-48 object-cover", alt: "picture for article: #{post.title}"%>
+                <%end%>
                 <%= link_to post, class: "" do%>
                   <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
                     style="background-color: rgba(251, 251, 251, 0.2)"></div>
