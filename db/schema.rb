@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_14_085652) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_15_015722) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -63,6 +63,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_14_085652) do
     t.string "lacrm_contact_id"
     t.string "lacrm_response_code"
     t.text "lacrm_response_body"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.date "post_date"
+    t.string "author"
+    t.text "post_content"
+    t.string "category"
+    t.string "meta_desription"
+    t.string "meta_keywords"
+    t.string "meta_tags"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "quiz_results", force: :cascade do |t|
