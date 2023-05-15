@@ -29,8 +29,9 @@ class BookDownloadsController < ApplicationController
 
     respond_to do |format|
       if @book_download.save
+        BookDownloadsMailer.book_downloads(@book_download).deliver_later
         format.html { redirect_to book_download_confirmation_path, notice: @book_download.name }
-        format.json { render :show, status: :created, location: @book_download }
+        #format.json { render :show, status: :created, location: @book_download }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @book_download.errors, status: :unprocessable_entity }
@@ -39,17 +40,18 @@ class BookDownloadsController < ApplicationController
   end
 
   # PATCH/PUT /book_downloads/1 or /book_downloads/1.json
-  def update
-    respond_to do |format|
-      if @book_download.update(book_download_params)
-        format.html { redirect_to book_download_url(@book_download), notice: "Book download was successfully updated." }
-        format.json { render :show, status: :ok, location: @book_download }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @book_download.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #def update
+  #  respond_to do |format|
+  #    if @book_download.update(book_download_params)
+  #      
+  #      format.html { redirect_to book_download_url(@book_download), notice: "Book download was successfully updated." }
+  #      format.json { render :show, status: :ok, location: @book_download }
+  #    else
+  #      format.html { render :edit, status: :unprocessable_entity }
+  #      format.json { render json: @book_download.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /book_downloads/1 or /book_downloads/1.json
   def destroy
