@@ -13,7 +13,7 @@
     <%= link_to "New to Flying?", become_path, class: "link-underline hover:scale-105 transition duration-300"%>
 
     <div class="" @mouseover="resource_drop = true">
-      <%= link_to root_path do %>
+      <%= link_to pilot_resources_path do %>
         <div class="link-underline hover:scale-105 transition duration-300">Pilot Resources</div>
       <%end%>
       <div class="dropshadow-xl bg-ideal-blue rounded-b-xl absolute z-50 pb-5 pt-4 left-[10rem]" x-cloak x-show="resource_drop"
@@ -65,7 +65,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to root_path, class: "hover:text-slate-400" do %>
+            <%= link_to pilot_resources_path, class: "hover:text-slate-400" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 Training Resources
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-50 h-4 ml-3 opacity-0" 
