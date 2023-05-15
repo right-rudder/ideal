@@ -1,6 +1,6 @@
 class BookDownloadsController < ApplicationController
   before_action :set_book_download, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:index, :create, :confirmation]
+  before_action :authenticate_admin!, except: [:create, :confirmation]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   def confirmation
