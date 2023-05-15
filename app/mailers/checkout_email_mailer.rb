@@ -5,7 +5,7 @@ class CheckoutEmailMailer < ApplicationMailer
   def checkout_email(checkout)
     @checkout = checkout
 
-    mail(to: @checkout.email, bcc: "info@idealaviationstlouis.com", subject: "✈️ Ideal Aviation Aircraft Checkout Request")
+    mail(to: @checkout.email, bcc: ["info@idealaviationstlouis.com", "info@idealaviationstl.com"], subject: "✈️ Ideal Aviation Aircraft Checkout Request")
   end
 
 

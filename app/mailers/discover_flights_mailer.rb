@@ -5,7 +5,7 @@ class DiscoverFlightsMailer < ApplicationMailer
   def discover_flights_email(discover_flight)
     @discover_flight = discover_flight
 
-    mail(to: @discover_flight.email, bcc: "info@idealaviationstlouis.com", subject: "✈️ Discovery Flight at Ideal Aviation")
+    mail(to: @discover_flight.email, bcc: ["info@idealaviationstlouis.com", "info@idealaviationstl.com"], subject: "✈️ Discovery Flight at Ideal Aviation")
   end
 
 

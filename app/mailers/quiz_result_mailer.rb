@@ -5,7 +5,7 @@ class QuizResultMailer < ApplicationMailer
   def quiz_result_email(quiz_result)
     @quiz_result = quiz_result
 
-    mail(to: @quiz_result.email, bcc: "info@idealaviationstlouis.com", subject: "✈️ Thanks for Taking Our Quiz!")
+    mail(to: @quiz_result.email, bcc: ["info@idealaviationstlouis.com", "info@idealaviationstl.com"], subject: "✈️ Thanks for Taking Our Quiz!")
   end
 
 

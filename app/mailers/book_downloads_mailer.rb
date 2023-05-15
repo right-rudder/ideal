@@ -5,7 +5,7 @@ class BookDownloadsMailer < ApplicationMailer
   def book_downloads(book_download)
     @book_download = book_download
 
-    mail(to: @book_download.email, bcc: "info@idealaviationstlouis.com", subject: "✈️ Ideal Aviation FREE Pilot Training Booklet")
+    mail(to: @book_download.email, bcc: ["info@idealaviationstlouis.com", "info@idealaviationstl.com"], subject: "✈️ Ideal Aviation FREE Pilot Training Booklet")
   end
 
 
