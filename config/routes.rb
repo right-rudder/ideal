@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
-  
+  root "pages#home"
+
+
   post 'uploader/image', to: 'uploader#image' #add upload image to posts 
+  get 'news', to: 'posts#index', as: :news
+  get 'pilot-resources', to: 'posts#index', as: :pilot_resources
   resources :posts
+  
+  
+  
   resources :book_downloads
   resources :checkouts
   resources :discover_flights
   resources :quiz_results
   resources :messages
-  root "pages#home"
+  
   
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
@@ -41,7 +48,7 @@ Rails.application.routes.draw do
   get 'about-ideal-aviation', to: 'pages#about_us', as: :about_us
   get 'advanced_training', to: 'pages#advanced_training', as: :advanced_training
   get 'our-team', to: 'pages#our_team', as: :our_team
-  get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
+  #get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
   get 'careers', to: 'pages#careers', as: :careers
   
 
