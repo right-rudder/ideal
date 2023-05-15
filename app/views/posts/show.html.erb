@@ -13,6 +13,9 @@
     <div class="lg:border-1 lg:w-3/5 flex flex-col lg:rounded-xl lg:my-10 border-slate-300 bg-slate-50">
       <!--Header-->
       <%#=image_tag @post.feature_image.url, class:"w-full object-cover object-center lg:rounded-t-xl", alt: "picture for article: #{@post.title}"%>
+      <% if @post.feature_image.present?%>
+      <%=image_tag @post.feature_image.url, class:"w-full object-cover object-center lg:rounded-t-xl", alt: "picture for article: #{@post.title}"%>
+      <%end%>
       <!--Text-->
       <div class="">
         <div class="p-3">
