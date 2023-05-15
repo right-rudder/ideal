@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  
+  devise_scope :admins do
+    # Redirests signing out users back to sign-in
+    get "admins", to: "devise/sessions#new"
+  end
+
+  devise_for :admins, controllers: { registrations: "registrations" }
   root "pages#home"
 
 
