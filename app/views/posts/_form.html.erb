@@ -1,4 +1,4 @@
-<%= tinymce_assets %>
+<%#= tinymce_assets %>
 
 <%= form_with(model: post, class: "contents") do |form| %>
   <% if post.errors.any? %>
@@ -15,20 +15,20 @@
     </div>
   <% end %>
   <% if current_page?(new_post_path) %>
-    <h1 class="font-bold text-4xl lg:pl-20 lg:text-left text-center">New NOTAM</h1>
+    <h1 class="font-bold text-4xl lg:pl-20 lg:text-left text-center">New Post</h1>
   <% else %>
-    <h1 class="font-bold text-4xl lg:pl-20 lg:text-left text-center">Edit NOTAM</h1>
+    <h1 class="font-bold text-4xl lg:pl-20 lg:text-left text-center">Edit Post</h1>
   <% end %>
 
   <div class="flex flex-col lg:flex-row lg:px-10">
     <div class="px-10 lg:w-1/3 pr-10">
       <!--Blog Data-->
       <div class="my-5">
-        <%= form.select(:status, ['NOTAM Status','Published','Drafting'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
+        <%= form.select(:status, ['Post Status','Published','Drafting'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
       </div>
 
       <div class="my-5">
-        <%= form.select(:category, ['NOTAM Category','Business and Marketing','Aviation and Flying', 'News and Announcements'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
+        <%= form.select(:category, ['Post Category','Business and Marketing','Aviation and Flying', 'News and Announcements'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
       </div>
 
       <div class="my-5">
@@ -40,7 +40,7 @@
       </div>
 
       <div class="my-5">
-        <%= form.text_field :title, placeholder: "NOTAM Title", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        <%= form.text_field :title, placeholder: "Post Title", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       </div>
 
       <div class="my-5">
@@ -77,7 +77,7 @@
     <div class="lg:w-2/3 pt-10 lg:pt-0 lg:pl-5 lg:pr-10">
       <div class="lg:my-5">
         <%= form.text_area :post_body, rows: 30, class: "tinymce block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-        <%= tinymce %>
+        <%#= tinymce %>
       </div>
     </div>
   </div>
