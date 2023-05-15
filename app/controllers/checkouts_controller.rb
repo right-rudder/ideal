@@ -1,5 +1,6 @@
 class CheckoutsController < ApplicationController
   before_action :set_checkout, only: %i[ show edit update destroy ]
+  before_action :authenticate_admin!, except: [:index, :create, :new, :confirmation]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /checkouts or /checkouts.json
