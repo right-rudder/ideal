@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  post 'uploader/image', to: 'uploader#image' #add upload image to posts 
   resources :posts
   resources :book_downloads
   resources :checkouts
