@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   resources :book_downloads
   resources :checkouts
   resources :discover_flights
