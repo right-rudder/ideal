@@ -53,7 +53,7 @@ gem "bootsnap", require: false
 
 # MY GEMS
 gem "figaro"
-# gem "recaptcha"
+gem "recaptcha"
 gem 'invisible_captcha'
 gem "httparty"
 gem "image_processing", ">= 1.2"
