@@ -28,15 +28,7 @@
       </div>
 
       <div class="my-5">
-        <%= form.select(:category, ['Post Category','Business and Marketing','Aviation and Flying', 'News and Announcements'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
-      </div>
-
-      <div class="my-5">
-        <%= form.select(:featured, ['Featured?','Yes','No'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
-      </div>
-
-      <div class="my-5">
-        <%= form.select(:webinar, ['Webinar?','Yes','No'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
+        <%= form.select(:category, ['Category', 'News','Pilot Resources'],  {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'}) %>
       </div>
 
       <div class="my-5">
@@ -52,7 +44,7 @@
       </div> 
 
       <div class="my-5">
-        <%= form.text_area :meta_description, rows: 3, placeholder: "Meta Description", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        <%= form.text_area :meta_desription, rows: 3, placeholder: "Meta Description", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
       </div>
 
       <div class="my-5">
@@ -76,7 +68,7 @@
     <!--Blog editor-->
     <div class="lg:w-2/3 pt-10 lg:pt-0 lg:pl-5 lg:pr-10">
       <div class="lg:my-5">
-        <%= form.text_area :post_body, rows: 30, class: "tinymce block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+        <%= form.text_area :post_content, rows: 30, class: "tinymce block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
         <%#= tinymce %>
       </div>
     </div>
