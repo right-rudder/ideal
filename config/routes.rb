@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  # 404/500 pages
+  get 'errors/not_found'
+  get 'errors/internal_server_error'
+  match "/404", to: "errors#not_found", via: :all
+  match "/500", to: "errors#internal_server_error", via: :all
+
   devise_scope :admins do
     # Redirests signing out users back to sign-in
     get "admins", to: "devise/sessions#new"
