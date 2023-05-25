@@ -1,7 +1,123 @@
 <%= render "shared/header"%>
 <section class="bg-ifr-flight bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
 <h1 class="lg:text-5xl text-3xl font-semibold pb-10 text-center">Advanced Flight Training</h1>
-<h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Complete your instrument, commercial, multi-engine, and CFII at Ideal Aviation</h2>
+<h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Complete your instrument, commercial, multi-engine, and CFI at Ideal Aviation</h2>
 <%= link_to "GET STARTED", contact_path, class: "btn-primary"%>
 </section>
+
+<section class="flex flex-col lg:flex-row-reverse py-10 bg-gradient-to-b from-white to-blue-200">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Instrument Rating</h3>
+    <p class="w-3/4">
+      Ideal Aviation is committed to helping you become a proficient instrument pilot, whether you're a private pilot looking to enhance your abilities or an aspiring professional pilot. Through a blend of comprehensive ground school instruction and hands on flight training, you'll acquire the knowledge and skills needed to confidently navigate and operate aircraft using instrument references alone. 
+    </p>
+    <p class="w-3/4 pt-10 pb-10">
+      Gain the expertise to fly in diverse weather conditions and execute precise instrument approaches. Take charge of your aviation journey and open doors to exciting new opportunities with our Instrument Training program at Ideal Aviation.
+    </p>
+    <%= link_to "INSTRUMENT TRAINING", contact_path, class: "btn-primary"%>
+    <!--
+    <div class="grid grid-cols-1 lg:grid-cols-2 w-full ">
+      <div class="px-5">
+        <h4 class="font-semibold text-lg font-sans text-center pb-5">Part 61</h4>
+        <ul class="list-disc">
+          <li>40 hours of instrument time</li>
+          <li>50 hours of cross country time</li>
+          <li>15 hours of flight with a CFII</li>
+          <li>Minimum of 3 hours in the past 2 calendar months prior to the checkride</li>
+          <li>250 NM (airplane) or 100 NM (helicopter) cross country IFR flight</li>
+          <li>Successful completion of an instrument rating knowledge test</li>
+          <li>Passing the instrument rating practical test</li>
+        </ul>
+      </div>
+      <div class="px-5">
+        <h4 class="font-semibold text-lg font-sans text-center pb-5">Part 141</h4>
+        <ul class="list-disc">
+          <li>35 hours of instrument flight training</li>
+          <li>Completion of course syllabus and pass stagechecks</li>
+          <li>250 NM (airplane) or 100 NM (helicopter) cross country IFR flight</li>
+          <li>Successful completion of an instrument rating knowledge test</li>
+          <li>Passing the instrument rating practical test</li>
+        </ul>
+      </div>
+    </div>-->
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "above_cloud.webp", alt: "Flying above the clouds on an instrument flight", class: "lg:w-5/6"%>
+  </div>
+</section>
+
+<section class="flex flex-col lg:flex-row py-10 bg-slate-200">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Commercial Certificate</h3>
+    <p class="w-3/4">
+      Take your flying career to new heights with Ideal Aviation's Commercial Certificate program. Designed for aspiring professional pilots, our comprehensive training equips you with the skills and expertise needed to excel in the dynamic world of commercial aviation. Led by experienced instructors, our program focuses on advanced flight maneuvers, precise aircraft control, crew resource management, and advanced navigation techniques. 
+    </p>
+    <p class="w-3/4 pt-10 pb-5">
+      Gain real world experience through cross-country flights and simulated commercial operations, preparing you for a range of exciting career opportunities. With Ideal Aviation, you'll soar confidently into a rewarding future as a commercial pilot. Take the next step today and unlock your full potential in the world of aviation.
+    </p>
+    <%= link_to "COMMERCIAL PILOT", contact_path, class: "btn-primary"%>
+    <!--
+    <div class="grid grid-cols-1 lg:grid-cols-2 w-full ">
+      <div class="px-5 lg:pl-10">
+        <h4 class="font-semibold text-lg font-sans text-center pb-5">Part 61</h4>
+        <ul class="list-disc">
+          <li>250 hours of flight time with 100 hours pilot in command time</li>
+          <li>300 NM cross country at three different airports</li>
+          <li>10 hours of instrument training</li>
+          <li>Successful completion of the commercial pilot knowledge test</li>
+          <li>Passing the commercial pilot practical test</li>
+        </ul>
+      </div>
+      <div class="px-5 lg:pl-10">
+        <h4 class="font-semibold text-lg font-sans text-center pb-5">Part 61</h4>
+        <ul class="list-disc">
+          <li>190 hours of flight time</li>
+          <li>35 hours of ground instruction</li>
+          <li>Completion of course syllabus and pass stagechecks</li>
+          <li>250 NM cross country IFR flight</li>
+          <li>Successful completion of an instrument rating knowledge test</li>
+          <li>Passing the instrument rating practical test</li>
+        </ul>
+      </div>
+    </div>-->
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "helicopter_commercial_checkride.webp", alt: "Helicopter pilot passing commercial checkride", class: "lg:w-5/6"%>
+  </div>
+</section>
+
+<section class="flex flex-col lg:flex-row-reverse py-10 bg-gradient-to-b from-white to-blue-200">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Multi-Engine Certificate</h3>
+    <p class="w-3/4">
+      Experience the power and precision of multi-engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Ideal Aviation's Piper Seminole provides an exceptional platform for honing your multi-engine skills. 
+    </p>
+    <p class="w-3/4 pt-10 pb-10">
+      Whether you're aspiring to become a professional pilot or seeking to expand your horizons, our multi-engine training program at Ideal Aviation will equip you with the expertise and confidence needed to conquer the skies. Elevate your flying abilities and soar towards success with us.
+    </p>
+    <%= link_to "MULTI-ENGINE TRAINING", contact_path, class: "btn-primary"%>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "multi_engine_checkride_pass.webp", alt: "Pilot passing her multi engine checkride", class: "lg:w-5/6"%>
+  </div>
+</section>
+
+<section class="flex flex-col lg:flex-row py-10 bg-slate-200">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Certified Flight Instructor</h3>
+    <p class="w-3/4">
+      Our CFI Training program offers you the opportunity to share your knowledge and love for flying with aspiring pilots. As a CFI, you'll play a vital role in shaping the next generation of aviators, and we're here to provide you with the training and support you need to excel in this rewarding role. 
+    </p>
+    <p class="w-3/4 pt-10 pb-5">
+      With our experienced team of instructors and comprehensive training curriculum, you'll develop the instructional skills and aviation expertise necessary to guide and inspire future pilots. Join Ideal Aviation's CFI Training program and embark on a fulfilling journey of teaching, mentorship, and professional growth in the dynamic field of aviation.
+    </p>
+    <%= link_to "CFI TRAINING", contact_path, class: "btn-primary"%>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "ideal_cfi_2.webp", alt: "An Ideal Aviation CFI", class: "lg:w-5/6"%>
+  </div>
+</section>
+
+
+<%= render "shared/cta_were_experts"%>
 <%= render "shared/footer"%>
