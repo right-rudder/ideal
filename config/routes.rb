@@ -63,6 +63,14 @@ Rails.application.routes.draw do
   get 'our-team', to: 'pages#our_team', as: :our_team
   #get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
   get 'careers', to: 'pages#careers', as: :careers
+
+
+  # Previous Pages that showed up on Google
+  get 'lessons-rentals', to: 'pages#aircraft_rental'
+  get 'lessons-rentals/fixed-wing-fleet', to: 'pages#fixed_wing'
+  get 'contact-us', to: 'messages#new'
+  get 'our-courses', to: 'pages#pilot_programs'
+
   
 
 end
