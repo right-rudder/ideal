@@ -1,3 +1,10 @@
+<%# Head / Meta Data %>
+<% title("Contact Ideal Aviation") %>
+<% meta_description("Let's meet.  Fill out the form below and get in touch with one of Ideal Aviation's team members.  We're here to help answer any questions you may have about pilot training.  We want to see you fly!") %>
+<% meta_keywords("nearest flight school in st. louis missouri, pilot training at downtown airport, pilot training part 141 st louis, part 141 st louis, right rudder marketing, become a pilot, helicopter training st louis, helicopter part 141 st louis") %>
+<%# og_image(image_url("meta_pic_rrm.webp")) %>
+<%# twitter_image(image_url("meta_pic_rrm_twitter.webp")) %>
+
 <%= form_with(model: message, class: "") do |form| %>
   <% if message.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
