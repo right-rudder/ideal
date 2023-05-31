@@ -1,6 +1,6 @@
 <nav class="sticky top-0 z-50 flex flex-row justify-between items-center drop-shadow-2xl bg-slate-50 transform-gpu">
   <div class="pl-3 lg:pl-0">
-    <%= link_to root_path do %>
+    <%= link_to root_path, data: { turbo: false } do %>
       <%= image_tag "ideal_logo.webp", alt: "ideal aviation logo", class: "lg:h-24 h-16"%>
     <% end %>
   </div>
@@ -20,7 +20,7 @@
 
     <!--FLY-->
     <div class="" x-on:mouseover="fly_drop = true">
-      <%= link_to "FLY NOW", become_path, class: "hover:text-ideal-blue link-underline" %>
+      <%= link_to "FLY NOW", become_path, data: { turbo: false }, class: "hover:text-ideal-blue link-underline" %>
       <div class="dropshadow-xl bg-slate-50 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[33rem]" x-cloak x-show="fly_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
@@ -31,7 +31,7 @@
         <!--Fly Menu-->
         <div class="flex flex-col gap-3 mx-5 items-start" >
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to discovery_flight_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to discovery_flight_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 DISCOVERY FLIGHT
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -44,7 +44,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to programs_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to programs_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 PILOT PROGRAMS
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -57,7 +57,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to aircraft_rental_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to aircraft_rental_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 AIRCRAFT RENTAL
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -74,7 +74,7 @@
     </div>
     <!--PILOT CERTIFICATION-->
     <div class="" x-on:mouseover="pilot_drop = true">
-      <%= link_to "PILOT CERTIFICATION" , programs_path, class: "hover:text-ideal-blue link-underline"%>
+      <%= link_to "PILOT CERTIFICATION" , programs_path, data: { turbo: false }, class: "hover:text-ideal-blue link-underline"%>
       <div class="dropshadow-xl bg-slate-50 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[19rem]" x-cloak x-show="pilot_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
@@ -85,7 +85,7 @@
         <!--PILOT Menu-->
         <div class="flex flex-col gap-3 mx-5 items-start">
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to airplane_training_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to airplane_training_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 AIRPLANE PILOT TRAINING
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -98,7 +98,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to helicopter_training_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to helicopter_training_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 HELICOPTER PILOT TRAINING
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -111,7 +111,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to private_pilot_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to private_pilot_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 PRIVATE PILOT TRAINING
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -124,7 +124,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to advanced_training_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to advanced_training_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 ADVANCED FLIGHT TRAINING
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -140,11 +140,11 @@
         
       </div>
     </div>
-    <%= link_to "NEWS", news_path, class: "link-underline hover:text-ideal-blue"%>  
+    <%= link_to "NEWS", news_path, data: { turbo: false }, class: "link-underline hover:text-ideal-blue"%>  
     
     <!--ABOUT-->
     <div class="" x-on:mouseover="about_drop = true">
-      <%= link_to "ABOUT US", about_us_path, class: "hover:text-ideal-blue link-underline" %>
+      <%= link_to "ABOUT US", about_us_path, data: { turbo: false }, class: "hover:text-ideal-blue link-underline" %>
       <div class="dropshadow-xl bg-slate-50 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[3rem]" x-cloak x-show="about_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
@@ -155,7 +155,7 @@
         <!--Fly Menu-->
         <div class="flex flex-col gap-3 mx-5 items-start" >
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to about_us_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to about_us_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 OUR STORY
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -168,7 +168,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to our_team_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to our_team_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 OUR TEAM
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -181,7 +181,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-ideal-blue">
-            <%= link_to location_path, class: "hover:text-ideal-blue" do %>
+            <%= link_to location_path, data: { turbo: false }, class: "hover:text-ideal-blue" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 WHERE TO FIND US
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-slate-400 h-4 ml-3 opacity-0" 
@@ -196,7 +196,7 @@
         </div>
       </div>
     </div>
-    <%= link_to "CONTACT", contact_path, class: "not-italic bg-ideal-blue text-slate-50 px-3 py-2 rounded-xl hover:bg-ideal-blue-light hover:scale-110 hover:drop-shadow-xl transition duration-300 z-0"%>
+    <%= link_to "CONTACT", contact_path, data: { turbo: false }, class: "not-italic bg-ideal-blue text-slate-50 px-3 py-2 rounded-xl hover:bg-ideal-blue-light hover:scale-110 hover:drop-shadow-xl transition duration-300 z-0"%>
 
 
 
