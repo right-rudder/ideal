@@ -44,4 +44,7 @@ class PagesController < ApplicationController
 
   def careers
   end
+
+  def tos
+  end
 end

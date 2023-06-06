@@ -63,6 +63,7 @@ Rails.application.routes.draw do
   get 'our-team', to: 'pages#our_team', as: :our_team
   #get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
   get 'careers', to: 'pages#careers', as: :careers
+  get 'privacy-policy', to: 'pages#tos', as: :tos
 
 
   # Previous Pages that showed up on Google
