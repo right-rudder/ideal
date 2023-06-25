@@ -1,9 +1,9 @@
 <%# Head / Meta Data %>
-<%# title(@post.title + " | Right Rudder Marketing Blog") %>
-<%# meta_description(if @post.meta_description? then @post.meta_description end) %>
-<%# meta_keywords(if @post.meta_keywords? then @post.meta_keywords end) %>
-<%# og_image(@post.feature_image.url) %>
-<%# twitter_image(@post.feature_image.url) %>
+<% title(@post.title + " | Ideal Aviation St. Louis") %>
+<% meta_description(if @post.meta_desription? then @post.meta_desription end) %>
+<% meta_keywords(if @post.meta_keywords? then @post.meta_keywords end) %>
+<% og_image(rails_storage_proxy_url(@post.feature_image)) %>
+<% twitter_image(rails_storage_proxy_url(@post.feature_image)) %>
 
 <%= render "shared/header" %>
 <div class="text-lg bg-gradient-to-r from-slate-100 to-blue-100">
@@ -46,5 +46,6 @@
     </div>
   </div>
 </div>
-<%#= render "shared/cta1" %>
+<%= render "shared/cta_fly_with" %>
+<%= render "shared/cta_next_steps" %>
 <%= render "shared/footer" %>
