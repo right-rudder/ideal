@@ -290,7 +290,7 @@
         </div>
       </div>
 
-      <div class="my-5" x-data="{ alternateAvailability: '' }">
+      <div class="mb-5" x-data="{ alternateAvailability: '' }">
         <span class="text-slate-700 text-base font-semibold">Select alternate date availability</span>
         <div class="grid grid-cols-2 mt-5 gap-3">
           <% availability_options = ['7 AM to 10 AM', '10 AM to 1 PM', '1 PM to 4 PM', '4 PM to 7 PM'] %>
@@ -308,11 +308,15 @@
         </div>
       </div>
 
+      <div class="mb-5 italic text-slate-600 text-xs">
+      NOTE: Dates requested may or may not be available depending on staff availability.  We will reach out to you shortly after submitting the form to confirm with you.  Please give us a call if you have any questions or would like to speak to one of our team members at <%= link_to "(618) 337-5845", "tel:1-618-337-5845" %>.  Looking forward to meeting you.
+      </div>
+
       <div class="flex justify-between">
         <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
         <%= form.submit "SEND", class: "btn-primary" %>
       </div>
-        
+
       </div>
     </div>
   </div>
