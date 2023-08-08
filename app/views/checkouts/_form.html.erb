@@ -141,7 +141,7 @@
               <%= form.radio_button :preferred_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "selectedDate" } %>
               <span class="relative">
                 <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-ideal-blue text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }">
-                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%B %d') %></span>
+                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': selectedDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': selectedDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
               </span>
@@ -186,7 +186,7 @@
               <%= form.radio_button :alternate_date, date.strftime('%Y-%m-%d'), { class: "hidden", "data-x-model" => "alternateDate" } %>
               <span class="relative">
                 <span class="inline-flex items-center justify-center bg-slate-50 border  border-slate-300 rounded-md cursor-pointer hover:border-slate-400" :class="{ 'bg-ideal-blue text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }">
-                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%B %d') %></span>
+                  <span class="px-4 py-2 text-base" :class="{ 'text-slate-700': alternateDate != '<%= date.strftime('%Y-%m-%d') %>', 'text-white': alternateDate == '<%= date.strftime('%Y-%m-%d') %>' }"><%= date.strftime('%b %d') %></span>
                 </span>
                 <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="alternateDate = '<%= date.strftime('%Y-%m-%d') %>'"></span>
               </span>
