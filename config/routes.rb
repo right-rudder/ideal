@@ -61,6 +61,12 @@ Rails.application.routes.draw do
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   get 'about-ideal-aviation', to: 'pages#about_us', as: :about_us
   get 'advanced_training', to: 'pages#advanced_training', as: :advanced_training
+  #Advanced Training Pages
+  get 'certified-flight-instructor', to: 'pages#certified_flight_instructor', as: :certified_flight_instructor
+  get 'commercial-rating', to: 'pages#commercial_rating', as: :commercial_rating
+  get 'multi-engine-rating', to: 'pages#multi_engine_rating', as: :multi_engine_rating
+  get 'instrument-rating', to: 'pages#instrument_rating', as: :instrument_rating
+
   get 'our-team', to: 'pages#our_team', as: :our_team
   #get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
   get 'careers', to: 'pages#careers', as: :careers
