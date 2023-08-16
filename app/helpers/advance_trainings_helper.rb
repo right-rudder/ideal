@@ -1,0 +1,2 @@
+module AdvanceTrainingsHelper
+end

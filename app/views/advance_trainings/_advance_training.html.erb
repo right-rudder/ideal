@@ -1,0 +1,37 @@
+<div id="<%= dom_id advance_training %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">First name:</strong>
+    <%= advance_training.first_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Last name:</strong>
+    <%= advance_training.last_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= advance_training.email %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Phone:</strong>
+    <%= advance_training.phone %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Comments:</strong>
+    <%= advance_training.comments %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Certificate sought:</strong>
+    <%= advance_training.certificate_sought %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this advance training", advance_training, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this advance training', edit_advance_training_path(advance_training), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
