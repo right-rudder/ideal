@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get 'commercial-certificate', to: 'advance_trainings#commercial_certificate', as: :commercial_certificate
   get 'multi-engine-rating', to: 'advance_trainings#multi_engine_rating', as: :multi_engine_rating
   get 'instrument-rating', to: 'advance_trainings#instrument_rating', as: :instrument_rating
+  get 'advanced-training-confirmation', to: 'advance_trainings#confirmation', as: :advanced_training_confirmation
   
   # Contact form
   get 'contact', to: 'messages#new', as: :contact

@@ -58,8 +58,7 @@ class AdvanceTrainingsController < ApplicationController
         #                else
         #                  root_path
         #                end
-        format.html { redirect_to redirect_path, notice: "Congrats #{@advance_training[:first_name]}! You're successfully enrolled!" }
-
+        format.html { redirect_to advanced_training_confirmation_path, notice: @advance_training[:first_name], alert: @advance_training[:certificate_sought] }
         format.json { render :show, status: :created, location: @advance_training }
       else
         format.html { render :new, status: :unprocessable_entity }
