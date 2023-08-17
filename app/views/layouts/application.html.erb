@@ -17,7 +17,6 @@
                                               |___/                 
 
     Nice to see you here.  Find new student pilots with Right Rudder Marketing.  https://rightruddermarketing.com -->
-
     <!--Title-->
     <title>
       <% if content_for?(:title) %>
@@ -26,13 +25,11 @@
         Ideal Aviation St. Louis
       <% end %>
     </title>
-
-    <!--Favicon--> 
+    <!--Favicon-->
     <%= favicon_link_tag asset_path('favicon/favicon.ico') %>
     <% %w(57 72 76 114 120 144 152 180).each do |size| %>
       <%= favicon_link_tag "favicon/apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
     <% end %>
-
     <!--Meta Tags-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -48,30 +45,25 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="1 days">
     <meta name="author" content="Right Rudder Marketing">
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="<%= request.original_url %>">
     <meta property="og:title" content="<%= if content_for?(:title) then yield(:title) else 'Ideal Aviation St. Louis' end %>">
     <meta property="og:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Ideal Aviation is the premier place for pilots in St. Louis.  Part 141 and Part 61 training for airplanes and helicopters.  From private pilot all the way to CFI and MEI, the team at Ideal Aviation is here for you.' end %>">
     <meta property="og:image" content="<%= if content_for?(:og_image) then yield(:og_image) else image_url('https://idealaviationstl.com/ideal_logo_600.webp') end %>">
-
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="<%= request.original_url %>">
     <meta property="twitter:title" content="<%= if content_for?(:title) then yield(:title) else "Ideal Aviation St. Louis" end %>">
     <meta property="twitter:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Ideal Aviation is the premier place for pilots in St. Louis.  Part 141 and Part 61 training for airplanes and helicopters.  From private pilot all the way to CFI and MEI, the team at Ideal Aviation is here for you.' end %>">
     <meta property="twitter:image" content="<%= if content_for?(:twitter_image) then yield(:twitter_image) else image_url('https://idealaviationstl.com/ideal_logo_600.webp') end %>">
-
     <!--CSS-->
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Poppins&display=swap" rel="stylesheet">
-
     <!--JS-->
     <%= javascript_importmap_tags %>
     <!-- Alpine Plugins -->
@@ -83,29 +75,24 @@
       [x-cloak] { display: none !important; }
     </style>
   </head>
-  
   <!-- Google Analytics // Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SVR01EH4G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SVR01EH4G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-3SVR01EH4G');
-</script>
-
-
-
+    gtag('config', 'G-3SVR01EH4G');
+  </script>
   <body>
     <main class="">
-    <% if admin_signed_in? %>
-      <!--USER MENU-->
-      <%= render "shared/admin_menu" %>
-    <% end %>
+      <% if admin_signed_in? %>
+        <!--USER MENU-->
+        <%= render "shared/admin_menu" %>
+      <% end %>
       <%= yield %>
     </main>
-
     <!--Call Rail-->
-    <script type="text/javascript" src="//cdn.callrail.com/companies/272286455/b900699f66a718ff6366/12/swap.js"></script> 
+    <script type="text/javascript" src="//cdn.callrail.com/companies/272286455/b900699f66a718ff6366/12/swap.js"></script>
   </body>
 </html>

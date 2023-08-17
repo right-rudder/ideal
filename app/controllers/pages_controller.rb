@@ -51,7 +51,7 @@ class PagesController < ApplicationController
   end
 
   def instrument_rating
-    
+    @advance_training = AdvanceTraining.new
   end
 
   def our_team

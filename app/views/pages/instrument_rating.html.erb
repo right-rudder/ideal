@@ -1,1 +1,179 @@
-<h1>INSTRUMENT RATING</h1>
+<%= render "shared/header"%>
+<% if flash[:notice].present? %>
+  <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<h2 class='text-center  font-extrabold text-5xl text-blue-900'>INSTRUMENT RATING</h2>
+<section class="bg-blue-900 py-20">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
+    <!--Text-->
+    <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
+      <!--Container for text to align them-->
+      <div class="lg:w-3/4 text-center lg:text-left">
+        <h2 class="font-extrabold text-4xl text-white pb-4">Embark on a Skyward Odyssey: Master the Instrument Rating</h2>
+        <!--Mobile image-->
+        <%= image_tag "bill_macon_peace.webp", class: "lg:hidden"%>
+        <div class="italic text-gray-300 text-center text-sm pb-10">
+          <!--Sub text-->
+        </div>
+        <div class="text-base text-white px-6 lg:pl-0 lg:pr-8">
+          <p class="pb-5">
+            Soar into the realm where instruments reign supreme – the Instrument Rating (IR). More than a rating, it's an odyssey. Picture navigating from point A to B, relying solely on instruments – an exhilarating skill that adds a new dimension to flying.
+          </p>
+          <p class="pb-5">
+            The IR isn't just about flying; it's about mastering the airspace system, radar techniques, and control. Your ticket to the world of turbine aircraft, elevating your journey to new heights. And for those who yearn for excitement, it's your maiden flight into clouds, a dance with darkness through Instrument Meteorological Conditions (IMC) and Instrument Flight Rules (IFR).
+          </p>
+          <p class="pb-5">
+            The Instrument Rating is your key to unlocking boundless possibilities in the expansive tapestry of the skies.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Desktop Picture-->
+    <div class="lg:w-1/2 py-6 lg:flex flex-col items-center hidden">
+      <div class="flex flex-col items-center lg:w-1/2">
+        <%= image_tag "bill_macon_peace.webp", class: "lg:rounded-xl"%>
+        <div class="italic text-gray-300 text-center text-sm">
+          <!--Subtext-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-gray-800 py-20">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
+    <!--Desktop Picture-->
+    <div class="lg:w-1/2 py-6 lg:flex flex-col items-center hidden">
+      <div class="flex flex-col items-center lg:w-1/2">
+        <%= image_tag "bill_macon_peace.webp", class: "lg:rounded-xl"%>
+        <div class="italic text-gray-300 text-center text-sm">
+          <!--Subtext-->
+        </div>
+      </div>
+    </div>
+    <!--Text-->
+    <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
+      <!--Container for text to align them-->
+      <div class="lg:w-3/4 text-center lg:text-left">
+        <h2 class="font-extrabold text-4xl text-white pb-4">Charting Your Path: Becoming a Pilot at Ideal Aviation</h2>
+        <!--Mobile image-->
+        <%= image_tag "bill_macon_peace.webp", class: "lg:hidden"%>
+        <div class="italic text-gray-300 text-center text-sm pb-10">
+          <!--Sub text-->
+        </div>
+        <div class="text-base text-white px-6 lg:pl-0 lg:pr-8">
+          <p class="pb-5">
+            Ideal Aviation is dedicated to nurturing your journey towards mastering the art of instrument piloting. Whether you're a private aviator seeking to elevate your skills or an ambitious professional pilot-to-be, we're here for you. Our program seamlessly blends comprehensive ground school instruction with immersive hands-on flight training, equipping you with the expertise to confidently navigate and operate aircraft relying solely on instruments.
+          </p>
+          <p class="pb-5">
+            Elevate your capabilities to conquer diverse weather scenarios and execute precise instrument approaches. Seize control of your aviation voyage and unlock doors to exhilarating new horizons through our Instrument Training program at Ideal Aviation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-blue-900 py-20">
+  <div class="flex flex-col lg:flex-row items-center justify-center">
+    <!--Text-->
+    <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
+      <!--Container for text to align them-->
+      <div class="lg:w-3/4 lg:text-left">
+        <h2 class="font-extrabold text-4xl text-white pb-4">Eligibility Requirements for an Instrument Rating</h2>
+        <div class="text-base text-white px-6 lg:pl-0 lg:pr-8">
+          <p class="pb-5">
+            Achieving an Instrument Rating opens up a new realm of aviation expertise. This coveted rating demands a solid foundation as you venture into the intricacies of instrument piloting.
+          </p>
+          <p class="my-2 pb-5 font-extrabold text-2xl">
+            To qualify, you must demonstrate proficiency in:
+            <ul class="list-disc list-inside border-b-2 pb-3 pl-3">
+              <li class="mb-2">Reading, speaking, writing, and comprehending English</li>
+              <li class="mb-2">Holding a current private pilot certificate or applying for one alongside the instrument rating</li>
+              <li class="mb-2">Receiving ground training from an authorized instructor or completing a home study course for aeronautical knowledge</li>
+              <li class="mb-2">Passing the instrument rating knowledge test with instructor endorsement</li>
+              <li class="mb-2">Completing the required flight training</li>
+              <p class="text-xs mt-4">Reference <a class="text-blue-300" href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61#61.65">14 CFR §61.65</a> for the entire list of eligibility requirements.</p>
+            </ul>
+          </p>
+          <p class="my-2 pb-5 font-extrabold text-2xl">
+            As you embark on this journey, you'll delve into a comprehensive curriculum, including topics like:
+            <ul class="list-disc list-inside border-b-2 pb-3 pl-3">
+              <li class="mb-2">IFR flight planning and filing</li>
+              <li class="mb-2">Navigation during departure, en route, and arrival in IFR conditions</li>
+              <li class="mb-2">Understanding airplane systems for IFR operations</li>
+              <li class="mb-2">Instrument flight deck checks</li>
+              <li class="mb-2">Air traffic control clearances and procedures</li>
+              <li class="mb-2">Various instrument approach procedures</li>
+              <li class="mb-2">Emergency operations within IFR</li>
+              <li class="mb-2">Weather information analysis</li>
+            </ul>
+          </p>
+          <p class="my-2 pb-5 font-extrabold text-2xl">
+            Your journey towards the Instrument Rating also involves achieving specific aeronautical flight experience:
+            <ul class="list-disc list-inside border-b-2 pb-3 pl-3">
+              <li class="mb-2">Clock in a minimum of 50 hours of cross-country pilot-in-command (PIC) time</li>
+              <li class="mb-2">Log 40 hours of instrument time, whether actual or simulated</li>
+              <li class="mb-2">Receive at least 15 hours of flight time from an authorized instructor</li>
+              <li class="mb-2">Conquer a cross-country flight of 250 nautical miles, meeting specific instrument requirements</li>
+              <p class="text-xs mt-4">Reference <a class="text-blue-300" href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61#61.65">14 CFR §61.65</a> for the entire list of eligibility requirements.</p>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10 bg-gray-800">
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 border-b-2 lg:border-b-0">
+    <div class="p-10 "><%=image_tag "ideal_group.webp", alt: "Group picture of Ideal Aviation team", class: "rounded-lg"%></div>
+    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 1. Emark On Flight Training</h3>
+    <p class="text-base w-3/4">
+      In this pivotal phase, you'll embark on a 50-hour cross-country flight journey, immersing yourself in diverse terrains, varied airspace, and intricate navigation scenarios. Guided by our seasoned instructors, you'll amass invaluable expertise in planning and executing cross-country flights, refining your mastery in flight planning, navigation precision, and effective communication. Furthermore, 40 dedicated hours will be invested in harnessing your instrument skills, teaching you the art of flying solely by instrument references. You'll become adept at precision approaches, mastering holding patterns, and navigating through instrument meteorological conditions (IMC).
+    </p>
+    <p class="text-base w-3/4 py-5">
+      Our team of expert instructors is committed to providing personalized guidance and immersive training, ensuring you not only become a proficient instrument pilot but also develop the unwavering confidence to conquer real-world aviation challenges.
+    </p>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 border-b-2 lg:border-b-0  lg:h-full">
+    <div class="p-10 lg:order-last"><%=image_tag "ideal_group.webp", alt: "Group picture of Ideal Aviation team", class: "rounded-lg"%></div>
+    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 2. Mastery through Written Assessment</h3>
+    <p class="text-base w-3/4">
+      Attaining true mastery of instrument flying necessitates a firm grasp of the underlying theoretical principles. During this phase, your focus will be on acing the instrument written exam. Our all-encompassing educational resources and experienced mentors are at your disposal, aiding you in fully comprehending the subject matter essential for success in the exam.
+    </p>
+    <p class="text-base w-3/4 py-5">
+      Ranging from the intricacies of Instrument Flight Rules (IFR) regulations and protocols to delving into meteorological theories and instrument-based navigation, we're committed to furnishing you with the proficiency and analytical skills necessary for excelling in the written assessment. Our approach includes mock tests, comprehensive deliberations, and personalized guidance, all intended to ensure your readiness to confidently conquer the exam. This phase will establish a sturdy bedrock for your journey into instrument flight training.
+    </p>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 border-b-2 lg:border-b-0">
+    <div class="p-10 "><%=image_tag "ideal_group.webp", alt: "Group picture of Ideal Aviation team", class: "rounded-lg"%></div>
+    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 3. Embarking on an Extensive Cross-Country Voyage</h3>
+    <p class="text-base w-3/4">
+      Embark on a thrilling and pivotal stage of your instrument training by immersing yourself in a substantial long cross-country flight. This phase represents a remarkable milestone, offering you the chance to apply your newly acquired instrument prowess in authentic scenarios. As you undertake this journey, you'll master advanced navigation techniques and employ intricate instrument procedures. Our adept instructors will be your guiding light as you meticulously plan and flawlessly execute a demanding cross-country expedition, braving diverse weather patterns, intricate airspace, and varied topography.
+    </p>
+    <p class="text-base w-3/4 py-5">
+      This firsthand encounter will sharpen your decision-making acumen, elevate your situational consciousness, and foster a profound comprehension of instrument flight dynamics. Confronting the intricacies of long-distance aviation will nurture the self-assurance and adeptness needed to adeptly navigate the instrument realm, ensuring your secure arrival at your intended destination.
+    </p>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
+    <div class="p-10 lg:order-last"><%=image_tag "ideal_group.webp", alt: "Group picture of Ideal Aviation team", class: "rounded-lg"%></div>
+    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 4. Culminating Evaluation - The Checkride</h3>
+    <p class="text-base w-3/4">
+      The pinnacle of your journey towards obtaining your instrument rating arrives in the form of meticulous preparation for the impending checkride. Our committed instructors are dedicated to furnishing you with an exhaustive checkride training regimen, ensuring your complete readiness to demonstrate your adeptness in instrument flying. Through intensive rehearsals, lifelike simulated checkride scenarios, and comprehensive feedback loops, we will meticulously refine your proficiencies and knowledge to surpass the evaluation benchmarks.
+    </p>
+    <p class="text-base w-3/4 py-5">
+      Our focus will be on perfecting your precision in instrument approaches, flawlessly executing intricate instrument procedures, and unveiling your impeccable decision-making prowess. With our unwavering support and guidance, you will approach the checkride with self-assurance and thorough preparation, poised to exhibit your expertise and secure the instrument rating that you've diligently earned.
+    </p>
+  </div>
+</section>
+<div class="bg-gray-800 block text-center text-4xl items-end  p-text text-gray-300 border-b-2 lg:border-b-0 pb-20 pt-5">
+  <a href="<%= new_advance_training_path(:certificate_sought => "instrument_rating", title: "Instrument Rating") %>" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 transform hover:scale-105">
+    Enroll Now for Your Instrument Rating
+  </a>
+</div>
+<%= render "shared/cta_discovery_flight_right"%>
+<%= render "shared/after_discovery"%>
+<%= render "shared/testimonials"%>
+<%= render "shared/cta_fly_with"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
