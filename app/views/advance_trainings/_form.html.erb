@@ -1,3 +1,15 @@
+<% advanced_page = case request.path
+  when instrument_rating_path
+    "Instrument Rating"
+  when commercial_certificate_path
+    "Commercial Certificate"
+  when multi_engine_rating_path_path
+    "Multi Engine Rating"
+  when multi_engine_rating_path_path
+    "Multi Engine Rating"
+  end
+%>
+
 <%= form_with(model: advance_training, class: "contents") do |form| %>
   <% if @advance_training.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
@@ -29,7 +41,7 @@
     <%= form.text_area :comments, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
   <div class="my-5">
-    <%= form.hidden_field :certificate_sought, value: @certificate_sought, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.hidden_field :certificate_sought, value: advanced_page, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
   <div class="inline">
     <%= form.submit "Submit Form",class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
