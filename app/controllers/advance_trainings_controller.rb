@@ -14,6 +14,7 @@ class AdvanceTrainingsController < ApplicationController
   def new
     @advance_training = AdvanceTraining.new
     @certificate_sought = params[:certificate_sought]
+    @certificate_sought_path = "#{params[:certificate_sought]}_path"
   end
 
   # GET /advance_trainings/1/edit
@@ -39,7 +40,8 @@ class AdvanceTrainingsController < ApplicationController
                         else
                           root_path
                         end
-        format.html { redirect_to redirect_path, notice: "Advance training was successfully created." }
+        format.html { redirect_to redirect_path, notice: "Congrats #{@advance_training[:first_name]}! You're successfully enrolled!" }
+
         format.json { render :show, status: :created, location: @advance_training }
       else
         format.html { render :new, status: :unprocessable_entity }
