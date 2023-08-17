@@ -158,10 +158,19 @@
   </div>
 </section>
 
+<section>
+  <div class="flex flex-col lg:flex-row">
+    <div class="lg:w-1/2">
+    </div>
+    <div class="lg:w-1/2">
+      <%= render "form", advance_training: @advance_training %>
+    </div>
+  </div>
 
 
-<%= render "shared/cta_discovery_flight_right"%>
-<%= render "shared/after_discovery"%>
+</section>
+
+
 <%= render "shared/testimonials"%>
 <%= render "shared/cta_fly_with"%>
 <%= render "shared/cta_next_steps"%>
