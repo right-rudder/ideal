@@ -33,27 +33,6 @@ class PagesController < ApplicationController
   def about_us
   end
 
-  def advanced_training
-
-  end
-
-  #Advanced Training Pages
-  def certified_flight_instructor
-
-  end
-
-  def commercial_rating
-
-  end
-
-  def multi_engine_rating
-
-  end
-
-  def instrument_rating
-    @advance_training = AdvanceTraining.new
-  end
-
   def our_team
   end
 

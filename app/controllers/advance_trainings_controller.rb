@@ -1,6 +1,24 @@
 class AdvanceTrainingsController < ApplicationController
   before_action :set_advance_training, only: %i[ show edit update destroy ]
 
+  def advanced_training
+  end
+
+
+  def certified_flight_instructor
+  end
+
+  def commercial_rating
+  end
+
+  def multi_engine_rating
+  end
+
+  def instrument_rating
+    @advance_training = AdvanceTraining.new
+  end
+
+
   # GET /advance_trainings or /advance_trainings.json
   def index
     @advance_trainings = AdvanceTraining.all

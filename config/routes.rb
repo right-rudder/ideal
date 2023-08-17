@@ -30,10 +30,11 @@ Rails.application.routes.draw do
   resources :advance_trainings
 
   #Advanced Training Pages
-  get 'certified-flight-instructor', to: 'pages#certified_flight_instructor', as: :certified_flight_instructor
-  get 'commercial-rating', to: 'pages#commercial_rating', as: :commercial_rating
-  get 'multi-engine-rating', to: 'pages#multi_engine_rating', as: :multi_engine_rating
-  get 'instrument-rating', to: 'pages#instrument_rating', as: :instrument_rating
+  get 'advanced_training', to: 'advance_trainings#advanced_training', as: :advanced_training
+  get 'certified-flight-instructor', to: 'advance_trainings#certified_flight_instructor', as: :certified_flight_instructor
+  get 'commercial-rating', to: 'advance_trainings#commercial_rating', as: :commercial_rating
+  get 'multi-engine-rating', to: 'advance_trainings#multi_engine_rating', as: :multi_engine_rating
+  get 'instrument-rating', to: 'advance_trainings#instrument_rating', as: :instrument_rating
   
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
@@ -65,7 +66,7 @@ Rails.application.routes.draw do
   get 'helicopter-pilot-training', to: 'pages#helicopter_training', as: :helicopter_training
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   get 'about-ideal-aviation', to: 'pages#about_us', as: :about_us
-  get 'advanced_training', to: 'pages#advanced_training', as: :advanced_training
+  
   
   
 
