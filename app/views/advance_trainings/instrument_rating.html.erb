@@ -4,7 +4,12 @@
     <%= flash[:notice] %>
   </div>
 <% end %>
-<h2 class='text-center  font-extrabold text-5xl text-blue-900'>INSTRUMENT RATING</h2>
+<section class="bg-ifr-flight2 bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
+  <h1 class="lg:text-5xl text-3xl font-semibold pb-10 text-center">Get Your Instrument Rating</h1>
+  <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Take the next step after your private pilot training</h2>
+  <%= link_to "GET STARTED",  contact_path, data: { turbo: false }, class: "btn-primary"%>
+</section>
+
 <section class="bg-blue-900 py-20">
   <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
     <!--Text-->
