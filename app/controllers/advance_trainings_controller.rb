@@ -31,8 +31,6 @@ class AdvanceTrainingsController < ApplicationController
   # GET /advance_trainings/new
   def new
     @advance_training = AdvanceTraining.new
-    #@certificate_sought = params[:certificate_sought]
-    #@certificate_sought_path = "#{params[:certificate_sought]}_path"
   end
 
   # GET /advance_trainings/1/edit
@@ -42,22 +40,9 @@ class AdvanceTrainingsController < ApplicationController
   # POST /advance_trainings or /advance_trainings.json
   def create
     @advance_training = AdvanceTraining.new(advance_training_params)
-    #@certificate_sought = advance_training_params[:certificate_sought]
   
     respond_to do |format|
       if @advance_training.save
-        #redirect_path = case @certificate_sought
-        #                when "certified_flight_instructor"
-        #                  certified_flight_instructor_path
-        #                when "commercial_rating"
-        #                  commercial_rating_path
-        #                when "multi_engine_rating"
-        #                  multi_engine_rating_path
-        #                when "instrument_rating"
-        #                  instrument_rating_path
-        #                else
-        #                  root_path
-        #                end
         format.html { redirect_to advanced_training_confirmation_path, notice: @advance_training[:first_name], alert: @advance_training[:certificate_sought] }
         format.json { render :show, status: :created, location: @advance_training }
       else
