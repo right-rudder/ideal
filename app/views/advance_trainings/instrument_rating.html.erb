@@ -10,18 +10,13 @@
   <%= link_to "GET STARTED",  contact_path, data: { turbo: false }, class: "btn-primary"%>
 </section>
 
-<section class="bg-blue-900 py-20">
+<section class="bg-ideal-blue-dark pt-10 lg:py-20">
   <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
     <!--Text-->
     <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
       <!--Container for text to align them-->
       <div class="text-center lg:text-left">
-        <h2 class="font-extrabold text-4xl text-white pb-4 text-center">Why an Instrument Rating?</h2>
-        <!--Mobile image-->
-        <%= image_tag "bill_macon_peace.webp", class: "lg:hidden"%>
-        <div class="italic text-gray-300 text-center text-sm pb-10">
-          <!--Sub text-->
-        </div>
+        <h2 class="font-semibold text-4xl text-white pb-4 text-center">Why an Instrument Rating?</h2>
         <div class="text-white px-6 lg:pl-0 lg:pr-8 p-text">
           <p class="pb-5">
             While your Private Pilot Certificate is a remarkable accomplishment, an Instrument Rating takes your flying skills to a whole new level. When you get your instrument rating, you'll acquire the skills to confidently navigate aircraft solely by instruments, regardless of external visual references. This mastery of precision flying opens doors to new flying experiences and enhances your overall piloting skills. Imagine confidently handling complex flight scenarios, from navigating through challenging weather conditions to performing pinpoint approaches – the Instrument Rating makes you a better and safer pilot.
@@ -32,47 +27,31 @@
         </div>
       </div>
     </div>
-    <!--Desktop Picture-->
-    <div class="lg:w-1/2 py-6 lg:flex flex-col items-center hidden">
+    <!--Picture-->
+    <div class="lg:w-1/2 lg:py-6 lg:flex flex-col items-center">
       <div class="flex flex-col items-center">
         <%=image_tag "in-between-clouds-ifr.webp", alt: "Flying in between the clouds on an instrument flight", class: "lg:w-5/6"%>
-        <div class="italic text-gray-300 text-center text-sm">
-          <!--Subtext-->
-        </div>
       </div>
     </div>
   </div>
 </section>
-<section class="bg-gray-800 py-20">
-  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
-    <!--Desktop Picture-->
-    <div class="lg:w-1/2 py-6 lg:flex flex-col items-center hidden">
-      <div class="flex flex-col items-center lg:w-1/2">
-        <%= image_tag "bill_macon_peace.webp", class: "lg:rounded-xl"%>
-        <div class="italic text-gray-300 text-center text-sm">
-          <!--Subtext-->
-        </div>
-      </div>
-    </div>
+<section class="bg-gradient-to-t from-ideal-blue-light to-blue-50 pt-10 lg:py-20">
+  <div class="container mx-auto flex flex-col lg:flex-row-reverse items-center justify-center">
     <!--Text-->
     <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
-      <!--Container for text to align them-->
-      <div class="lg:w-3/4 text-center lg:text-left">
-        <h2 class="font-extrabold text-4xl text-white pb-4">Charting Your Path: Becoming a Pilot at Ideal Aviation</h2>
-        <!--Mobile image-->
-        <%= image_tag "bill_macon_peace.webp", class: "lg:hidden"%>
-        <div class="italic text-gray-300 text-center text-sm pb-10">
-          <!--Sub text-->
-        </div>
-        <div class="text-base text-white px-6 lg:pl-0 lg:pr-8">
-          <p class="pb-5">
-            Ideal Aviation is dedicated to nurturing your journey towards mastering the art of instrument piloting. Whether you're a private aviator seeking to elevate your skills or an ambitious professional pilot-to-be, we're here for you. Our program seamlessly blends comprehensive ground school instruction with immersive hands-on flight training, equipping you with the expertise to confidently navigate and operate aircraft relying solely on instruments.
-          </p>
-          <p class="pb-5">
-            Elevate your capabilities to conquer diverse weather scenarios and execute precise instrument approaches. Seize control of your aviation voyage and unlock doors to exhilarating new horizons through our Instrument Training program at Ideal Aviation.
-          </p>
-        </div>
+      <h2 class="font-semibold text-4xl text-black pb-4 text-center">How to Get Your Instrument Rating</h2>
+      <div class="text-black px-10 p-text lg:max-w-xl">
+        <p class="pb-5">
+          Ideal Aviation is dedicated to supporting you on your journey towards becoming an instrument pilot. Whether you're a private pilot seeking to enhance your skills or you have aviation as a career in mind, we're here for you. Our program seamlessly blends comprehensive ground school instruction with immersive hands on flight training, equipping you with the expertise to confidently navigate and operate aircraft relying solely on instruments.
+        </p>
+        <p class="pb-5">
+          Learn how to better understand tough weather scenarios and execute instrument approaches to land the aircraft safely. Our experienced certified flight instructors (CFII) will help you become a better and safer pilot.
+        </p>
       </div>
+    </div>
+
+    <div class="lg:w-1/2">
+      <%= image_tag "pilot-flying-on-ifr-flight.webp", alt: "Pilot smiling for a picture in the middle of an IFR flight at Ideal Aviation", class: ""%>
     </div>
   </div>
 </section>
