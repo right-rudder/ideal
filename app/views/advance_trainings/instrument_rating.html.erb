@@ -107,31 +107,31 @@
   </div>
 </section>
 
-<section class="bg-blue-900 py-20">
+<!--Eligibility Reqs-->
+<section class="bg-gradient-to-b from-blue-50 to-blue-200 text-black py-20">
   <div class="flex flex-col lg:flex-row items-center justify-center">
     <!--Text-->
     <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
       <!--Container for text to align them-->
       <div class="lg:text-left">
-        <h2 class="font-extrabold text-4xl text-white pb-4">Eligibility Requirements for an Instrument Rating</h2>
-        <div class="text-base text-white px-6 lg:pl-0 lg:pr-8">
+        <h2 class="font-extrabold text-4xl  pb-4">Eligibility Requirements for an Instrument Rating</h2>
+        <div class="text-base px-6 lg:pl-0 lg:pr-8">
           <p class="pb-5">
             Achieving an Instrument Rating opens up a new realm of aviation expertise. This coveted rating demands a solid foundation as you venture into the intricacies of instrument piloting.
           </p>
           <p class="my-2 pb-5 font-extrabold text-2xl">
             To qualify, you must demonstrate proficiency in:
-            <ul class="list-disc list-inside border-b-2 pb-3 pl-3">
+            <ul class="list-disc list-inside border-b-2 border-slate-300 pb-3 pl-3">
               <li class="mb-2">Reading, speaking, writing, and comprehending English</li>
               <li class="mb-2">Holding a current private pilot certificate or applying for one alongside the instrument rating</li>
               <li class="mb-2">Receiving ground training from an authorized instructor or completing a home study course for aeronautical knowledge</li>
               <li class="mb-2">Passing the instrument rating knowledge test with instructor endorsement</li>
               <li class="mb-2">Completing the required flight training</li>
-              <p class="text-xs mt-4">Reference <a class="text-blue-300" href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61#61.65">14 CFR §61.65</a> for the entire list of eligibility requirements.</p>
             </ul>
           </p>
           <p class="my-2 pb-5 font-extrabold text-2xl">
             As you embark on this journey, you'll delve into a comprehensive curriculum, including topics like:
-            <ul class="list-disc list-inside border-b-2 pb-3 pl-3">
+            <ul class="list-disc list-inside border-b-2 border-slate-300 pb-3 pl-3">
               <li class="mb-2">IFR flight planning and filing</li>
               <li class="mb-2">Navigation during departure, en route, and arrival in IFR conditions</li>
               <li class="mb-2">Understanding airplane systems for IFR operations</li>
@@ -144,12 +144,12 @@
           </p>
           <p class="my-2 pb-5 font-extrabold text-2xl">
             Your journey towards the Instrument Rating also involves achieving specific aeronautical flight experience:
-            <ul class="list-disc list-inside border-b-2 pb-3 pl-3">
+            <ul class="list-disc list-inside pb-3 pl-3">
               <li class="mb-2">Clock in a minimum of 50 hours of cross-country pilot-in-command (PIC) time</li>
               <li class="mb-2">Log 40 hours of instrument time, whether actual or simulated</li>
               <li class="mb-2">Receive at least 15 hours of flight time from an authorized instructor</li>
               <li class="mb-2">Conquer a cross-country flight of 250 nautical miles, meeting specific instrument requirements</li>
-              <p class="text-xs mt-4">Reference <a class="text-blue-300" href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61#61.65">14 CFR §61.65</a> for the entire list of eligibility requirements.</p>
+              <p class="text-xs mt-4">Reference <a class="text-blue-800 hover:underline" href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61#61.65">14 CFR §61.65</a> for the entire list of eligibility requirements.</p>
             </ul>
           </p>
         </div>
@@ -160,11 +160,6 @@
 
 
 
-<div class="bg-gray-800 block text-center text-4xl items-end  p-text text-gray-300 border-b-2 lg:border-b-0 pb-20 pt-5">
-  <a href="<%= new_advance_training_path(:certificate_sought => "instrument_rating", title: "Instrument Rating") %>" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 transform hover:scale-105">
-    Enroll Now for Your Instrument Rating
-  </a>
-</div>
 <%= render "shared/cta_discovery_flight_right"%>
 <%= render "shared/after_discovery"%>
 <%= render "shared/testimonials"%>
