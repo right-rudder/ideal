@@ -71,7 +71,7 @@
 <section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10 bg-slate-800">
   
   <!--Step 1-->
-  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 border-b-2 lg:border-b-0">
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
     <div class="p-10 "><%=image_tag "group-flight-ifr.webp", alt: "Group flight in IFR flying at Ideal Aviation", class: "rounded-lg"%></div>
     <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 1. Start Flight Training</h3>
     <p class="text-base w-3/4 p-text">
@@ -80,7 +80,7 @@
   </div>
 
   <!--Step 2-->
-  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 border-b-2 lg:border-b-0  lg:h-full">
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300  lg:h-full">
     <div class="p-10"><%=image_tag "ifr-flying.webp", alt: "Flying a Cessna 172 in IMC on IFR flight at Ideal Aviation", class: "rounded-lg"%></div>
     <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 2. Pass the Written Exam</h3>
     <p class="text-base w-3/4 p-text">
@@ -89,7 +89,7 @@
   </div>
 
   <!--Step 3-->
-  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 border-b-2 lg:border-b-0">
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
     <div class="p-10 "><%=image_tag "pilot-thumbs-up-about-to-go-ifr-flight.webp", alt: "Pilot about to go on a cross country at Ideal Aviation", class: "rounded-lg"%></div>
     <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 3. Complete Long Cross Country</h3>
     <p class="text-base w-3/4">
@@ -98,7 +98,7 @@
   </div>
 
   <!--Step 4-->
-  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 mb-10 lg:mb-0">
     <div class="p-10"><%=image_tag "pilot-giving-thumbs-up-after-instrument-checkride.webp", alt: "An Ideal Aviation student right after passing his checkride", class: "rounded-lg"%></div>
     <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 4. Complete the Instrument Checkride</h3>
     <p class="text-base w-3/4">
@@ -114,7 +114,7 @@
     <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
       <!--Container for text to align them-->
       <div class="lg:text-left">
-        <h2 class="font-semibold text-4xl  pb-4">Eligibility Requirements for an Instrument Rating</h2>
+        <h2 class="font-semibold text-2xl lg:text-4xl text-center pb-4">Eligibility Requirements for an Instrument Rating</h2>
         <div class="text-base px-6 lg:pl-0 lg:pr-8">
           <p class="pb-5">
             Achieving an Instrument Rating opens up a new realm of aviation expertise. This coveted rating demands a solid foundation as you venture into the intricacies of instrument piloting.
@@ -158,13 +158,19 @@
   </div>
 </section>
 
-<section>
+<section class="py-10">
   <div class="flex flex-col lg:flex-row">
-    <div class="lg:w-1/2">
+    <div class="lg:w-1/2 lg:px-20 px-10 flex flex-col items-center">
+      <h2 class="font-semibold text-3xl text-center  pb-5">Don't Wait. Begin Your Instrument Training Today</h2>
+      <h3 class="italic text-lg pb-5">Fill out the form to get started.  We'll reach out to you and pair you up with a CFII.  Ideal Aviation is the best place to get your instrument rating in the St. Louis area.</h3>
+      <%= image_tag "cabri3.webp", alt: "Ideal Aviation student right after he passed his instrument checkride", class: "lg:w-3/4 pb-5"%>
+      <div class="italic text-slate-500 text-sm text-center">Ideal Aviation student right after he passed his instrument checkride</div>
     </div>
     <div class="lg:w-1/2">
       <%= turbo_frame_tag "advance_training_form", class: "w-full" do %>
-        <%= render "form", advance_training: @advance_training %>
+        <div class="max-w-xl px-10">
+          <%= render "form", advance_training: @advance_training %>
+        </div>
       <% end %>
     </div>
   </div>
