@@ -169,7 +169,7 @@
     <div class="lg:w-1/2">
       <%= turbo_frame_tag "advance_training_form", class: "w-full" do %>
         <div class="max-w-xl px-10">
-          <%= render "form", advance_training: @advance_training %>
+          <%= render "form", advance_training: @advance_training, advanced_page: @advanced_page %>
         </div>
       <% end %>
     </div>
