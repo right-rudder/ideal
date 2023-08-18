@@ -1,6 +1,6 @@
 <%= form_with(model: advance_training, class: "contents") do |form| %>
   <% if @advance_training.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3 absolute">
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <ul>
         <% advance_training.errors.each do |error| %>
           <li><%= error.full_message %></li>
