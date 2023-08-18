@@ -17,6 +17,8 @@ class AdvanceTrainingsController < ApplicationController
   end
 
   def multi_engine_rating
+    @advance_training = AdvanceTraining.new
+    @advanced_page = calculate_advanced_page(request.path)  # Calculate advanced_page value
   end
 
   def instrument_rating

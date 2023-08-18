@@ -1,1 +1,170 @@
-<h1>Multi Engine Rating</h1>
+<%= render "shared/header"%>
+<% if flash[:notice].present? %>
+  <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<section class="bg-ifr-flight4 bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
+  <h1 class="lg:text-5xl text-3xl font-semibold pb-10 text-center">Get Your Multi Engine Rating</h1>
+  <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Take the next step after your private pilot training</h2>
+  <%= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
+</section>
+<section class="bg-ideal-blue-dark pt-10 lg:py-20">
+  <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
+    <!--Text-->
+    <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
+      <!--Container for text to align them-->
+      <div class="text-center lg:text-left">
+        <h2 class="font-semibold text-4xl text-white pb-4 text-center">Why Take a Multi Engine Rating?</h2>
+        <div class="text-white px-6 lg:pl-0 lg:pr-8 p-text">
+          <p class="pb-5">
+            Embrace the benefits of a Multi-Engine Rating to amplify your aviation prowess. By mastering multi-engine aircraft, you enhance your competence, elevating safety and self-assurance in the skies. This rating grants access to more advanced aircraft, expands your career horizons, and bestows you with a sought-after certification. Ideal Aviation's Multi-Engine Rating program equips you with the skills to navigate intricate systems, refining your piloting finesse and positioning you for triumph in the dynamic world of aviation.
+          </p>
+          <p class="pb-5 font-bold underline font-sans text-3xl">
+            Fuel your career, embrace your passion, and dive into an exhilarating odyssey with the Multi-Engine Rating – where the skies are merely the beginning of your extraordinary voyage!
+          </p>
+          <p class="pb-5">
+            Elevate your horizons with a Multi-Engine Rating – Your Passage to Exciting Possibilities!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Picture-->
+    <div class="lg:w-1/2 lg:py-6 lg:flex flex-col items-center">
+      <div class="flex flex-col items-center">
+        <%=image_tag "multi-engine-sky-view.webp", alt: "Flying over an airport view", class: "lg:w-5/6"%>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-gradient-to-t from-blue-300 to-blue-50 pt-10 lg:py-20">
+  <div class="container mx-auto flex flex-col lg:flex-row-reverse items-center justify-center">
+    <!--Text-->
+    <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
+      <h2 class="font-semibold text-4xl text-black pb-4 text-center lg:px-20">How to Get Your Commercial Pilot Certificate</h2>
+      <div class="text-black px-10 p-text lg:max-w-xl">
+        <p class="pb-5">
+          Discover the artistry of multi-engine aircraft alongside our seasoned instructors, who will adeptly navigate you through a comprehensive training journey. With its sophisticated systems, twin engines, and heightened performance capabilities, Ideal Aviation's Piper Seminole stands as the ultimate platform for refining your multi-engine skills. Whether you aspire to a professional pilot path or seek to expand your horizons, our multi-engine training program at Ideal Aviation guarantees to equip you with the adeptness and self-assurance required to conquer the skies. Elevate your aviation proficiency and soar toward accomplishment in partnership with us.
+        </p>
+        <p class="pb-5">
+          <span class="font-bold font-sans text-2xl">Choose Ideal Aviation and Start Your Multi-Engine Rating Today</span>
+        </p>
+        <p class="pb-5">
+          A Multi-Engine Rating is a pilot qualification that authorizes you to serve as pilot-in-command (PIC) of aircraft featuring multiple engines. This essential certification is a valuable addition for aspiring pilots aiming to progress into the airline industry or enhance their appeal in the competitive aviation job market.
+        </p>
+        <p class="grid place-items-center pb-10">
+          <%= link_to "CONTACT US",  contact_path, data: { turbo: false }, class: "btn-primary"%>
+        </p>
+      </div>
+    </div>
+    <div class="lg:w-1/2">
+      <%= image_tag "multi-engine-aircraft.webp", alt: "Image of multi engine aircraft in Ideal Aviation", class: ""%>
+    </div>
+  </div>
+</section>
+<section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10 bg-slate-800">
+  <!--Step 1-->
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
+    <div class="p-10 "><%=image_tag "multi-engine-aircraft-n611r.webp", alt: "Image of multi engine aircraft N611R in Ideal Aviation", class: "rounded-lg"%></div>
+    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 1. Start Flight Training</h3>
+    <p class="text-base w-3/4 p-text">
+      Start your Commercial Certificate Training by pairing up with a CFII. You also need to log a minimum of 250 total flight hours, including 100 hours as pilot-in-command (PIC) and 50 hours of cross-country flight time. Proceed to practical flight training with experienced instructors. This phase refines your piloting skills, focusing on maneuvers, emergency procedures, and various flight scenarios. You'll accumulate the required flight hours, including instrument and complex aircraft training.
+    </p>
+  </div>
+  <!--Step 2-->
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300  lg:h-full">
+    <div class="p-10"><%=image_tag "multi-engine-aircraft-parked.webp", alt: "Multi engine aircraft", class: "rounded-lg"%></div>
+    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 2. Pass the Written Exam</h3>
+    <p class="text-base w-3/4 p-text">
+      Get ready to excel by mastering the subjects covered in the Commercial Pilot Certificate written exam. Delve into aviation regulations, navigation techniques, meteorology, and aircraft systems, showcasing a thorough grasp of commercial flight principles. Acing this exam not only demonstrates your theoretical proficiency but also reinforces your capability to make well-informed decisions during real-world commercial flying scenarios.
+    </p>
+  </div>
+  <!--Step 3-->
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
+    <div class="p-10 "><%=image_tag "multi-engine-flying-cross-country.webp", alt: "Pilot about to go on a cross country at Ideal Aviation", class: "rounded-lg"%></div>
+    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 3. Complete Long Cross Country</h3>
+    <p class="text-base w-3/4">
+      Elevate your skills with a pivotal phase: the completion of a demanding long cross-country flight. Covering a minimum distance of 300 nautical miles and touching down at a minimum of three different airports, this journey sharpens your navigation prowess, strategic planning, and cross-country expertise. Guiding you through diverse weather and navigation challenges, this experience equips you with the competence to navigate confidently and safely under real-world commercial conditions, further solidifying your readiness for the Commercial Pilot Certificate.
+    </p>
+  </div>
+  <!--Step 4-->
+  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 mb-10 lg:mb-0">
+    <div class="p-10"><%=image_tag "multi-engine-pass-certificate", alt: "An Ideal Aviation student right after passing his checkride", class: "rounded-lg"%></div>
+    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 4. Complete the Commercial Certificate Checkride</h3>
+    <p class="text-base w-3/4">
+      The culmination of your training is the FAA checkride, consisting of an oral exam and a flight test. A designated FAA examiner evaluates your aeronautical knowledge and flight proficiency. Passing the checkride earns you your Commercial Pilot Certificate, marking a significant achievement in your aviation journey.
+    </p>
+  </div>
+</section>
+<!--Eligibility Reqs-->
+<section class="bg-gradient-to-b from-blue-50 to-blue-200 text-black py-20">
+  <div class="flex flex-col lg:flex-row items-center justify-center">
+    <!--Text-->
+    <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
+      <!--Container for text to align them-->
+      <div class="lg:text-left">
+        <h2 class="font-semibold text-2xl lg:text-4xl text-center pb-4">Eligibility Requirements for a Commercial Pilot Certificate</h2>
+        <div class="text-base px-6 lg:pl-0 lg:pr-8">
+          <p class="pb-5">
+            To qualify for an FAA commercial pilot license, individuals need to meet specific criteria. This includes being at least 18 years old and possessing the ability to comprehend and communicate effectively in the English language, encompassing reading, speaking, and writing skills. 
+          </p>
+          <p class="text-xs mt-4">Reference <a class="text-blue-800 hover:underline" href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61/subpart-F/section-61.123">14 CFR §61.123</a> for the entire list of eligibility requirements.</p>
+          <p class="my-2 pb-5 font-semibold text-2xl">
+            Requirements:
+            <ul class="list-disc list-inside border-b-2 border-slate-300 pb-3 pl-3">
+              <li class="mb-2">Holding a current private pilot certificate</li>
+              <li class="mb-2">Receiving ground training from an authorized instructor or completing a home study course for aeronautical knowledge</li>
+              <li class="mb-2">Logbook Endorsements from an instructor:
+                <ul class="list-disc list-inside pl-4 pt-2">
+                  <li class="mb-2">Obtain instructor endorsements in your logbook, allowing you to take the aeronautical knowledge test.</li>
+                  <li class="mb-2">Secure logbook endorsements to participate in the practical test</li>
+                </ul>
+              </li>
+              <li class="mb-2">Test Achievements:
+                <ul class="list-disc list-inside pl-4 pt-2">
+                  <li class="mb-2">Excel in the commercial pilot knowledge test (commonly known as the written exam, abbreviated as CAX)</li>
+                  <li class="mb-2">Conquer the commercial pilot practical test, also referred to as the checkride</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+          <p class="my-2 pb-5 font-semibold text-2xl">
+            Aeronautical Experience & Qualifications</p>
+          <p class="my-2 pb-5 font-semibold text-l">In accordance with <a class="text-blue-800 hover:underline" href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61/subpart-F/section-61.129">federal regulations</a>, you need to have documented the specified aeronautical flight experience prerequisites to qualify for a commercial pilot license.</p>
+          <p class="my-2 pb-5 font-semibold text-2xl">
+            Commercial Pilot Flight Time Requirements:
+            <ul class="list-disc list-inside pb-3 pl-3">
+              <li class="mb-2">Accumulate a total flight time of at least 250 hours</li>
+              <li class="mb-2">Attain a minimum of 100 hours as pilot-in-command (PIC)</li>
+              <li class="mb-2">Complete 50 hours of cross-country flight time as PIC</li>
+              <li class="mb-2">Obtain 10 hours of dedicated instrument training</li>
+              <li class="mb-2">Fulfill 10 hours of flight time in Technically Advanced Aircraft (TAA)</li>
+              <p class="text-xs mt-4">Reference <a class="text-blue-800 hover:underline" href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-D/part-61/subpart-F/section-61.129">14 CFR §61.129</a> for the entire list of eligibility requirements.</p>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-10" id="form-section">
+  <div class="flex flex-col lg:flex-row">
+    <div class="lg:w-1/2 lg:px-20 px-10 flex flex-col items-center">
+      <h2 class="font-semibold text-3xl text-center  pb-5">Don't Wait. Begin Your Commercial Certificate Training Today</h2>
+      <h3 class="italic text-lg pb-5">Fill out the form to get started.  We'll reach out to you and pair you up with a CFII.  Ideal Aviation is the best place to get your Commercial Certificate Training in the St. Louis area.</h3>
+      <%= image_tag "multi-engine-certificate-passer-on-the-wing.webp", alt: "Ideal Aviation student right after he passed his multi engine checkride", class: "lg:w-3/4 pb-5"%>
+      <div class="italic text-slate-500 text-sm text-center">Ideal Aviation student right after he passed his multi engine checkride</div>
+    </div>
+    <div class="lg:w-1/2">
+      <%= turbo_frame_tag "advance_training_form", class: "w-full" do %>
+        <div class="max-w-xl px-10">
+          <%= render "form", advance_training: @advance_training, advanced_page: @advanced_page %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+<%= render "shared/testimonials"%>
+<%= render "shared/cta_were_experts"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
