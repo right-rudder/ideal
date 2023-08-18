@@ -115,6 +115,7 @@ module.exports = {
         'hangarbg' : "url('hangarbg.webp')",   
         'ifr-flight' : "url('ifr_flight.webp')",
         'ifr-flight2' : "url('flying-in-clouds.webp')",
+        'ifr-flight3' : "url('commercial-side-wing-pov.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',

@@ -7,6 +7,8 @@ class AdvanceTrainingsController < ApplicationController
 
 
   def certified_flight_instructor
+    @advance_training = AdvanceTraining.new
+    @advanced_page = calculate_advanced_page(request.path)  # Calculate advanced_page value
   end
 
   def commercial_certificate

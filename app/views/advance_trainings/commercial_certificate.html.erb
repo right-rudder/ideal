@@ -4,7 +4,7 @@
     <%= flash[:notice] %>
   </div>
 <% end %>
-<section class="bg-ifr-flight2 bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
+<section class="bg-ifr-flight3 bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
   <h1 class="lg:text-5xl text-3xl font-semibold pb-10 text-center">Get Your Commercial Pilot Certificate</h1>
   <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Take the next step after your private pilot training</h2>
   <%= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
@@ -32,7 +32,7 @@
     <!--Picture-->
     <div class="lg:w-1/2 lg:py-6 lg:flex flex-col items-center">
       <div class="flex flex-col items-center">
-        <%=image_tag "in-between-clouds-ifr.webp", alt: "Flying in between the clouds on an instrument flight", class: "lg:w-5/6"%>
+        <%=image_tag "commercial-pov-sky.webp", alt: "Flying in between the clouds on an instrument flight", class: "lg:w-5/6"%>
       </div>
     </div>
   </div>
@@ -58,14 +58,14 @@
       </div>
     </div>
     <div class="lg:w-1/2">
-      <%= image_tag "pilot-flying-on-ifr-flight.webp", alt: "Pilot smiling for a picture in the middle of an IFR flight at Ideal Aviation", class: ""%>
+      <%= image_tag "commercial-instructor.webp", alt: "Pilot Instructor smiling beside the plane", class: ""%>
     </div>
   </div>
 </section>
 <section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10 bg-slate-800">
   <!--Step 1-->
   <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
-    <div class="p-10 "><%=image_tag "group-flight-ifr.webp", alt: "Group flight in IFR flying at Ideal Aviation", class: "rounded-lg"%></div>
+    <div class="p-10 "><%=image_tag "commercial-step-flying-1.webp", alt: "pilot-on-flight", class: "rounded-lg"%></div>
     <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 1. Start Flight Training</h3>
     <p class="text-base w-3/4 p-text">
       Start your Commercial Certificate Training by pairing up with a CFII. You also need to log a minimum of 250 total flight hours, including 100 hours as pilot-in-command (PIC) and 50 hours of cross-country flight time. Proceed to practical flight training with experienced instructors. This phase refines your piloting skills, focusing on maneuvers, emergency procedures, and various flight scenarios. You'll accumulate the required flight hours, including instrument and complex aircraft training.
@@ -73,7 +73,7 @@
   </div>
   <!--Step 2-->
   <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300  lg:h-full">
-    <div class="p-10"><%=image_tag "ifr-flying.webp", alt: "Flying a Cessna 172 in IMC on IFR flight at Ideal Aviation", class: "rounded-lg"%></div>
+    <div class="p-10"><%=image_tag "commercial-step-flying-2.webp", alt: "Wingside view of the sky", class: "rounded-lg"%></div>
     <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 2. Pass the Written Exam</h3>
     <p class="text-base w-3/4 p-text">
       Get ready to excel by mastering the subjects covered in the Commercial Pilot Certificate written exam. Delve into aviation regulations, navigation techniques, meteorology, and aircraft systems, showcasing a thorough grasp of commercial flight principles. Acing this exam not only demonstrates your theoretical proficiency but also reinforces your capability to make well-informed decisions during real-world commercial flying scenarios.
@@ -81,7 +81,7 @@
   </div>
   <!--Step 3-->
   <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
-    <div class="p-10 "><%=image_tag "pilot-thumbs-up-about-to-go-ifr-flight.webp", alt: "Pilot about to go on a cross country at Ideal Aviation", class: "rounded-lg"%></div>
+    <div class="p-10 "><%=image_tag "commercial-step-flying-3.webp", alt: "Pilot about to go on a cross country at Ideal Aviation", class: "rounded-lg"%></div>
     <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 3. Complete Long Cross Country</h3>
     <p class="text-base w-3/4">
       Elevate your skills with a pivotal phase: the completion of a demanding long cross-country flight. Covering a minimum distance of 300 nautical miles and touching down at a minimum of three different airports, this journey sharpens your navigation prowess, strategic planning, and cross-country expertise. Guiding you through diverse weather and navigation challenges, this experience equips you with the competence to navigate confidently and safely under real-world commercial conditions, further solidifying your readiness for the Commercial Pilot Certificate.
@@ -89,7 +89,7 @@
   </div>
   <!--Step 4-->
   <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 mb-10 lg:mb-0">
-    <div class="p-10"><%=image_tag "pilot-giving-thumbs-up-after-instrument-checkride.webp", alt: "An Ideal Aviation student right after passing his checkride", class: "rounded-lg"%></div>
+    <div class="p-10"><%=image_tag "commercial-step-check-ride", alt: "An Ideal Aviation student right after passing his checkride", class: "rounded-lg"%></div>
     <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 4. Complete the Commercial Certificate Checkride</h3>
     <p class="text-base w-3/4">
       The culmination of your training is the FAA checkride, consisting of an oral exam and a flight test. A designated FAA examiner evaluates your aeronautical knowledge and flight proficiency. Passing the checkride earns you your Commercial Pilot Certificate, marking a significant achievement in your aviation journey.
@@ -152,8 +152,8 @@
     <div class="lg:w-1/2 lg:px-20 px-10 flex flex-col items-center">
       <h2 class="font-semibold text-3xl text-center  pb-5">Don't Wait. Begin Your Commercial Certificate Training Today</h2>
       <h3 class="italic text-lg pb-5">Fill out the form to get started.  We'll reach out to you and pair you up with a CFII.  Ideal Aviation is the best place to get your instrument rating in the St. Louis area.</h3>
-      <%= image_tag "cabri3.webp", alt: "Ideal Aviation student right after he passed his instrument checkride", class: "lg:w-3/4 pb-5"%>
-      <div class="italic text-slate-500 text-sm text-center">Ideal Aviation student right after he passed his instrument checkride</div>
+      <%= image_tag "commercial-certificate-obtained.webp", alt: "Ideal Aviation student right after he passed his instrument checkride", class: "lg:w-3/4 pb-5"%>
+      <div class="italic text-slate-500 text-sm text-center">Ideal Aviation student right after he passed his commercial checkride</div>
     </div>
     <div class="lg:w-1/2">
       <%= turbo_frame_tag "advance_training_form", class: "w-full" do %>
