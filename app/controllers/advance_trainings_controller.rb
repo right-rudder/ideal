@@ -1,6 +1,7 @@
 class AdvanceTrainingsController < ApplicationController
   before_action :set_advance_training, only: %i[ show edit update destroy ]
 
+  # Original static page
   def advanced_training
   end
 
