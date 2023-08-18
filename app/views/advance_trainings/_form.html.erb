@@ -1,15 +1,3 @@
-<%# advanced_page = case request.path
-  when instrument_rating_path
-    "Instrument Rating"
-  when commercial_certificate_path
-    "Commercial Certificate"
-  when multi_engine_rating_path
-    "Multi Engine Rating"
-  when certified_flight_instructor_path
-    "CFI Certificate"
-  end
-%>
-
 <%= form_with(model: advance_training, class: "contents") do |form| %>
   <% if @advance_training.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
