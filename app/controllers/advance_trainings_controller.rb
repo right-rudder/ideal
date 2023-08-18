@@ -53,6 +53,7 @@ class AdvanceTrainingsController < ApplicationController
     respond_to do |format|
       if @advance_training.save
         # Handle successful submission
+        AdvanceTrainingsMailer.advance_trainings(@advance_training).deliver_later
         format.html { redirect_to advanced_training_confirmation_path, notice: @advance_training[:first_name], alert: @advance_training[:certificate_sought] }
         format.json { render :show, status: :created, location: @advance_training }
       else
