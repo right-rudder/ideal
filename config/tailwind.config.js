@@ -116,6 +116,7 @@ module.exports = {
         'ifr-flight' : "url('ifr_flight.webp')",
         'ifr-flight2' : "url('flying-in-clouds.webp')",
         'ifr-flight3' : "url('commercial-side-wing-pov.webp')",
+        'ifr-flight4' : "url('cfi-header-image-city-view.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
