@@ -5,7 +5,8 @@
 <section class="bg-hangarbg2 bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
   <h1 class="lg:text-5xl text-3xl font-semibold pb-10 text-center">Get Your Commercial Pilot Certificate</h1>
   <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 px-5 text-center">Start flying for compensation or hire. Turn your passion for flying into a career</h2>
-  <%= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
+  <a href="#form-section", class="btn-primary" onclick="event.preventDefault(); document.getElementById('form-section').scrollIntoView({ behavior: 'smooth'});">GET STARTED</a>
+  <%#= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
 </section>
 <section class="bg-ideal-blue-dark pt-10 lg:py-20">
   <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
@@ -144,11 +145,12 @@
       </div>
     </div>
   </div>
+  <div class="" id="form-section"></div>
 </section>
-<section class="py-10" id="form-section">
+<section class="py-10">
   <div class="flex flex-col lg:flex-row lg:place-content-evenly">
     <div class="lg:w-1/2 lg:px-20 px-10 flex flex-col items-center">
-      <h2 class="font-semibold text-3xl text-center  pb-5">Start Your Commercial Training Today</h2>
+      <h2 class="font-semibold text-3xl text-center  pb-5" >Start Your Commercial Training Today</h2>
       <h3 class="italic text-lg pb-5">Fill out the form to get started.  We'll reach out to you and pair you up with an instructor.  Ideal Aviation is the best place to get your commercial certificate in the St. Louis area.</h3>
       <%= image_tag "commercial-checkride-pass-helicopter.webp", alt: "Ideal Aviation student right after he passed his commercial checkride", class: "lg:w-3/4 pb-5"%>
       <div class="italic text-slate-500 text-sm text-center">Ideal Aviation student right after he passed his commercial checkride</div>
