@@ -5,8 +5,9 @@ class AdvanceTrainingsMailer < ApplicationMailer
   def advance_trainings(advance_training)
     @advance_training = advance_training
 
-    # mail(to: @advance_training.email, bcc: ["info@idealaviationstlouis.com", "info@idealaviationstl.com"], subject: "✈️ Thank you for filling up the form for your #{certificate_sought}.")
-    mail(to: @advance_training.email, bcc: ["info@idealaviationstlouis.com"], subject: "✈️ Thank you for filling up the form for your #{@advance_training.certificate_sought}.")
+    # Comment out to not include info@idealaviationstl.com for testing.
+    # mail(to: @advance_training.email, bcc: ["info@idealaviationstlouis.com", "info@idealaviationstl.com"], subject: "✈️ Requesting Information About Ideal Aviation's #{@advance_training.certificate_sought}")
+    mail(to: @advance_training.email, bcc: ["info@idealaviationstlouis.com"], subject: "✈️ Requesting Information About Ideal Aviation's #{@advance_training.certificate_sought}")
   end
 
 end
