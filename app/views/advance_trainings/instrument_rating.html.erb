@@ -5,8 +5,7 @@
 <section class="bg-ifr-flight2 bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
   <h1 class="lg:text-5xl text-3xl font-semibold pb-10 text-center">Get Your Instrument Rating</h1>
   <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Take the next step after your private pilot training</h2>
-  <a href="#form-section", class="btn-primary lg:block hidden" onclick="event.preventDefault(); document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'center' });">GET STARTED</a>
-  <a href="#form-section", class="btn-primary lg:hidden" onclick="event.preventDefault(); document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'nearest' });">GET STARTED</a>
+  <a href="#form-section", class="btn-primary" onclick="event.preventDefault(); document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' });">GET STARTED</a>
   <%#= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
 </section>
 <section class="bg-ideal-blue-dark pt-10 lg:py-20">
@@ -145,8 +144,9 @@
       </div>
     </div>
   </div>
+  <div class="" id="form-section"></div>
 </section>
-<section class="py-10" id="form-section">
+<section class="py-10">
   <div class="flex flex-col lg:flex-row lg:place-content-evenly">
     <div class="lg:w-1/2 lg:px-20 px-10 flex flex-col items-center">
       <h2 class="font-semibold text-3xl text-center  pb-5">Don't Wait. Begin Your Instrument Training Today</h2>
