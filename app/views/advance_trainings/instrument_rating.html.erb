@@ -5,7 +5,9 @@
 <section class="bg-ifr-flight2 bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
   <h1 class="lg:text-5xl text-3xl font-semibold pb-10 text-center">Get Your Instrument Rating</h1>
   <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Take the next step after your private pilot training</h2>
-  <%= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
+  <a href="#form-section", class="btn-primary lg:block hidden" onclick="event.preventDefault(); document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'center' });">GET STARTED</a>
+  <a href="#form-section", class="btn-primary lg:hidden" onclick="event.preventDefault(); document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'nearest' });">GET STARTED</a>
+  <%#= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
 </section>
 <section class="bg-ideal-blue-dark pt-10 lg:py-20">
   <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
