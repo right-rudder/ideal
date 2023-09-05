@@ -115,7 +115,7 @@ module.exports = {
         'hangarbg' : "url('hangarbg.webp')",   
         'ifr-flight' : "url('ifr_flight.webp')",
         'ifr-flight2' : "url('flying-in-clouds.webp')",
-        'ifr-flight3' : "url('commercial-side-wing-pov.webp')",
+        'cfi-jump' : "url('cfi-jumping.webp')",
         'hangarbg2' : "url('piper-pilots-parked-outside-ideal-aviation-hangar.webp')",
         'multi-bg' : "url('multi-engine-bg.webp')",
       },

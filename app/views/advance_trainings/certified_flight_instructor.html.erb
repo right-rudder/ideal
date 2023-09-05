@@ -2,9 +2,9 @@
 <% meta_description("Come train at Ideal Aviation.  We offer courses from private pilot to CFII and MEI.  Get your instrument rating and commercial certificate done in the best flight school in St. Louis") %>
 <% meta_keywords("Certified Flight Instructor, CFI Training, Pilot Career Launch, Flight Instructor Experience, Ideal Aviation St. Louis, Aviation Mentorship") %>
 <%= render "shared/header"%>
-<section class="bg-ifr-flight4 bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
+<section class="bg-cfi-jump bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
   <h1 class="lg:text-5xl text-3xl font-semibold pb-10 text-center">Become a Certified Flight Instructor</h1>
-  <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Launch your pilot career upon achieving your commercial certificate!</h2>
+  <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Start your pilot career after achieving your commercial certificate</h2>
   <%= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
 </section>
 <section class="bg-ideal-blue-dark pt-10 lg:py-20">
@@ -13,16 +13,13 @@
     <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
       <!--Container for text to align them-->
       <div class="text-center lg:text-left">
-        <h2 class="font-semibold text-4xl text-white pb-4 text-center">Why Choose the Path of a Certified Flight Instructor?</h2>
+        <h2 class="font-semibold text-4xl text-white pb-4 text-center">Why Become a CFI?</h2>
         <div class="text-white px-6 lg:pl-0 lg:pr-8 p-text">
           <p class="pb-5">
-            Diverse motivations drive pilots towards embracing the role of a CFI, with a predominant reason being the pursuit of experience and the accrual of flight hours. In the aviation realm, especially for coveted roles like commercial airline pilots, meeting specific flight time benchmarks is imperative. Many individuals opt for flight instruction due to its dynamic nature, offering rapid progress in flight time accumulation. Guiding students in the art of safe and proficient aircraft operation not only imparts essential skills but also cements the knowledge garnered during your personal flight training journey. Over time, flight instructors metamorphose into seasoned aviators, proficiently equipped to both train and endorse fellow pilots for FAA practical evaluations.
+            The primary reason pilots choose to become a Certified Flight Instructor (CFI) is the pursuit of experience and the accrual of flight hours. In the aviation industry, especially for highly sought roles like commercial airline pilots, meeting ATP minimums and specific flight hours is required. Many pilots opt for flight instruction as their first pilot job which offers rapid progress in flight time accumulation. Guiding students in the art of safe and proficient aircraft operation not only imparts essential skills but also solidifies the knowledge garnered during your personal flight training journey. Over time, flight instructors become seasoned aviators, proficiently equipped to both train and endorse fellow pilots for FAA practical evaluations.
           </p>
           <p class="pb-5 font-bold underline font-sans text-3xl">
-            Ignite your career, channel your passion, and set forth on an exhilarating expedition as a Certified Flight Instructor – where the horizon marks the commencement of your remarkable voyage!
-          </p>
-          <p class="pb-5">
-            Elevate beyond limits as a Certified Flight Instructor – Your Key to Unlocking Exciting Possibilities!
+            Begin your pilot career at Ideal Aviation
           </p>
         </div>
       </div>
@@ -30,7 +27,7 @@
     <!--Picture-->
     <div class="lg:w-1/2 lg:py-6 lg:flex flex-col items-center">
       <div class="flex flex-col items-center">
-        <%=image_tag "cfi-sky-open-field-view.webp", alt: "Flying with open field view", class: "lg:w-5/6"%>
+        <%=image_tag "ideal-cfi-with-private-pilot.webp", alt: "Ideal Aviation CFI with a student who just passed their private pilot checkride", class: "lg:w-5/6"%>
       </div>
     </div>
   </div>
@@ -42,13 +39,13 @@
       <h2 class="font-semibold text-4xl text-black pb-4 text-center lg:px-20">How to Become a Certified Flight Instructor?</h2>
       <div class="text-black px-10 p-text lg:max-w-xl">
         <p class="pb-5">
-          Start on your pilot journey following the attainment of your commercial certificate. Begin your flight ventures today, charting the course toward building the essential hours that pave the way to becoming an airline pilot. Ideal Aviation presents a pathway – become a Certified Flight Instructor (CFI). Embracing the role of a CFI unlocks a precious chance to swiftly accumulate flight experience, meeting the minimum benchmarks set by airlines and corporate aviation entities. This avenue offers you a brilliant opportunity to apply the wealth of knowledge and skills cultivated during your own flight training odyssey. Flight instructors stand as pivotal advocates of the aviation community, sharing their wisdom and expertise with budding aviators. For many, it marks their inaugural step into the aviation realm, not just offering invaluable experience, but also substantial compensation.
+          Meeting the Federal Aviation Regulations (FAR/AIM) requirements is essential on the path to becoming a Certified Flight Instructor (CFI) at Ideal Aviation. To obtain your instructor's certificate, aspiring CFIs must hold a Commercial Pilot Certificate and have logged a minimum of 250 flight hours, including specific experience in different aircraft categories. Successful completion of a CFI ground school and passing the Fundamentals of Instruction (FOI) knowledge test are also crucial milestones. At Ideal Aviation, we provide structured training to ensure you meet these requirements and equip you with the teaching skills and aviation expertise needed to inspire and mentor future pilots.
         </p>
         <p class="pb-5">
           <span class="font-bold font-sans text-2xl">Choose Ideal Aviation and Begin Your Certified Flight Instructor Training Today</span>
         </p>
         <p class="pb-5">
-          Unleash your aviation passion as a Certified Flight Instructor through our program. Shape future aviators, guided by our training and support. Gain instructional finesse and aviation expertise, inspiring the next generation. Join Ideal Aviation's CFI Training for a fulfilling journey of mentorship and professional growth in aviation.
+          Ideal Aviation is the place for pilots becoming a Certified Flight Instructor (CFI). Our staff and team of seasoned CFI professionals provides unparalleled mentorship and support, ensuring you receive the best guidance on your journey to your CFI certification. Our modern fleet of well maintained aircraft is specially equipped to meet the demands of CFI training. Located conveniently near downtown St. Louis, Ideal Aviation offers easy access for local and visiting candidates. Join Ideal Aviation, where our commitment to CFI excellence becomes your key to a successful career in aviation education.
         </p>
         <p class="grid place-items-center pb-10">
           <%= link_to "CONTACT US",  contact_path, data: { turbo: false }, class: "btn-primary"%>
@@ -56,44 +53,11 @@
       </div>
     </div>
     <div class="lg:w-1/2">
-      <%= image_tag "cfi-take-off-okay-sign.webp", alt: "Pilot smiling for a picture before take off", class: ""%>
+      <%= image_tag "ideal-team-2020.webp", alt: "Ideal Aviation Alumni in front of plane", class: ""%>
     </div>
   </div>
 </section>
-<section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10 bg-slate-800">
-  <!--Step 1-->
-  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
-    <div class="p-10 "><%=image_tag "cfi-take-off-training.webp", alt: "Helicopter that about to take off", class: "rounded-lg"%></div>
-    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 1. Start Flight Training</h3>
-    <p class="text-base w-3/4 p-text">
-      Experience a comprehensive flight training regimen that places strong emphasis on instructional flights. This rigorous training enhances your proficiency in effectively showcasing flight maneuvers, adeptly communicating, and adeptly handling various real-world scenarios. Through hands-on practice, you'll refine the art of translating complex aviation concepts into accessible instruction, setting the stage for your role as a confident and capable Certified Flight Instructor.
-    </p>
-  </div>
-  <!--Step 2-->
-  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300  lg:h-full">
-    <div class="p-10"><%=image_tag "cfi-sunset-wing-view.webp", alt: "Wing side view of the aircraft with sunset", class: "rounded-lg"%></div>
-    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 2. Pass the Written Exam</h3>
-    <p class="text-base w-3/4 p-text">
-      The written exam assesses your knowledge of instructional techniques, regulations, aviation principles, and other topics relevant to teaching aviation. This exam is designed to ensure that you have a solid understanding of the principles and methods required to effectively instruct aspiring pilots. Upon successfully passing the written exam, you'll proceed to the practical flight test, where you'll demonstrate your instructional skills and flying abilities under the evaluation of a designated examiner.
-    </p>
-  </div>
-  <!--Step 3-->
-  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
-    <div class="p-10 "><%=image_tag "cfi-aircraft-n51827.webp", alt: "Image of a n5182 aircraft", class: "rounded-lg"%></div>
-    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 3. Complete Long Cross Country</h3>
-    <p class="text-base w-3/4">
-      This flight is designed to enhance your navigation skills, planning abilities, and cross-country flying experience, all of which are essential for teaching and mentoring aspiring pilots effectively. Just like the requirements for other pilot certificates, the specifics of the cross-country flight can vary based on the aviation authority's regulations and the flight school's curriculum. It's an opportunity for you to apply your navigation knowledge in a real-world scenario and gain valuable experience that you can later share with your students.
-    </p>
-  </div>
-  <!--Step 4-->
-  <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 mb-10 lg:mb-0">
-    <div class="p-10"><%=image_tag "cfi-checkride-complete.webp", alt: "An Ideal Aviation student right after passing his checkride", class: "rounded-lg"%></div>
-    <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 4. Complete the Commercial Certificate Checkride</h3>
-    <p class="text-base w-3/4">
-      Successfully navigate the CFI practical flight test, a pivotal step where you demonstrate your instructional finesse, adept flight maneuvers, and your capability to teach with precision. This evaluation underscores your readiness to guide future pilots with confidence, ensuring that you're well-prepared to excel as a Certified Flight Instructor. Your performance in this test affirms your ability to instill aviation knowledge and skills effectively in aspiring aviators.
-    </p>
-  </div>
-</section>
+
 <!--Eligibility Reqs-->
 <section class="bg-gradient-to-b from-blue-50 to-blue-200 text-black py-20">
   <div class="flex flex-col lg:flex-row items-center justify-center">
@@ -110,16 +74,15 @@
               <li class="mb-2">Possess a strong command of the English language, ensuring your ability to read, speak, write, and understand effectively.</li>
               <li class="mb-2">
                 Hold either a <a class="text-blue-800 hover:underline" href="<%= commercial_certificate_path %>">commercial pilot certificate</a>
-                or an airline transport pilot certificate with an <a class="text-blue-800 hover:underline" href="<%= instrument_rating_path %>">instrument rating</a>,
-                underscoring your comprehensive aviation expertise.
+                or an airline transport pilot certificate with an <a class="text-blue-800 hover:underline" href="<%= instrument_rating_path %>">instrument rating</a>.
               </li>
-              <li class="mb-2">Accumulate a minimum of 250 flight hours, solidifying your flying experience.
+              <li class="mb-2">Accumulate a minimum of 250 flight hours
               </li>
-              <li class="mb-2">Secure a valid FAA 3rd Class Medical Certificate or a higher class, attesting to your medical fitness.
+              <li class="mb-2">Secure a valid FAA 3rd Class Medical Certificate or a higher class.
               </li>
-              <li class="mb-2">Garner a logbook endorsement from an authorized instructor, confirming your grasp of the fundamentals of instructing.
+              <li class="mb-2">Receive a logbook endorsement from an authorized instructor.
               </li>
-              <li class="mb-2">Excel in a knowledge test, demonstrating your proficiency in aeronautical knowledge areas relevant to the flight instructor rating you're pursuing.
+              <li class="mb-2">Pass a knowledge and practical test to demonstrate your proficiency in aeronautical knowledge areas relevant to the flight instructor rating you're pursuing.
               </li>
             </ul>
           </p>
@@ -132,10 +95,10 @@
 <section class="py-10" id="form-section">
   <div class="flex flex-col lg:flex-row lg:place-content-evenly">
     <div class="lg:w-1/2 lg:px-20 px-10 flex flex-col items-center">
-      <h2 class="font-semibold text-3xl text-center  pb-5">Don't Wait. Begin Your Instrument Training Today</h2>
-      <h3 class="italic text-lg pb-5">Fill out the form to get started.  We'll reach out to you and pair you up with a CFII.  Ideal Aviation is the best place to get your instrument rating in the St. Louis area.</h3>
-      <%= image_tag "cabri3.webp", alt: "Ideal Aviation student right after he passed his instrument checkride", class: "lg:w-3/4 pb-5"%>
-      <div class="italic text-slate-500 text-sm text-center">Ideal Aviation student right after he passed his instrument checkride</div>
+      <h2 class="font-semibold text-3xl text-center  pb-5">Your Pilot Career at Ideal Aviation</h2>
+      <h3 class="italic text-lg pb-5">Fill out the form to get started.  We'll reach out to you and pair you up with an instructor.  Ideal Aviation is the place for pilots to get their CFI certification in the St. Louis area.</h3>
+      <%= image_tag "ideal-cfi-jake-pass-cfii.webp", alt: "Ideal Aviation CFI right after he passed his CFII checkride", class: "lg:w-3/4 pb-5"%>
+      <div class="italic text-slate-500 text-sm text-center">Ideal Aviation CFI right after he passed his CFII checkride</div>
     </div>
     <div class="p-10 lg:w-2/6 lg:p-10 md:p-20 sm:p-10">
       <%= turbo_frame_tag "advance_training_form" do %>
