@@ -1,6 +1,7 @@
 <% title("Get Your Multi Engine Rating | Ideal Aviation Training") %>
 <% meta_description("Enhance your aviation skills with a Multi Engine Rating from Ideal Aviation. Master multi-engine aircraft, expand career prospects, and gain a sought-after certification. Join us to elevate your flying capabilities and embrace new possibilities.") %>
 <% meta_keywords("Multi Engine Rating, Aviation Skills, Ideal Aviation, Flight Training, Multi-Engine Aircraft, Pilot Certification") %>
+
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
@@ -11,62 +12,55 @@
   <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Your Guide to Getting a Multi Engine Rating at Ideal Aviation</h2>
   <%= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
 </section>
-<section class="bg-ideal-blue-dark pt-10 lg:py-20">
+<section class="bg-ideal-blue-dark">
   <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center">
     <!--Text-->
-    <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
+    <div class="lg:w-1/2 flex flex-col items-center lg:items-end pt-10 lg:pt-20">
       <!--Container for text to align them-->
       <div class="text-center lg:text-left">
         <h2 class="font-semibold text-4xl text-white pb-4 text-center">Why Get a Multi Engine Rating?</h2>
         <div class="text-white px-6 lg:pl-0 lg:pr-8 p-text">
           <p class="pb-5">
-            Obtaining a Multi-Engine Rating enhances your aviation expertise, boosting safety and confidence in flight. This rating provides access to advanced aircraft, broadening career opportunities. Ideal Aviation's Multi-Engine Rating program equips you with the skills to navigate complex systems, refining your piloting abilities for success in the aviation industry.
+            Obtaining a Multi Engine Rating enhances your aviation expertise, boosting safety and confidence in flight. This rating provides access to advanced aircraft, broadening career opportunities. Ideal Aviation's Multi Engine Rating program equips you with the skills to navigate complex systems, refining your piloting abilities for success in the aviation industry.
           </p>
           <p class="pb-5 font-bold underline font-sans text-3xl">
             Ideal Aviation is the place for pilots to get their Multi Engine Rating
           </p>
           <p class="pb-5">
-            Read below for more information on obtaining a Multi Engine Rating at Ideal Aviation.  Ideal Aviation offers multi engine training through use of our well maintained Piper Senminole.
+            Read below for more information on obtaining a Multi Engine Rating at Ideal Aviation.  Ideal Aviation offers multi engine training through use of our well maintained Piper Senminole.  Contact us today to talk with an Ideal Aviation team member and schedule a flight with a CFI-MEI in our Piper Seminole.
           </p>
         </div>
       </div>
     </div>
     <!--Picture-->
-    <div class="lg:w-1/2 lg:py-6 lg:flex flex-col items-center">
+    <div class="lg:w-1/2 lg:flex flex-col items-center">
       <div class="flex flex-col items-center">
-        
-
-        <!-- Your embedded video player code -->
-        <div class="fb-video" data-href="https://www.facebook.com/IdealAviation/videos/573621291327996" data-width="400" data-show-text="false">
-        </div>
-        
-        <%#=image_tag "multi-engine-sky-view.webp", alt: "Flying over an airport view", class: "lg:w-5/6"%>
+        <%=image_tag "multi-engine-instructor-pass-checkride.webp", alt: "Scott passing his multi engine instructor checkride at Ideal Aviation", class: "lg:w-5/6"%>
       </div>
     </div>
   </div>
 </section>
-<section class="bg-gradient-to-t from-blue-300 to-blue-50 pt-10 lg:py-20">
+<section class="bg-gradient-to-t from-blue-300 to-blue-50">
   <div class="container mx-auto flex flex-col lg:flex-row-reverse items-center justify-center">
     <!--Text-->
     <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
-      <h2 class="font-semibold text-4xl text-black pb-4 text-center lg:px-20">How to Get Your Multi Engine Rating</h2>
-      <div class="text-black px-10 p-text lg:max-w-xl">
+      <h2 class="font-semibold text-4xl text-black pb-4 text-center">How to Get Your Multi Engine Rating</h2>
+      <div class="text-black px-10 p-text">
         <p class="pb-5">
-          Discover the artistry of multi-engine aircraft alongside our seasoned instructors, who will adeptly navigate you through a comprehensive training journey. With its sophisticated systems, twin engines, and heightened performance capabilities, Ideal Aviation's Piper Seminole stands as the ultimate platform for refining your multi-engine skills. Whether you aspire to a professional pilot path or seek to expand your horizons, our multi-engine training program at Ideal Aviation guarantees to equip you with the adeptness and self-assurance required to conquer the skies. Elevate your aviation proficiency and soar toward accomplishment in partnership with us.
+          To obtain your Multi Engine Rating, you'll need to meet specific eligibility criteria, which generally include holding a Private Pilot Certificate and a valid medical certificate. The process involves a combination of ground school and flight training, where you'll gain essential theoretical knowledge and practical skills in multi engine aircraft operations. You'll accumulate the required flight hours, typically around 10-15 hours, to build proficiency and meet experience requirements. After thorough preparation, you'll need to pass both a written exam and a practical checkride with an FAA designated pilot examiner. These steps ensure you're well prepared to safely operate multi engine aircraft, and upon successful completion, you'll receive your Multi Engine Rating certification.
         </p>
         <p class="pb-5">
           <span class="font-bold font-sans text-2xl">Choose Ideal Aviation and Start Your Multi-Engine Rating Today</span>
-        </p>
-        <p class="pb-5">
-          A Multi-Engine Rating is a pilot qualification that authorizes you to serve as pilot-in-command (PIC) of aircraft featuring multiple engines. This essential certification is a valuable addition for aspiring pilots aiming to progress into the airline industry or enhance their appeal in the competitive aviation job market.
         </p>
         <p class="grid place-items-center pb-10">
           <%= link_to "CONTACT US",  contact_path, data: { turbo: false }, class: "btn-primary"%>
         </p>
       </div>
     </div>
-    <div class="lg:w-1/2">
-      <%= image_tag "multi-engine-aircraft.webp", alt: "Image of multi engine aircraft in Ideal Aviation", class: ""%>
+    <div class="lg:w-1/2 flex flex-col items-center">
+      <!-- FB video player code -->
+        <div class="fb-video" data-href="https://www.facebook.com/IdealAviation/videos/573621291327996" data-width="400" data-show-text="false">
+        </div>
     </div>
   </div>
 </section>
