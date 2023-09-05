@@ -1,6 +1,6 @@
 class AdvanceTraining < ApplicationRecord
   before_validation :strip_phone_number
-  # after_save :to_lacrm -- Tested already comment out for test purposes on Action Mailer
+  after_save :to_lacrm -- Tested already comment out for test purposes on Action Mailer
 
   validates :first_name, presence: true
   validates :last_name, presence: true
