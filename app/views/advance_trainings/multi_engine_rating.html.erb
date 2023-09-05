@@ -1,10 +1,14 @@
 <% title("Get Your Multi Engine Rating | Ideal Aviation Training") %>
 <% meta_description("Enhance your aviation skills with a Multi Engine Rating from Ideal Aviation. Master multi-engine aircraft, expand career prospects, and gain a sought-after certification. Join us to elevate your flying capabilities and embrace new possibilities.") %>
 <% meta_keywords("Multi Engine Rating, Aviation Skills, Ideal Aviation, Flight Training, Multi-Engine Aircraft, Pilot Certification") %>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
 <%= render "shared/header"%>
-<section class="bg-ifr-flight4 bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
+<section class="bg-multi-bg bg-cover bg-center h-screen-2/3 flex flex-col items-center justify-center">
   <h1 class="lg:text-5xl text-3xl font-semibold pb-10 text-center">Get Your Multi Engine Rating</h1>
-  <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Take the next step after your private pilot training</h2>
+  <h2 class="lg:text-3xl text-xl italic font-semibold pb-10 text-center">Your Guide to Getting a Multi Engine Rating at Ideal Aviation</h2>
   <%= link_to "GET STARTED",  "#form-section", data: { turbo: false }, class: "btn-primary"%>
 </section>
 <section class="bg-ideal-blue-dark pt-10 lg:py-20">
@@ -13,16 +17,16 @@
     <div class="lg:w-1/2 flex flex-col items-center lg:items-end">
       <!--Container for text to align them-->
       <div class="text-center lg:text-left">
-        <h2 class="font-semibold text-4xl text-white pb-4 text-center">Why Take a Multi Engine Rating?</h2>
+        <h2 class="font-semibold text-4xl text-white pb-4 text-center">Why Get a Multi Engine Rating?</h2>
         <div class="text-white px-6 lg:pl-0 lg:pr-8 p-text">
           <p class="pb-5">
-            Embrace the benefits of a Multi-Engine Rating to amplify your aviation prowess. By mastering multi-engine aircraft, you enhance your competence, elevating safety and self-assurance in the skies. This rating grants access to more advanced aircraft, expands your career horizons, and bestows you with a sought-after certification. Ideal Aviation's Multi-Engine Rating program equips you with the skills to navigate intricate systems, refining your piloting finesse and positioning you for triumph in the dynamic world of aviation.
+            Obtaining a Multi-Engine Rating enhances your aviation expertise, boosting safety and confidence in flight. This rating provides access to advanced aircraft, broadening career opportunities. Ideal Aviation's Multi-Engine Rating program equips you with the skills to navigate complex systems, refining your piloting abilities for success in the aviation industry.
           </p>
           <p class="pb-5 font-bold underline font-sans text-3xl">
-            Fuel your career, embrace your passion, and dive into an exhilarating odyssey with the Multi-Engine Rating – where the skies are merely the beginning of your extraordinary voyage!
+            Ideal Aviation is the place for pilots to get their Multi Engine Rating
           </p>
           <p class="pb-5">
-            Elevate your horizons with a Multi-Engine Rating – Your Passage to Exciting Possibilities!
+            Read below for more information on obtaining a Multi Engine Rating at Ideal Aviation.  Ideal Aviation offers multi engine training through use of our well maintained Piper Senminole.
           </p>
         </div>
       </div>
@@ -30,7 +34,13 @@
     <!--Picture-->
     <div class="lg:w-1/2 lg:py-6 lg:flex flex-col items-center">
       <div class="flex flex-col items-center">
-        <%=image_tag "multi-engine-sky-view.webp", alt: "Flying over an airport view", class: "lg:w-5/6"%>
+        
+
+        <!-- Your embedded video player code -->
+        <div class="fb-video" data-href="https://www.facebook.com/IdealAviation/videos/573621291327996" data-width="400" data-show-text="false">
+        </div>
+        
+        <%#=image_tag "multi-engine-sky-view.webp", alt: "Flying over an airport view", class: "lg:w-5/6"%>
       </div>
     </div>
   </div>

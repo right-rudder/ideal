@@ -117,7 +117,7 @@ module.exports = {
         'ifr-flight2' : "url('flying-in-clouds.webp')",
         'ifr-flight3' : "url('commercial-side-wing-pov.webp')",
         'hangarbg2' : "url('piper-pilots-parked-outside-ideal-aviation-hangar.webp')",
-        'ifr-flight4' : "url('multi-engine-aircraft-flying-header.webp')",
+        'multi-bg' : "url('multi-engine-bg.webp')",
       },
       height: theme => ({
         'screen-1/2': '50vh',
