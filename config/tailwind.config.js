@@ -103,6 +103,8 @@ module.exports = {
       },
       backgroundImage : {
         'home' : "url('collage_header.webp')",
+        'home-mobile' : "url('collage_header_mobile.webp')",
+        'home-tablet' : "url('collage_header_tablet.webp')",
         'ctahead' : "url('cta_banner_ideal.webp')",
         'sunset' : "url('sunset.webp')",
         'archbg' : "url('archbg.webp')",
