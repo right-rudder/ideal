@@ -93,11 +93,13 @@
       <% end %>
       <%= yield %>
     </main>
-    <!--Call Rail-->
-    <script type="text/javascript" src="//cdn.callrail.com/companies/272286455/b900699f66a718ff6366/12/swap.js"></script>
+    
+    
   
     <%# GOOGLE TAG ONLY SHOW DURING PRODUCTION ENVIRONMENT%>
     <% if Rails.env.production? %>
+      <!--Call Rail-->
+      <script type="text/javascript" src="//cdn.callrail.com/companies/272286455/b900699f66a718ff6366/12/swap.js"></script>
       <!-- Google Analytics // Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SVR01EH4G"></script>
       <script>
