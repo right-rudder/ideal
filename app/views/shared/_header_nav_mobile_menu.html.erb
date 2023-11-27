@@ -75,9 +75,6 @@
           <%=link_to "PILOT PROGRAMS", programs_path, data: { turbo: false }%>
           
         </li>
-        <li class="ml-5 animate-slide-in-left3" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_now_drop}">
-          <%=link_to "AIRCRAFT RENTAL", aircraft_rental_path, data: { turbo: false }%>
-        </li>
       <li>
         <div class="flex flex-row justify-between" >
           <div class=""><%= link_to "PILOT CERTIFICATION", programs_path, data: { turbo: false }%></div>
