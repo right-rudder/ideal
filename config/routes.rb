@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   
   
   resources :book_downloads
-  resources :checkouts
+  #resources :checkouts
   resources :discover_flights
   resources :quiz_results
   resources :messages
@@ -51,8 +51,8 @@ Rails.application.routes.draw do
   get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
 
   # Check out form
-  get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
-  get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation
+  #get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
+  #get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation
 
   # Book Download
   get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
