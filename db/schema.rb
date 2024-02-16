@@ -104,23 +104,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_092106) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "enrollments", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "phone"
-    t.string "email"
-    t.text "goals"
-    t.string "previous_training"
-    t.text "comments"
-    t.date "preferred_date"
-    t.string "preferred_availability"
-    t.date "alternate_date"
-    t.string "alternate_availability"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "location"
-  end
-
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
