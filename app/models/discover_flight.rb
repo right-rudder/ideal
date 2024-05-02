@@ -1,6 +1,7 @@
 class DiscoverFlight < ApplicationRecord
   before_validation :strip_phone_number
   after_save :to_lacrm
+  after_save :to_ghl
   
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -72,4 +73,22 @@ class DiscoverFlight < ApplicationRecord
     HTTParty.post(endpoint, headers: headers, body: note_payload.to_json)
 
   end  
+
+  def to_ghl
+    ghl_url = ENV['DISCOVER_FLIGHT_URL']
+    ghl_payload = {
+      "first name" => "#{self.first_name}",
+      "last name" => "#{self.last_name}",
+      "email" => "#{self.email}",
+      "phone" => "#{self.phone}",
+      "notes" => "
+      
+      Interested program: #{self.aircraft}
+      Comments: #{self.comments}
+      Preferred date: #{self.preferred_date} #{self.preferred_availability}
+      Alternate date: #{self.alternate_date} #{self.alternate_availability}
+      ",
+    }     
+    HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
+  end
 end

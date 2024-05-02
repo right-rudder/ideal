@@ -1,6 +1,7 @@
 class BookDownload < ApplicationRecord
   before_validation :strip_phone_number
   after_save :to_lacrm
+  after_save :to_ghl
   
   validates :name, presence: true
   validates :phone, presence: true, format: { with: /\A\d{10}\z/, message: "must be a valid 10-digit phone number" }
@@ -48,5 +49,16 @@ class BookDownload < ApplicationRecord
     response = HTTParty.post(endpoint, headers: headers, body: contact_payload.to_json)
 
   end  
+
+  def to_ghl
+    ghl_url = ENV['BOOK_DOWNLOAD_URL']
+    
+    ghl_payload = {
+      "name" => "#{self.name}",
+      "email" => "#{self.email}",
+      "phone" => "#{self.phone}",
+    }     
+    HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
+  end
 
 end
