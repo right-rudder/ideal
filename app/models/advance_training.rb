@@ -1,6 +1,7 @@
 class AdvanceTraining < ApplicationRecord
   before_validation :strip_phone_number
   after_save :to_lacrm #-- Tested already comment out for test purposes on Action Mailer
+  after_save :to_ghl
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -52,4 +53,16 @@ class AdvanceTraining < ApplicationRecord
 
   end  
 
+  def to_ghl
+    ghl_url = ENV['ADVANCE_TRAINING_URL']
+    ghl_payload = {
+      "first name" => "#{self.first_name}",
+      "last name" => "#{self.last_name}",
+      "email" => "#{self.email}",
+      "phone" => "#{self.phone}",
+      "comments" => "#{self.comments}",
+      "certificate sought" => "#{self.certificate_sought}",
+    }     
+    HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
+  end
 end

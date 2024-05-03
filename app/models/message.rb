@@ -1,6 +1,7 @@
 class Message < ApplicationRecord
   before_validation :strip_phone_number
   after_save :to_lacrm
+  after_save :to_ghl
   
   validates :name, presence: true
   validates :body, presence: { message: "Tell us how we can help" }
@@ -75,4 +76,15 @@ class Message < ApplicationRecord
     HTTParty.post(endpoint, headers: headers, body: note_payload.to_json)
 
   end  
+
+  def to_ghl
+    ghl_url = ENV['MESSAGE_URL']
+    ghl_payload = {
+      "name" => "#{self.name}",
+      "email" => "#{self.email}",
+      "phone" => "#{self.phone}",
+      "message" => "#{self.body}",
+    }     
+    HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
+  end
 end
