@@ -75,7 +75,7 @@ class DiscoverFlight < ApplicationRecord
   end  
 
   def to_ghl
-    ghl_url = ENV['DISCOVER_FLIGHT_URL']
+    ghl_url = ENV['DISCOVERY_FLIGHT_URL']
     ghl_payload = {
       "first name" => "#{self.first_name}",
       "last name" => "#{self.last_name}",
