@@ -25,15 +25,6 @@
         Ideal Aviation St. Louis
       <% end %>
     </title>
-
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PJHVGV48');
-    </script>
-    
     <!--Favicon-->
     <%= favicon_link_tag asset_path('favicon/favicon.ico') %>
     <% %w(57 72 76 114 120 144 152 180).each do |size| %>
@@ -95,9 +86,6 @@
 
 
   <body>
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJHVGV48" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
     <main class="">
       <% if admin_signed_in? %>
         <!--USER MENU-->
@@ -113,13 +101,28 @@
       <!--Call Rail ### DISABLE FOR NOW ###-->
       <!--<script type="text/javascript" src="//cdn.callrail.com/companies/272286455/b900699f66a718ff6366/12/swap.js"></script>-->
       <!-- Google Analytics // Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SVR01EH4G"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-3SVR01EH4G');
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJHVGV48"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+      <script>
+        // Consolidated Google Analytics and Google Tag Manager Scripts
+        (function(w,d,s,l,i){
+          w[l]=w[l]||[];
+          w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+          var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+          j.async=true;
+          j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+          f.parentNode.insertBefore(j,f);
+
+          // Google Analytics Script
+          w.dataLayer = w.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-3SVR01EH4G');
+        })(window,document,'script','dataLayer','GTM-PJHVGV48');
       </script>
     <%end%>
   </body>
