@@ -1,7 +1,7 @@
 class BookDownload < ApplicationRecord
   before_validation :strip_phone_number
-  after_save :to_lacrm
-  after_save :to_ghl
+  after_save :to_lacrm if Rails.env.production?
+  after_save :to_ghl if Rails.env.production?
   
   validates :name, presence: true
   validates :phone, presence: true, format: { with: /\A\d{10}\z/, message: "must be a valid 10-digit phone number" }
