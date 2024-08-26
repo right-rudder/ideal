@@ -1,12 +1,13 @@
 <section class="bg-gradient-to-t lg:bg-gradient-to-l from-ideal-blue to-ideal-blue-dark text-white">
-  <div class="flex flex-col justify-center items-center pt-10 py-10">
+  <div class="flex flex-col lg:flex-row-reverse lg:items-center pt-10 py-10">
     <!--Text Section-->
-    <div class="flex flex-col justify-center items-center pb-5">
-      <p class="text-xl lg:text-2xl text-center">Why Choose Ideal Aviation?</p>
-      <h2 class="font-bold text-2xl lg:text-4xl pt-3 text-center">Hear from our Students!</h2>
+    <div class="lg:w-1/2 flex flex-col justify-center items-center pb-10">
+      <p class="text-xl lg:text-3xl text-center">Why Choose Ideal Aviation?</p>
+      <h2 class="font-bold text-2xl lg:text-5xl pt-3 text-center">Hear from our Students!</h2>
+      <%= link_to "FLY NOW", discovery_flight_path, data: { turbo: false }, class: "flex mx-auto block mt-5 justify-self-center flex-row items-center rounded-xl px-5 py-4 mx-2 bg-red-700 text-xl lg:text-2xl font-semibold duration-300 hover:scale-105 hover:bg-red-600 w-fit" %>
     </div>
     <!--video section-->
-    <div class="max-w-xl w-full mx-auto">
+    <div class="lg:w-1/2 lg:max-w-2xl lg:mx-10">
       <div class="grid place-items-center">
         <div style="height: 0px; overflow: hidden; padding-top: 56.25%; position: relative; width: 100%;">
           <iframe
@@ -20,7 +21,5 @@
         </div>
       </div>
     </div>
-
-    <%= link_to "FLY NOW", discovery_flight_path, data: { turbo: false }, class: "flex mx-auto block mt-5 justify-self-center flex-row items-center rounded-xl px-5 py-4 mx-2 bg-red-700 text-xl font-semibold duration-300 hover:scale-105 hover:bg-red-600 w-fit" %>
   </div>
 </section>
