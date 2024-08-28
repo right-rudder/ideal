@@ -1,0 +1,25 @@
+<section class="bg-gradient-to-t lg:bg-gradient-to-l from-ideal-blue to-ideal-blue-dark text-white">
+  <div class="flex flex-col lg:flex-row-reverse lg:items-center pt-10 py-10">
+    <!--Text Section-->
+    <div class="lg:w-1/2 flex flex-col justify-center items-center pb-10">
+      <p class="text-xl lg:text-3xl text-center">Why Choose Ideal Aviation?</p>
+      <h2 class="font-bold text-2xl lg:text-5xl pt-3 text-center">Hear from our Students!</h2>
+      <%= link_to "FLY NOW", discovery_flight_path, data: { turbo: false }, class: "btn-primary bg-slate-500 hover:bg-slate-400 mt-5" %>
+    </div>
+    <!--video section-->
+    <div class="lg:w-1/2 lg:max-w-2xl lg:mx-10">
+      <div class="grid place-items-center">
+        <div style="height: 0px; overflow: hidden; padding-top: 56.25%; position: relative; width: 100%;">
+          <iframe
+            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+            src="https://tube.rvere.com/embed?v=ou45NYu9iDQ"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
