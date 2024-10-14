@@ -158,6 +158,20 @@
     </div>
     <div x-show="currentPage === 4" x-cloak>
       <div class="my-5">
+        <span class="p-text">Before we finish up, we just want to restate that this form is just a <b>request</b> for a discovery flight at Ideal Aviation.  After the form is submitted, we'll reach out to confirm the dates and times and also give you some more information to better prepare you for your first flight lesson. </span>
+      </div>
+      <div class="my-5">
+        <span class="p-text">To make very sure you're on the flight schedule, give us a call at (618) 360-7600 after you submit the form.  Please click next to continue and finish this form. </span>
+      </div>
+      
+      <div class="flex justify-between">
+        <input type="button" class="btn-primary" @click="currentPage--" :disabled="currentPage === 1" value="PREVIOUS">
+        <input type="button" class="btn-primary" @click="currentPage++" value="NEXT">
+      </div>
+      
+    </div>
+    <div x-show="currentPage === 5" x-cloak>
+      <div class="my-5">
         <span class="p-text">Hi There! Looking forward to flying with you.  Is there anything you'd like us to know?  We'll give you a call shortly.</span>
         <%= form.text_area :comments, rows: 4, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
       </div>
@@ -167,7 +181,7 @@
           <%= form.submit "REQUEST", class: "btn-primary", data: { turbo: false } %>
         </div>
       </div>
-      <div class="mt-10 text-slate-600 italic text-sm">This form is a request to complete a discovery flight at Ideal Aviation.  The requested or alternate dates for a flight may or may not be available depending on demand and availability.  If you would like an earlier date and time or a date and time that is not listed above, please contact us directly at (618) 337-5845.</div>
+      <div class="mt-10 text-slate-600 italic text-sm">This form is a request to complete a discovery flight at Ideal Aviation.  The requested or alternate dates for a flight may or may not be available depending on demand and availability.  If you would like an earlier date and time or a date and time that is not listed above, please contact us directly at (618) 360-7600.</div>
       <div class="mt-10">
         <%= image_tag "ideal_logo.webp"%>
       </div>
